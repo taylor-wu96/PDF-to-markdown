@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Processor</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+      input,
+      button {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PDF Processor</h1>
+    <form id="uploadForm">
+      <input type="file" id="pdfFile" accept=".pdf" required />
+      <br />
+      <input
+        type="text"
+        id="outputPrefix"
+        placeholder="Output Prefix"
+        required />
+      <br />
+      <input
+        type="number"
+        id="pagesPerChunk"
+        placeholder="Pages per Chunk"
+        required />
+      <br />
+      <input
+        type="number"
+        id="maxPages"
+        placeholder="Max Pages (0 for no limit)"
+        required />
+      <br />
+      <button type="submit">Process PDF</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      document
+        .getElementById("uploadForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData();
+          formData.append("pdf", document.getElementById("pdfFile").files[0]);
+          formData.append(
+            "outputPrefix",
+            document.getElementById("outputPrefix").value
+          );
+          formData.append(
+            "pagesPerChunk",
+            document.getElementById("pagesPerChunk").value
+          );
+          formData.append(
+            "maxPages",
+            document.getElementById("maxPages").value
+          );
+
+          try {
+            const response = await axios.post("/process-pdf", formData, {
+              headers: { "Content-Type": "multipart/form-data" },
+            });
+            document.getElementById("result").innerText = response.data;
+          } catch (error) {
+            document.getElementById("result").innerText =
+              "Error: " + error.message;
+          }
+        });
+    </script>
+  </body>
+</html>
