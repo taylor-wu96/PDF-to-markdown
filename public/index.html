@@ -60,14 +60,133 @@
         required />
       <button type="submit">Process PDF</button>
     </form>
+    <progress
+      id="progressBar"
+      value="0"
+      max="100"
+      style="width: 100%"></progress>
+
     <div id="result"></div>
     <div id="download"></div>
 
     <script>
+      // document
+      //   .getElementById("uploadForm")
+      //   .addEventListener("submit", async (e) => {
+      //     e.preventDefault();
+      //     const formData = new FormData();
+      //     formData.append("pdf", document.getElementById("pdfFile").files[0]);
+      //     formData.append(
+      //       "outputPrefix",
+      //       document.getElementById("outputPrefix").value
+      //     );
+      //     formData.append(
+      //       "pagesPerChunk",
+      //       document.getElementById("pagesPerChunk").value
+      //     );
+      //     formData.append(
+      //       "maxPages",
+      //       document.getElementById("maxPages").value
+      //     );
+      //     formData.append(
+      //       "languages",
+      //       document.getElementById("languages").value
+      //     );
+
+      //     try {
+      //       const response = await axios.post("/process-pdf", formData, {
+      //         headers: { "Content-Type": "multipart/form-data" },
+      //       });
+
+      //       document.getElementById("result").innerText = JSON.stringify(
+      //         response.data,
+      //         null,
+      //         2
+      //       );
+
+      //       if (response.data.outputFile) {
+      //         // Fetch the markdown content
+      //         const markdownResponse = await axios.get(
+      //           `/download/${response.data.outputFile}`
+      //         );
+      //         const markdownContent = markdownResponse.data;
+
+      //         // Convert markdown to HTML using marked.js
+      //         const htmlContent = marked.parse(markdownContent);
+
+      //         // Render the HTML content
+      //         document.getElementById("download").innerHTML = htmlContent;
+      //       }
+      //     } catch (error) {
+      //       document.getElementById("result").innerText =
+      //         "Error: " + JSON.stringify(error.response.data, null, 2);
+      //     }
+      //   });
+      // document
+      //   .getElementById("uploadForm")
+      //   .addEventListener("submit", async (e) => {
+      //     e.preventDefault();
+
+      //     const formData = new FormData();
+      //     formData.append("pdf", document.getElementById("pdfFile").files[0]);
+      //     formData.append(
+      //       "outputPrefix",
+      //       document.getElementById("outputPrefix").value
+      //     );
+      //     formData.append(
+      //       "pagesPerChunk",
+      //       document.getElementById("pagesPerChunk").value
+      //     );
+      //     formData.append(
+      //       "maxPages",
+      //       document.getElementById("maxPages").value
+      //     );
+      //     formData.append(
+      //       "languages",
+      //       document.getElementById("languages").value
+      //     );
+
+      //     const progressBar = document.getElementById("progressBar");
+      //     progressBar.value = 0; // Reset progress bar
+
+      //     try {
+      //       const response = await axios.post("/process-pdf", formData, {
+      //         headers: { "Content-Type": "multipart/form-data" },
+      //         onUploadProgress: (progressEvent) => {
+      //           const progress = Math.round(
+      //             (progressEvent.loaded * 100) / progressEvent.total
+      //           );
+      //           progressBar.value = progress;
+      //         },
+      //       });
+
+      //       document.getElementById("result").innerText = JSON.stringify(
+      //         response.data,
+      //         null,
+      //         2
+      //       );
+      //       progressBar.value = 100; // Set progress to 100% when processing is done
+
+      //       if (response.data.outputFile) {
+      //         const markdownResponse = await axios.get(
+      //           `/download/${response.data.outputFile}`
+      //         );
+      //         const markdownContent = markdownResponse.data;
+
+      //         const htmlContent = marked.parse(markdownContent);
+      //         document.getElementById("download").innerHTML = htmlContent;
+      //       }
+      //     } catch (error) {
+      //       document.getElementById("result").innerText =
+      //         "Error: " + JSON.stringify(error.response.data, null, 2);
+      //       progressBar.value = 0; // Reset progress bar on error
+      //     }
+      //   });
       document
         .getElementById("uploadForm")
         .addEventListener("submit", async (e) => {
           e.preventDefault();
+
           const formData = new FormData();
           formData.append("pdf", document.getElementById("pdfFile").files[0]);
           formData.append(
@@ -87,35 +206,67 @@
             document.getElementById("languages").value
           );
 
+          const progressBar = document.getElementById("progressBar");
+          const resultDiv = document.getElementById("result");
+          progressBar.value = 0; // Reset progress bar
+          resultDiv.innerText = "Processing...";
+
           try {
+            // Start processing and get taskId
             const response = await axios.post("/process-pdf", formData, {
               headers: { "Content-Type": "multipart/form-data" },
             });
 
-            document.getElementById("result").innerText = JSON.stringify(
-              response.data,
-              null,
-              2
-            );
+            const taskId = response.data.taskId;
+            resultDiv.innerText = `Processing started. Task ID: ${taskId}`;
 
-            if (response.data.outputFile) {
-              // Fetch the markdown content
-              const markdownResponse = await axios.get(
-                `/download/${response.data.outputFile}`
-              );
-              const markdownContent = markdownResponse.data;
+            // Start polling for progress
+            const pollProgress = async () => {
+              try {
+                const progressResponse = await axios.get(`/progress/${taskId}`);
+                const progress = progressResponse.data.progress;
 
-              // Convert markdown to HTML using marked.js
-              const htmlContent = marked.parse(markdownContent);
+                if (progress === 100) {
+                  progressBar.value = 100;
+                  resultDiv.innerText = "Processing complete!";
+                  await fetchResult(taskId);
+                  return;
+                } else if (progress < 0) {
+                  throw new Error("Processing failed");
+                }
 
-              // Render the HTML content
-              document.getElementById("download").innerHTML = htmlContent;
-            }
+                progressBar.value = progress;
+                resultDiv.innerText = `Processing... ${progress}%`;
+                setTimeout(pollProgress, 1000); // Poll every second
+              } catch (error) {
+                resultDiv.innerText = `Error: ${error.message}`;
+                progressBar.value = 0;
+              }
+            };
+
+            pollProgress();
           } catch (error) {
-            document.getElementById("result").innerText =
-              "Error: " + JSON.stringify(error.response.data, null, 2);
+            resultDiv.innerText =
+              "Error: " +
+              JSON.stringify(error.response?.data || error.message, null, 2);
+            progressBar.value = 0;
           }
         });
+
+      async function fetchResult(taskId) {
+        try {
+          const prefix_output = document.getElementById("outputPrefix").value;
+          const response = await axios.get(
+            `/download/${prefix_output}_final_output.md`
+          );
+          const markdownContent = response.data;
+          const htmlContent = marked.parse(markdownContent);
+          document.getElementById("download").innerHTML = htmlContent;
+        } catch (error) {
+          document.getElementById("download").innerText =
+            "Error fetching result: " + error.message;
+        }
+      }
     </script>
   </body>
 </html>
