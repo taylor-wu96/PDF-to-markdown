@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF Processor</title>
+    <link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -18,6 +20,17 @@
       input,
       button {
         margin: 10px 0;
+        width: 100%;
+        padding: 5px;
+      }
+      #result {
+        white-space: pre-wrap;
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      #download {
+        margin-top: 20px;
       }
     </style>
   </head>
@@ -25,28 +38,30 @@
     <h1>PDF Processor</h1>
     <form id="uploadForm">
       <input type="file" id="pdfFile" accept=".pdf" required />
-      <br />
       <input
         type="text"
         id="outputPrefix"
         placeholder="Output Prefix"
         required />
-      <br />
       <input
         type="number"
         id="pagesPerChunk"
         placeholder="Pages per Chunk"
         required />
-      <br />
       <input
         type="number"
         id="maxPages"
         placeholder="Max Pages (0 for no limit)"
         required />
-      <br />
+      <input
+        type="text"
+        id="languages"
+        placeholder="Languages (comma-separated, e.g., en,fr,de)"
+        required />
       <button type="submit">Process PDF</button>
     </form>
     <div id="result"></div>
+    <div id="download"></div>
 
     <script>
       document
@@ -67,15 +82,38 @@
             "maxPages",
             document.getElementById("maxPages").value
           );
+          formData.append(
+            "languages",
+            document.getElementById("languages").value
+          );
 
           try {
             const response = await axios.post("/process-pdf", formData, {
               headers: { "Content-Type": "multipart/form-data" },
             });
-            document.getElementById("result").innerText = response.data;
+
+            document.getElementById("result").innerText = JSON.stringify(
+              response.data,
+              null,
+              2
+            );
+
+            if (response.data.outputFile) {
+              // Fetch the markdown content
+              const markdownResponse = await axios.get(
+                `/download/${response.data.outputFile}`
+              );
+              const markdownContent = markdownResponse.data;
+
+              // Convert markdown to HTML using marked.js
+              const htmlContent = marked.parse(markdownContent);
+
+              // Render the HTML content
+              document.getElementById("download").innerHTML = htmlContent;
+            }
           } catch (error) {
             document.getElementById("result").innerText =
-              "Error: " + error.message;
+              "Error: " + JSON.stringify(error.response.data, null, 2);
           }
         });
     </script>
