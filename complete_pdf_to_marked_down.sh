@@ -349,6 +349,20 @@ do
         MODIFIED_CONTENT=$(cat "$CHUNK_OUTPUT")
         
         # Process all PNG files in the current chunk
+        # for IMG in "${CHUNK_OUTPUT_DIR}"/*.png; do
+        #     if [ -f "$IMG" ]; then
+        #         # Generate a new name for the image using the counter
+        #         NEW_IMG_NAME="image_${COUNTER}.png"
+        #         cp "$IMG" "${COMBINED_IMAGES_DIR}/${NEW_IMG_NAME}"
+                
+        #         # Replace the old image name with the new image name, including the relative path
+        #         MODIFIED_CONTENT=$(echo "$MODIFIED_CONTENT" | sed "s|$(basename "$IMG")|./${COMBINED_IMAGES_DIR}/${NEW_IMG_NAME}|g")
+                
+        #         # Increment the counter
+        #         COUNTER=$((COUNTER + 1))
+        #     fi
+        # done
+        # Loop through all PNG files in the current chunk
         for IMG in "${CHUNK_OUTPUT_DIR}"/*.png; do
             if [ -f "$IMG" ]; then
                 # Generate a new name for the image using the counter
@@ -362,6 +376,7 @@ do
                 COUNTER=$((COUNTER + 1))
             fi
         done
+
         
         # Append the modified content to the final output
         echo "$MODIFIED_CONTENT" >> "$FINAL_OUTPUT"

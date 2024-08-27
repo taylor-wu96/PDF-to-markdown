@@ -154,6 +154,22 @@ app.get('/download/:filename', (req, res) => {
   }
 });
 
+app.get('/picture', (req, res) => {
+    const filename = req.query.filename;
+    const relativePath = req.query.relativePath;
+
+    if (!filename || !relativePath) {
+        return res.status(400).send('Missing filename or relativePath parameter');
+    }
+
+    const filePath = path.join(__dirname, relativePath, filename);
+
+    if (fs.existsSync(filePath)) {
+        res.download(filePath);
+    } else {
+        res.status(404).send('File not found');
+    }
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
