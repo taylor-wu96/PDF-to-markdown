@@ -4,73 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF Processor</title>
-    <!-- <link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /> -->
-    <link rel="stylesheet" href="/public/marked_down.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {},
+        },
+        plugins: [
+        tailwindcss('typography'),
+        ],
       }
-      form {
-        margin-bottom: 20px;
-      }
-      input,
-      button {
-        margin: 10px 0;
-        width: 100%;
-        padding: 5px;
-      }
-      #result {
-        white-space: pre-wrap;
-        background-color: #f0f0f0;
-        padding: 10px;
-        border-radius: 5px;
-      }
-      #download {
-        margin-top: 20px;
-      }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+
     </style>
+    <link rel="stylesheet" href="./marked_down.css">
   </head>
   <body>
-    <h1>PDF Processor</h1>
-    <form id="uploadForm">
-      <input type="file" id="pdfFile" accept=".pdf" required />
-      <input
-        type="text"
-        id="outputPrefix"
-        placeholder="Output Prefix"
-        required />
-      <input
-        type="number"
-        id="pagesPerChunk"
-        placeholder="Pages per Chunk"
-        required />
-      <input
-        type="number"
-        id="maxPages"
-        placeholder="Max Pages (0 for no limit)"
-        required />
-      <input
-        type="text"
-        id="languages"
-        placeholder="Languages (comma-separated, e.g., en,fr,de)"
-        required />
-      <button type="submit">Process PDF</button>
-    </form>
-    <progress
-      id="progressBar"
-      value="0"
-      max="100"
-      style="width: 100%"></progress>
+    <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div class="mx-auto max-w-2xl">
+        <div class="text-center">
+          <h2
+            class="text-xl text-gray-800 font-bold sm:text-3xl dark:text-white">
+            PDF Processor
+          </h2>
+        </div>
 
-    <div id="result"></div>
-    <div id="download"></div>
+        <!-- Card -->
+        <div
+          class="mt-5 p-4 relative z-10 bg-white border rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
+          <form id="uploadForm">
+            <div class="mb-4 sm:mb-8">
+              <label for="pdfFile" class="sr-only">Choose PDF file</label>
+              <input
+                type="file"
+                id="pdfFile"
+                name="pdfFile"
+                accept=".pdf"
+                required
+                class="block w-full text-sm text-gray-500 file:me-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-blue-600 file:text-white hover:file:bg-blue-700 file:disabled:opacity-50 file:disabled:pointer-events-none dark:text-neutral-500 dark:file:bg-blue-500 dark:hover:file:bg-blue-400" />
+            </div>
+            <div class="mb-4 sm:mb-8">
+              <label
+                for="outputPrefix"
+                class="block mb-2 text-sm font-medium dark:text-white"
+                >OutputDirectory</label
+              >
+              <input
+                type="text"
+                id="outputPrefix"
+                placeholder="Output Prefix"
+                required
+                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" />
+            </div>
+            <div class="mb-4 sm:mb-8">
+              <label
+                for="pagesPerChunk"
+                class="block mb-2 text-sm font-medium dark:text-white"
+                >Pages</label
+              >
+              <input
+                type="number"
+                id="pagesPerChunk"
+                placeholder="Pages per Chunk"
+                required
+                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" />
+            </div>
 
+            <div class="mb-4 sm:mb-8">
+              <label
+                for="pagesPerChunk"
+                class="block mb-2 text-sm font-medium dark:text-white"></label>
+                Max Pages</label
+              >
+              <input
+              type="number"
+              id="maxPages"
+              placeholder="Max Pages (0 for no limit)"
+                required
+                class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" />
+            </div>
+
+            <div class="mb-4 sm:mb-8">
+              <select
+                multiple=""
+                id="languages"
+                data-hs-select='{
+              "placeholder": "language preference...",
+              "toggleTag": "<button type=\"button\" aria-expanded=\"false\"></button>",
+              "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative py-3 ps-4 pe-9 flex gap-x-2 text-nowrap w-full cursor-pointer bg-white border border-gray-200 rounded-lg text-start text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-neutral-600",
+              "dropdownClasses": "mt-2 z-50 w-full max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 dark:bg-neutral-900 dark:border-neutral-700",
+              "optionClasses": "py-2 px-4 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100 dark:bg-neutral-900 dark:hover:bg-neutral-800 dark:text-neutral-200 dark:focus:bg-neutral-800",
+              "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"shrink-0 size-3.5 text-blue-600 dark:text-blue-500 \" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>",
+              "extraMarkup": "<div class=\"absolute top-1/2 end-3 -translate-y-1/2\"><svg class=\"shrink-0 size-3.5 text-gray-500 dark:text-neutral-500 \" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m7 15 5 5 5-5\"/><path d=\"m7 9 5-5 5 5\"/></svg></div>"
+            }'
+                class="hidden">
+                <option value="">Choose</option>
+                <option value="english">English</option>
+                <option value="chinese">Chinese</option>
+              </select>
+            </div>
+
+            <div class="mt-6 grid">
+              <button
+                type="submit"
+                class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                Process PDF
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+    <!-- End Comment Form -->
+    <div class="max-w-[65rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+      <div class="mx-auto max-w-2xl">
+          <div class="mb-2 flex justify-between items-center">
+            <h3 class="text-sm font-semibold text-gray-800 dark:text-white">Progress Ratio</h3>
+            <span class="text-sm text-gray-800 dark:text-white">25%</span>
+          </div>
+          <progress
+          
+          id="progressBar"
+          value="0"
+          max="100"
+          style="width: 100%"></progress>
+          <div class="flex w-full h-2 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 25%"></div>
+          </div>
+          <div id="result"></div>
+          <article class="prose lg:prose-xl mx-auto mt-8" id="download">
+          </article>
+      </div>
+
+  
+
+    </div>
+
+  
     <script>
       document
         .getElementById("uploadForm")
@@ -148,20 +227,6 @@
           }
         });
 
-      // async function fetchResult(taskId) {
-      //   try {
-      //     const prefix_output = document.getElementById("outputPrefix").value;
-      //     const response = await axios.get(
-      //       `/download/${prefix_output}_final_output.md`
-      //     );
-      //     const markdownContent = response.data;
-      //     const htmlContent = marked.parse(markdownContent);
-      //     document.getElementById("download").innerHTML = htmlContent;
-      //   } catch (error) {
-      //     document.getElementById("download").innerText =
-      //       "Error fetching result: " + error.message;
-      //   }
-      // }
       async function fetchResult(taskId) {
         try {
           const prefix_output = document.getElementById("outputPrefix").value;
@@ -193,6 +258,7 @@
         }
       }
     </script>
-    <script src="./node_modules/preline/dist/preline.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/preline@2.4.1/dist/preline.min.js"></script>
   </body>
 </html>

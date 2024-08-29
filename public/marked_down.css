@@ -3,16 +3,7 @@
   src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
 }
 
-html {
-  width: 880px;
-  padding: 45px;
-  margin-top: 25px;
-  margin-bottom: 125px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-body {
+.prose {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
@@ -23,194 +14,194 @@ body {
   word-wrap: break-word;
 }
 
-body .pl-c {
+.prose .pl-c {
   color: #969896;
 }
 
-body .pl-c1,
-body .pl-s .pl-v {
+.prose .pl-c1,
+.prose .pl-s .pl-v {
   color: #0086b3;
 }
 
-body .pl-e,
-body .pl-en {
+.prose .pl-e,
+.prose .pl-en {
   color: #795da3;
 }
 
-body .pl-smi,
-body .pl-s .pl-s1 {
+.prose .pl-smi,
+.prose .pl-s .pl-s1 {
   color: #333;
 }
 
-body .pl-ent {
+.prose .pl-ent {
   color: #63a35c;
 }
 
-body .pl-k {
+.prose .pl-k {
   color: #a71d5d;
 }
 
-body .pl-s,
-body .pl-pds,
-body .pl-s .pl-pse .pl-s1,
-body .pl-sr,
-body .pl-sr .pl-cce,
-body .pl-sr .pl-sre,
-body .pl-sr .pl-sra {
+.prose .pl-s,
+.prose .pl-pds,
+.prose .pl-s .pl-pse .pl-s1,
+.prose .pl-sr,
+.prose .pl-sr .pl-cce,
+.prose .pl-sr .pl-sre,
+.prose .pl-sr .pl-sra {
   color: #183691;
 }
 
-body .pl-v {
+.prose .pl-v {
   color: #ed6a43;
 }
 
-body .pl-id {
+.prose .pl-id {
   color: #b52a1d;
 }
 
-body .pl-ii {
+.prose .pl-ii {
   color: #f8f8f8;
   background-color: #b52a1d;
 }
 
-body .pl-sr .pl-cce {
+.prose .pl-sr .pl-cce {
   font-weight: bold;
   color: #63a35c;
 }
 
-body .pl-ml {
+.prose .pl-ml {
   color: #693a17;
 }
 
-body .pl-mh,
-body .pl-mh .pl-en,
-body .pl-ms {
+.prose .pl-mh,
+.prose .pl-mh .pl-en,
+.prose .pl-ms {
   font-weight: bold;
   color: #1d3e81;
 }
 
-body .pl-mq {
+.prose .pl-mq {
   color: #008080;
 }
 
-body .pl-mi {
+.prose .pl-mi {
   font-style: italic;
   color: #333;
 }
 
-body .pl-mb {
+.prose .pl-mb {
   font-weight: bold;
   color: #333;
 }
 
-body .pl-md {
+.prose .pl-md {
   color: #bd2c00;
   background-color: #ffecec;
 }
 
-body .pl-mi1 {
+.prose .pl-mi1 {
   color: #55a532;
   background-color: #eaffea;
 }
 
-body .pl-mdr {
+.prose .pl-mdr {
   font-weight: bold;
   color: #795da3;
 }
 
-body .pl-mo {
+.prose .pl-mo {
   color: #1d3e81;
 }
 
-body .octicon {
+.prose .octicon {
   display: inline-block;
   vertical-align: text-top;
   fill: currentColor;
 }
 
-body a {
+.prose a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
-body a:active,
-body a:hover {
+.prose a:active,
+.prose a:hover {
   outline-width: 0;
 }
 
-body strong {
+.prose strong {
   font-weight: inherit;
 }
 
-body strong {
+.prose strong {
   font-weight: bolder;
 }
 
-body h1 {
+.prose h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-body img {
+.prose img {
   border-style: none;
 }
 
-body svg:not(:root) {
+.prose svg:not(:root) {
   overflow: hidden;
 }
 
-body code,
-body kbd,
-body pre {
+.prose code,
+.prose kbd,
+.prose pre {
   font-family: monospace, monospace;
   font-size: 1em;
 }
 
-body hr {
+.prose hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
 
-body input {
+.prose input {
   font: inherit;
   margin: 0;
 }
 
-body input {
+.prose input {
   overflow: visible;
 }
 
-body [type="checkbox"] {
+.prose [type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
 }
 
-body * {
+.prose * {
   box-sizing: border-box;
 }
 
-body input {
+.prose input {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
 }
 
-body a {
+.prose a {
   color: #4078c0;
   text-decoration: none;
 }
 
-body a:hover,
-body a:active {
+.prose a:hover,
+.prose a:active {
   text-decoration: underline;
 }
 
-body strong {
+.prose strong {
   font-weight: 600;
 }
 
-body hr {
+.prose hr {
   height: 0;
   margin: 15px 0;
   overflow: hidden;
@@ -219,166 +210,166 @@ body hr {
   border-bottom: 1px solid #ddd;
 }
 
-body hr::before {
+.prose hr::before {
   display: table;
   content: "";
 }
 
-body hr::after {
+.prose hr::after {
   display: table;
   clear: both;
   content: "";
 }
 
-body table {
+.prose table {
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-body td,
-body th {
+.prose td,
+.prose th {
   padding: 0;
 }
 
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-body h1 {
+.prose h1 {
   font-size: 32px;
   font-weight: 600;
 }
 
-body h2 {
+.prose h2 {
   font-size: 24px;
   font-weight: 600;
 }
 
-body h3 {
+.prose h3 {
   font-size: 20px;
   font-weight: 600;
 }
 
-body h4 {
+.prose h4 {
   font-size: 16px;
   font-weight: 600;
 }
 
-body h5 {
+.prose h5 {
   font-size: 14px;
   font-weight: 600;
 }
 
-body h6 {
+.prose h6 {
   font-size: 12px;
   font-weight: 600;
 }
 
-body p {
+.prose p {
   margin-top: 0;
   margin-bottom: 10px;
 }
 
-body blockquote {
+.prose blockquote {
   margin: 0;
 }
 
-body ul,
-body ol {
+.prose ul,
+.prose ol {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-body ol ol,
-body ul ol {
+.prose ol ol,
+.prose ul ol {
   list-style-type: lower-roman;
 }
 
-body ul ul ol,
-body ul ol ol,
-body ol ul ol,
-body ol ol ol {
+.prose ul ul ol,
+.prose ul ol ol,
+.prose ol ul ol,
+.prose ol ol ol {
   list-style-type: lower-alpha;
 }
 
-body dd {
+.prose dd {
   margin-left: 0;
 }
 
-body code {
+.prose code {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
   font-size: 12px;
 }
 
-body pre {
+.prose pre {
   margin-top: 0;
   margin-bottom: 0;
   font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
-body .octicon {
+.prose .octicon {
   vertical-align: text-bottom;
 }
 
-body input {
+.prose input {
   -webkit-font-feature-settings: "liga" 0;
   font-feature-settings: "liga" 0;
 }
 
-body::before {
+.prose::before {
   display: table;
   content: "";
 }
 
-body::after {
+.prose::after {
   display: table;
   clear: both;
   content: "";
 }
 
-body>*:first-child {
+.prose>*:first-child {
   margin-top: 0 !important;
 }
 
-body>*:last-child {
+.prose>*:last-child {
   margin-bottom: 0 !important;
 }
 
-body a:not([href]) {
+.prose a:not([href]) {
   color: inherit;
   text-decoration: none;
 }
 
-body .anchor {
+.prose .anchor {
   float: left;
   padding-right: 4px;
   margin-left: -20px;
   line-height: 1;
 }
 
-body .anchor:focus {
+.prose .anchor:focus {
   outline: none;
 }
 
-body p,
-body blockquote,
-body ul,
-body ol,
-body dl,
-body table,
-body pre {
+.prose p,
+.prose blockquote,
+.prose ul,
+.prose ol,
+.prose dl,
+.prose table,
+.prose pre {
   margin-top: 0;
   margin-bottom: 16px;
 }
 
-body hr {
+.prose hr {
   height: 0.25em;
   padding: 0;
   margin: 24px 0;
@@ -386,21 +377,21 @@ body hr {
   border: 0;
 }
 
-body blockquote {
+.prose blockquote {
   padding: 0 1em;
   color: #777;
   border-left: 0.25em solid #ddd;
 }
 
-body blockquote>:first-child {
+.prose blockquote>:first-child {
   margin-top: 0;
 }
 
-body blockquote>:last-child {
+.prose blockquote>:last-child {
   margin-bottom: 0;
 }
 
-body kbd {
+.prose kbd {
   display: inline-block;
   padding: 3px 5px;
   font-size: 11px;
@@ -414,102 +405,102 @@ body kbd {
   box-shadow: inset 0 -1px 0 #bbb;
 }
 
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
   margin-top: 24px;
   margin-bottom: 16px;
   font-weight: 600;
   line-height: 1.25;
 }
 
-body h1 .octicon-link,
-body h2 .octicon-link,
-body h3 .octicon-link,
-body h4 .octicon-link,
-body h5 .octicon-link,
-body h6 .octicon-link {
+.prose h1 .octicon-link,
+.prose h2 .octicon-link,
+.prose h3 .octicon-link,
+.prose h4 .octicon-link,
+.prose h5 .octicon-link,
+.prose h6 .octicon-link {
   color: #000;
   vertical-align: middle;
   visibility: hidden;
 }
 
-body h1:hover .anchor,
-body h2:hover .anchor,
-body h3:hover .anchor,
-body h4:hover .anchor,
-body h5:hover .anchor,
-body h6:hover .anchor {
+.prose h1:hover .anchor,
+.prose h2:hover .anchor,
+.prose h3:hover .anchor,
+.prose h4:hover .anchor,
+.prose h5:hover .anchor,
+.prose h6:hover .anchor {
   text-decoration: none;
 }
 
-body h1:hover .anchor .octicon-link,
-body h2:hover .anchor .octicon-link,
-body h3:hover .anchor .octicon-link,
-body h4:hover .anchor .octicon-link,
-body h5:hover .anchor .octicon-link,
-body h6:hover .anchor .octicon-link {
+.prose h1:hover .anchor .octicon-link,
+.prose h2:hover .anchor .octicon-link,
+.prose h3:hover .anchor .octicon-link,
+.prose h4:hover .anchor .octicon-link,
+.prose h5:hover .anchor .octicon-link,
+.prose h6:hover .anchor .octicon-link {
   visibility: visible;
 }
 
-body h1 {
+.prose h1 {
   padding-bottom: 0.3em;
   font-size: 2em;
   border-bottom: 1px solid #eee;
 }
 
-body h2 {
+.prose h2 {
   padding-bottom: 0.3em;
   font-size: 1.5em;
   border-bottom: 1px solid #eee;
 }
 
-body h3 {
+.prose h3 {
   font-size: 1.25em;
 }
 
-body h4 {
+.prose h4 {
   font-size: 1em;
 }
 
-body h5 {
+.prose h5 {
   font-size: 0.875em;
 }
 
-body h6 {
+.prose h6 {
   font-size: 0.85em;
   color: #777;
 }
 
-body ul,
-body ol {
+.prose ul,
+.prose ol {
   padding-left: 2em;
 }
 
-body ul ul,
-body ul ol,
-body ol ol,
-body ol ul {
+.prose ul ul,
+.prose ul ol,
+.prose ol ol,
+.prose ol ul {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-body li>p {
+.prose li>p {
   margin-top: 16px;
 }
 
-body li+li {
+.prose li+li {
   margin-top: 0.25em;
 }
 
-body dl {
+.prose dl {
   padding: 0;
 }
 
-body dl dt {
+.prose dl dt {
   padding: 0;
   margin-top: 16px;
   font-size: 1em;
@@ -517,43 +508,43 @@ body dl dt {
   font-weight: bold;
 }
 
-body dl dd {
+.prose dl dd {
   padding: 0 16px;
   margin-bottom: 16px;
 }
 
-body table {
+.prose table {
   display: block;
   width: 100%;
   overflow: auto;
 }
 
-body table th {
+.prose table th {
   font-weight: bold;
 }
 
-body table th,
-body table td {
+.prose table th,
+.prose table td {
   padding: 6px 13px;
   border: 1px solid #ddd;
 }
 
-body table tr {
+.prose table tr {
   background-color: #fff;
   border-top: 1px solid #ccc;
 }
 
-body table tr:nth-child(2n) {
+.prose table tr:nth-child(2n) {
   background-color: #f8f8f8;
 }
 
-body img {
+.prose img {
   max-width: 100%;
   box-sizing: content-box;
   background-color: #fff;
 }
 
-body code {
+.prose code {
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -563,17 +554,17 @@ body code {
   border-radius: 3px;
 }
 
-body code::before,
-body code::after {
+.prose code::before,
+.prose code::after {
   letter-spacing: -0.2em;
   content: "\00a0";
 }
 
-body pre {
+.prose pre {
   word-wrap: normal;
 }
 
-body pre>code {
+.prose pre>code {
   padding: 0;
   margin: 0;
   font-size: 100%;
@@ -583,17 +574,17 @@ body pre>code {
   border: 0;
 }
 
-body .highlight {
+.prose .highlight {
   margin-bottom: 16px;
 }
 
-body .highlight pre {
+.prose .highlight pre {
   margin-bottom: 0;
   word-break: normal;
 }
 
-body .highlight pre,
-body pre {
+.prose .highlight pre,
+.prose pre {
   padding: 16px;
   overflow: auto;
   font-size: 85%;
@@ -602,7 +593,7 @@ body pre {
   border-radius: 3px;
 }
 
-body pre code {
+.prose pre code {
   display: inline;
   max-width: auto;
   padding: 0;
@@ -614,45 +605,45 @@ body pre code {
   border: 0;
 }
 
-body pre code::before,
-body pre code::after {
+.prose pre code::before,
+.prose pre code::after {
   content: normal;
 }
 
-body .pl-0 {
+.prose .pl-0 {
   padding-left: 0 !important;
 }
 
-body .pl-1 {
+.prose .pl-1 {
   padding-left: 3px !important;
 }
 
-body .pl-2 {
+.prose .pl-2 {
   padding-left: 6px !important;
 }
 
-body .pl-3 {
+.prose .pl-3 {
   padding-left: 12px !important;
 }
 
-body .pl-4 {
+.prose .pl-4 {
   padding-left: 24px !important;
 }
 
-body .pl-5 {
+.prose .pl-5 {
   padding-left: 36px !important;
 }
 
-body .pl-6 {
+.prose .pl-6 {
   padding-left: 48px !important;
 }
 
-body .full-commit .btn-outline:not(:disabled):hover {
+.prose .full-commit .btn-outline:not(:disabled):hover {
   color: #4078c0;
   border: 1px solid #4078c0;
 }
 
-body kbd {
+.prose kbd {
   display: inline-block;
   padding: 3px 5px;
   font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
@@ -666,25 +657,25 @@ body kbd {
   box-shadow: inset 0 -1px 0 #bbb;
 }
 
-body :checked+.radio-label {
+.prose :checked+.radio-label {
   position: relative;
   z-index: 1;
   border-color: #4078c0;
 }
 
-body .task-list-item {
+.prose .task-list-item {
   list-style-type: none;
 }
 
-body .task-list-item+.task-list-item {
+.prose .task-list-item+.task-list-item {
   margin-top: 3px;
 }
 
-body .task-list-item input {
+.prose .task-list-item input {
   margin: 0 0.2em 0.25em -1.6em;
   vertical-align: middle;
 }
 
-body hr {
+.prose hr {
   border-bottom-color: #eee;
 }
