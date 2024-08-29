@@ -117,6 +117,14 @@ app.post('/process-pdf', upload.single('pdf'), (req, res) => {
       console.error('Final output file not found');
       taskProgress[taskId] = -1; // Use a negative value to indicate error
     }
+
+    fs.unlink(inputPdf, (err) => {
+      if (err) {
+        console.error(`Failed to delete uploaded file ${inputPdf}:`, err);
+      } else {
+        console.log(`Uploaded file ${inputPdf} deleted.`);
+      }
+    });
   });
 });
 
