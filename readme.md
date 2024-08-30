@@ -21,6 +21,22 @@ cd PDF-Chunker
 chmod +x complete_pdf_to_marked_down.sh
 ```
 
+4. Install the reqirements by running the following command:
+```bash
+pip install -r requirements.txt
+```
+
+5. Install the node modules by running the following command:
+```bash
+npm install
+``` 
+
+6. Run the server by running the following command:
+```bash
+	node server.js
+```
+
+
 **Manual Usage:**
 
 * Save this script to a file (e.g., `complete_pdf_to_marked_down.sh`)
