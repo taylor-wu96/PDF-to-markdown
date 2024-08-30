@@ -135,8 +135,29 @@
             <div id="progressBarFill" class="flex flex-col justify-center rounded-full overflow-hidden bg-blue-600 text-xs text-white text-center whitespace-nowrap transition duration-500 dark:bg-blue-500" style="width: 0%"></div>
           </div>
           <div id="result"></div>
-          <article class="prose lg:prose-xl mx-auto mt-8" id="download">
-          </article>
+
+          <div class="max-w-2xl mx-auto">
+            <div class="mt-4 sm:mt-8">
+              <button type="button" id="downloadZip"  class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+                Download Markdown
+               </button>
+            </div>
+
+            <!-- Accordion -->
+            <div class="hs-accordion-group">
+              <div class="hs-accordion hs-accordion-active:bg-gray-100 rounded-xl p-6 dark:hs-accordion-active:bg-white/10 active" id="hs-basic-with-title-and-arrow-stretched-heading-one">
+                <button class="hs-accordion-toggle group pb-3 inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 focus:outline-none focus:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400" aria-expanded="true" aria-controls="hs-basic-with-title-and-arrow-stretched-collapse-one">
+                 Rendered Markdown
+                  <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+                </button>
+                <div id="hs-basic-with-title-and-arrow-stretched-collapse-one" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300" role="region" aria-labelledby="hs-basic-with-title-and-arrow-stretched-heading-one">
+                  <article class="prose lg:prose-xl mx-auto mt-8" id="download">
+                  </article>
+                </div>
+              </div>
+            </div>
+
       </div>
     </div>
 
@@ -244,6 +265,22 @@
             "Error fetching result: " + error.message;
         }
       }
+      document.getElementById("downloadZip").addEventListener("click", async () => {
+        try {
+          const outputPrefix = document.getElementById("outputPrefix").value;
+          const response = await axios.get(`/zip/${outputPrefix}`, {
+            responseType: "blob",
+          });
+
+          const blob = new Blob([response.data], { type: "application/zip" });
+          const link = document.createElement("a");
+          link.href = window.URL.createObjectURL(blob);
+          link.download = `${outputPrefix}.zip`;
+          link.click();
+        } catch (error) {
+          console.error("Download Error", error);
+        }
+      });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/preline@2.4.1/dist/preline.min.js"></script>

@@ -1,570 +1,277 @@
-DOI: 10.1111/1475-679X.12407 Journal of Accounting Research Vol. 60 No. 1 March 2022 Printed in U.S.A.
+【章首個案】大山背博物館 台灣新竹縣的橫山鄉有內灣鐵路連接竹北高鐵站以及新竹市火車站,又有三號省道貫 穿,68 號快速道路連接國道一號與三號,交通便利。發源於尖石鄉的油羅溪經過大山背山麓, 在竹東鎮邊與上坪溪匯流進入頭前溪。傳統的客家聚落散佈在山麓與溪旁的農田間,雖然許 多已經改建洋房,從庭院醃大菜和曬蘿蔔的意象裡,仍然可以體驗客家的生活面貌。在山、 河、丘陵與農田的自然環境裡,加上便捷的鐵公路交通,以及純樸友善的客家文化,橫山蘊 含著如瑞士小鎮的自然與文化價值。
 
-# Man Versus Machine: Complex Estimates And Auditor Reliance On Artificial Intelligence
+然而,距離新竹科學園區僅 20 分鐘車程的橫山,卻存在著與台灣許多鄉村一樣的國民教 育議題:學生的學習成就不高。同時,交通便利的結果,卻是人口往都市集中。鄉村的產業 與文化無法留住人才,遑論吸引多元與創新人才。從服務科學的系統觀來看這個現象,一個 區域的發展是由許多的系統的交互作用所形成的。例如,國民教育的問題與在地的人口組成、 產業型態、社區文化、公共服務以及交通等系統息息相關;在地的產業發展與土地、環境、 交通、市場、人力資源等系統所影響。這是一個複雜的系統,包括了人,環境、社會價值、 科技、公共政策、公家與私人組織等組成。如何了解系統彼此影響關係,如何促進利害關係 者的價值共創,如何導向永續多元與健康的區域發展等議題,都是服務科學面對的真實挑戰。
 
-BEN JAM IN P. COMME R FO RD , ∗ **SEAN A. DENNIS** , †
-JENNIFER R. JOE , ‡ **AND JENNY W. ULLA** §
-Received 19 July 2019; accepted 26 May 2021
+透過台灣服務科學學會在地實踐計畫的支持,新竹地區的幾所大學的教授組成的跨領域 合作團隊,結合在地的社群,從 2011 年啟動了「新竹台三大道價值創新計劃」。透過學校課 程活動的規劃與實施,探討在地服務系統,並運用服務設計方法以創新服務系統。為能廣泛 連結在地的社群並擷取共同關心議題,召開了開放空間論壇(Open Space Technology, OST) 活動,邀請來自關西、橫山、竹東、北埔、峨嵋等鄉鎮在地的社群以及關心城鄉均衡發展的 不同領域人士,進行開放的討論。於會議中,提出了六項行動方案。其中一個行動方案為「大 山背博物館」:一個開放的博物館,創造與連接台三線上鄉鎮在天文、地產、人文、生態的價 值(如大山背博物館的企業識別系統所示)。經由四個子計畫在教育、交通、農業、觀光等議 題的探討與服務雛型的提出與測試,共同規劃出大山背博物館天、地、人、生的價值論述。
 
-## Abstract
+在大山背博物館的服務系統,以公益平台為載具,如關西與橫山科學小菁英的教育平台 為基礎,結合永續農業、低碳交通、文化觀光以及社會創新等服務創新專案的推動,期能在 地扎根,並結合各種資源,達到國際發光的國際競爭力。
 
-Audit firms are investing billions of dollars to develop artificial intelligence
-(AI) systems that will help auditors execute challenging tasks (e.g., evaluating complex estimates). Although firms assume AI will enhance audit quality, a growing body of research documents that individuals often exhibit "algorithm aversion"—the tendency to discount computer-based advice more heavily than human advice, although the advice is identical otherwise. Therefore, we conduct an experiment to examine how algorithm aversion manifests in auditor judgments. Consistent with theory, we find that auditors receiving contradictory evidence from their firm's AI system (instead of a human specialist)
-
-∗University of Kentucky; †University of Central Florida; ‡University of Delaware; §University of Nevada, Las Vegas Accepted by Rodrigo Verdi. This paper benefited from thoughtful comments from an anonymous associate editor and an anonymous reviewer. We thank Sanaz Aghazadeh, Tim Bauer, Jessica Buchanan, Jon Grenier, Rick Hatfield, Sean Hillison, Blake Holman, Khim Kelly, Jared Koreff, Tamara Lambert, Justin Leiby, Curtis Mullis, EB Poziemski, Greg Trompeter, and Aubrey Whitfield as well as workshop participants at the University of Alabama, Baruch College, the University of Central Florida, the University of Kansas, and Kent State University for their helpful comments. We also appreciate the feedback received from participants at the University of Waterloo Centre for Accounting Ethics' 2019 Ethics Symposium, 2019 PCAOB/TAR Conference on Auditing and Capital Markets, 2020 Hawaii Accounting Research Conference, and 2020 Auditing Section Midyear Conference. We also thank the audit firms that provided participants for this study and gratefully acknowledge funding from the Von Allmen School of Accountancy at the University of Kentucky.
-171
-
-© 2021 The Chookaszian Accounting Research Center at the University of Chicago Booth School of Business
-propose smaller adjustments to management's complex estimates, particularly when management develops their estimates using relatively objective (vs.
-
-subjective) inputs. Our findings suggest auditor susceptibility to algorithm aversion could prove costly for the profession and financial statements users.
-
-## Jel Codes: M40, M41, M42, O30, O33
-
-Keywords: accounting estimates; auditing; artificial intelligence; algorithm aversion; subjectivity; competing information
-
-## 1. Introduction
-
-Some of the largest audit firms have touted plans to invest billions of dollars in audit technologies in the coming years, with the goal of enhancing the effectiveness, efficiency, and decision-usefulness of audits (Bloomberg Tax [2020]). One of the most promising advanced technologies under consideration is the application of machine learning or artificial intelligence
-(AI) on audit engagements. AI can synthesize large amounts of diverse and unstructured data, and some firms are harnessing these abilities to help auditors perform tasks that have traditionally been performed by human specialists, such as evaluating complex accounting estimates (e.g., commercial loan grades; KPMG [2016]). In doing so, audit firms are carefully developing "narrow AI" systems to perform specific tasks within certain programmable parameters.1 Currently, the goal for these AI systems is to use machine learning to replicate specific (yet complex) judgments that auditors and human specialists make (e.g., Deloitte [2014, 2016], PwC [2017]).
-
-Firms believe that applying these advanced technologies to the audit setting will enhance audit quality and provide significant benefits for auditors and clients (FEI [2017], EY [2018]). These benefits, however, will only materialize if auditors consider and incorporate the information produced by such systems into their evidence evaluation. Therefore, this study examines when and how receiving contradictory evidence from a firm's AI system– rather than a firm's human specialist–influences auditor judgments related to complex estimates.
-
-Auditors lack the requisite expertise to evaluate management's complex estimates on their own, and are therefore expected to rely on advice from
-
-1 According to the Brookings Institution (e.g., West and Allen [2018]), AI incorporates intentionality, intelligence (i.e., "machine learning"), and adaptability. "General AI" refers to a fully autonomous system that can learn about any problem and then solve it (e.g., Deloitte
-[2018a]). With narrow AI systems (e.g., KPMG [2016]), firms can maintain more direct control over their audit methodologies and how they comply with current auditing standards. This focus on narrow AI also is consistent with documented concerns around potential regulatory scrutiny and legal liability that can arise from the use of autonomous, unsupervised AI (e.g.,
-Christ, Emett, Summers, and Wood [2021], Emett, Kaplan, Mauldin, and Pickerd [2021]).
-
-Importantly, while firms appear focused on narrow AI currently, they intend to use this technology to assist with some of the most challenging tasks that humans perform during audits
-(e.g., KPMG [2016]).
-experts when doing so (Martin, Rich, and Wilks [2006], Griffith, Hammersley, and Kadous [2015], PCAOB [2017a, b]). Due to the subjectivity and related potential for management bias inherent in complex estimates, auditors have strong incentives to rely on evidence from their own firm's expert specialists. However, as audit firms begin using AI systems rather than human specialists to produce evidence, auditors will transition from weighing the advice of humans to weighing the advice of machines. Although some regulators have expressed concerns that auditors might over-rely on advanced audit technologies (e.g., Harris [2017]), theory suggests the risk of auditor *under*-reliance is also a concern.
-
-A growing body of research finds that individuals often exhibit "algorithm aversion"–the human tendency to discount advice from algorithms and rely more readily on human input, as compared to computergenerated input (e.g., Eastwood, Snook, and Luther [2012], Dietvorst, Simmons, and Massey [2015]). For example, identical stock forecasting advice has a greater influence on individuals' own predictions when they believe that advice comes from a human instead of a computer-based model (Önkal et al. [2009]). This aversion persists even when individuals receive feedback suggesting the algorithmic predictions are more accurate than their own (Dietvorst, Simmons, and Massey [2015]). Algorithm aversion is particularly evident in tasks that are highly subjective (e.g., movie and joke recommendations), possibly due to beliefs that algorithms lack the necessary capabilities to perform subjective tasks effectively (Castelo, Bos, and Lehmann [2019], Yeomans et al. [2019]). Furthermore, as task uncertainty increases, individuals exhibit greater algorithm aversion (Dietvorst and Bharti [2020]). Therefore, because evaluating management's complex estimates is inherently subjective and involves a high degree of uncertainty, auditors' judgments will likely exhibit some degree of algorithm aversion in this context. Specifically, this literature suggests auditors will more heavily discount firm-provided evidence around a complex estimate when it comes from an AI system than when that same evidence comes from a human specialist.
-
-Algorithm aversion could be especially problematic in competitive information environments, such as the audit setting, because discounting one source's information causes a corresponding increase in the weight placed on *competing* information (Birnbaum [1976], Birnbaum and Stegner [1979]). For example, Birnbaum and Stegner [1979] develop and test a scale-adjustment model that shows lower perceived expertise in one source creates a trade-off, whereby advice from that source is discounted and competing advice is more heavily weighted. Therefore, if auditors discount firm-provided evidence (vis-à-vis algorithm aversion), this will likely cause them to more heavily weight management-provided evidence, making them more willing to accept management's preferences. For instance, auditors consider evidence from both management and firm sources when deciding whether and to what extent management's estimates should be adjusted. Drawing on the algorithm aversion and advice-taking literatures, we predict that receiving contradictory evidence from an AI system instead of a human specialist will cause auditors to propose lower adjustments to management's complex estimates.
-
-Because auditors operate in a competitive information environment, we draw further on the advice-taking literature to investigate whether the nature of management's evidence moderates the degree to which algorithm aversion influences auditor judgments. The Birnbaum and Stegner [1979] scale-adjustment model demonstrates that the expertise of one source and the perceived objectivity of a *competing* information source interactively affect judgments. Specifically, the same degree of concern about one source's expertise creates a trade-off that is *even greater* when the competing source is perceived to be more objective. Thus, if auditors are concerned about the adequacy of their firm's AI system (i.e., aversion), then the Birnbaum and Stegner [1979] model suggests that algorithm aversion effects will be amplified when management's competing evidence appears relatively more objective.
-
-Although all complex accounting estimates are inherently subjective, the underlying information management uses to develop these estimates can contain varying degrees of objectivity/subjectivity (e.g., Kadous, Koonce, and Towry [2005], Bratten et al. [2013], Joe, Vandervelde, and Wu [2017]).
-
-For example, management can rely on inputs that are relatively more objective (e.g., verifiable external data) and/or rely on inputs that are relatively more subjective (e.g., management assumptions; Kadous, Koonce, and Towry [2005], FASB [2010], Griffin [2014], PCAOB [2017b]). Further, research suggests auditors will find objective inputs to be more persuasive than subjective inputs (e.g., Kadous, Koonce, and Towry [2005], Joe, Vandervelde, and Wu [2017]). Accordingly, we predict that algorithm aversion will have a greater impact on auditors' judgments (i.e., proposed adjustments will be even smaller) when management uses objective (vs. subjective) inputs to develop their estimates.
-
-We conduct an experiment with 170 audit senior participants, manipulating the source of audit firm-provided evidence (human specialist vs. AI system) and the nature of the inputs used by management (subjective vs. objective) to develop a complex estimate. Participants in all conditions receive the same audit evidence from their own firm's specialist (based on the same underlying inputs) regarding a banking client's allowance for loan losses
-("ALL"). This evidence contradicts management's evidence (i.e., "contradictory evidence") and suggests that the client's ALL is materially understated (i.e., net income is materially overstated). We manipulate the source of the audit firm-provided contradictory evidence as either the in-house valuation group (i.e., human specialist) or the firm's proprietary AI system. Importantly, we use identical language to describe the accuracy and reliability of the audit evidence derived from each firm source. We also manipulate the nature of the inputs used by management. In the subjective inputs condition, management relies heavily on the judgment of loan officers and credit analysts, who use a variety of methods and information
-(e.g., discussions with real estate brokers) to develop estimates for a key parameter in the ALL estimate (i.e., collateral values). In the objective inputs condition, management relies on client-selected, detailed market data
-(i.e., real estate price indices) to update collateral values in a standardized manner. Participants' proposed audit adjustments serve as our dependent measure.
-
-Consistent with our theory-based expectations, auditors recommend smaller proposed adjustments, on average, when firm-provided evidence comes from an AI system versus a human specialist (i.e., exhibiting algorithm aversion). We also find that the effect of algorithm aversion is stronger when management uses inputs that are more objective (vs. subjective) to develop their estimates. Importantly, our results suggest that algorithm aversion could have economically significant implications. On average, mean proposed adjustments are 23% lower in the AI system condition than in the human specialist condition. Furthermore, when management uses inputs that are relatively more objective this difference increases, such that mean proposed adjustments are 43% lower in AI system condition than in the human specialist condition.
-
-We also conduct additional analyses using a moderated mediation model to examine the psychological process through which algorithm aversion affects auditors' adjustment decisions. Mediation results reveal that when auditors receive evidence from an AI system instead of a human specialist, they are more concerned that the firm source (i.e., the AI system) might lack the necessary knowledge and expertise. Consequently, auditors also believe the system's evidence will be less convincing to management. However, these concerns about expertise and the ability to convince management only lead to smaller proposed adjustments when management relies on inputs that are relatively more objective. Overall, these results suggest the effects of algorithm aversion on auditors' adjustment decisions are amplified when management's evidence is more persuasive to auditors (i.e.,
-when evidence is more objective).
-
-Our study makes several important contributions and extends two streams of research. First, we contribute to the growing literature around auditing complex accounting estimates. Measurement uncertainty continues to be a critically important risk for financial reporting stakeholders
-(Bratten et al. [2013], Dennis, Griffin, and Zehms [2019]). Additionally, due to the high degree of measurement uncertainty and subjectivity, appropriately evaluating complex estimates remains a challenge for auditors
-(Cannon and Bedard [2017], Joe, Vandervelde, and Wu [2017]). Recent findings indicate that auditors are willing to discount (and perhaps even ignore) contradictory evidence from valuation specialists (PCAOB [2017a],
-Griffith [2020]). Our findings suggest that receiving evidence from an AI
-system likely exacerbates this auditor tendency to discount contradictory evidence around management's complex estimates. Thus, the adoption of these AI systems could increase the likelihood of auditors accepting their clients' potentially biased estimates, particularly when management develops their estimates using inputs that appear relatively more objective in nature.
-
-Second, we contribute to a growing body of research in psychology and management science that documents individuals' reluctance to rely on computer-generated advice. This study is the first to provide evidence of algorithm aversion in auditors' judgments, demonstrating that this phenomenon manifests even for experienced professionals who have strong incentives to rely on the related computer-generated evidence. We also show that, at least in the audit setting, the effects of algorithm aversion are partly attributable to source credibility (i.e., expertise) concerns. We also extend the algorithm aversion literature by demonstrating that the characteristics of competing information sources can influence the extent to which algorithm aversion affects individuals' judgments. Specifically, when a competing information source appears more objective (i.e., less biased) the effects of algorithm aversion are amplified. Our findings have interesting implications for other, non-audit settings in which AI models are beginning to emerge, such as forecasting, lending, and financial reporting (e.g., Ding et al. [2020], Chen et al. [2021], Liu [2021]). These studies find that AI
-models can outperform human-based models in these settings. Our results highlight that, beyond performance concerns, care and attention in implementing AI is warranted because getting professionals to rely on these AI-based models can be a significant barrier to realizing the benefits of this technology.
-
-Our findings are especially relevant to audit firms and regulators. Although the audit environment is quickly evolving due to technological advancement (Raphael [2017], Tysiac [2017]), auditing standards do not yet contemplate the implications of autonomous and unsupervised AI systems (e.g., PCAOB [2020]). Therefore, our investigation of narrow AI in this setting provides insights that are relevant to the current state of audit firm methodologies and auditor regulation. We provide evidence that the implementation of AI systems could alter auditor judgments in a way that inadvertently undermines audit quality. Though it is important to evaluate the reliability and appropriateness of new audit tools, it is equally important to consider how auditors will incorporate evidence from these tools on their engagements.
-
-## 2. Theory And Hypothesis Development 2.1 Background
-
-Audit firms are making significant investments in advanced technologies such as data analytics, drones, and robotic process automation and have already begun implementing these technologies to assist auditors with relatively basic and routine audit tasks, such as confirmation testing and inventory observations (PwC [2017], Deloitte [2018b], Cooper et al. [2019],
-Austin et al. [2020], Christ et al. [2021]). The most advanced technology under consideration is AI, which firms believe can assist auditors on some of the most challenging audit tasks (Murphy [2017]). Currently, the goal is that these AI systems will make the same judgments that auditors and human specialists would, but through the use of machine learning to synthesize and process large amounts of diverse and unstructured data. However, consistent with concerns about the potential for increased regulatory scrutiny and legal liability associated with the use of more advanced audit technologies (e.g., Christ et al. [2021], Emett et al. [2021]), firms are not yet considering the use of fully autonomous, unsupervised AI systems to produce audit evidence. Rather, firms describe their current ambitions as
-"narrow AI," which performs specific tasks within certain programmable parameters (PwC [2017]). For example, KPMG is developing an AI system to help auditors evaluate commercial loan grades (KPMG [2016]). As audit firms continue developing AI systems to produce evidence around complex estimates—a task traditionally performed by human specialists—it is critical to understand how auditors respond to evidence provided by these systems.2 2.2 contradictory audit evidence and algorithm aversion When evaluating complex estimates, auditors must consider the evidence from their firm's specialists in conjunction with the evidence provided by management to form an opinion about whether the client's estimates are fairly stated (PCAOB [2010, 2014a, b], Hanson [2012], CPAB [2015a, b],
-IFIAR [2015], PCAOB [2017a]). Due to the high degree of uncertainty associated with complex estimates, auditors often receive evidence from their firm specialists that contradicts management's estimates (Griffith, Hammersley, and Kadous [2015], Cannon and Bedard [2017], Griffith [2020]).
-
-When firm specialists provide evidence that contradicts management's estimates, auditors must use their professional judgment to incorporate the competing evidence into their decisions (PCAOB [2015, 2017a, b]). The rapid advancement and planned use of audit technologies point to a future in which AI systems are a key source of contradictory audit evidence. Although firms anticipate that these AI systems will improve audit outcomes, theory suggests that auditors will respond to their own firm's evidence differently when it comes from a system instead of a human specialist.
-
-Specifically, a growing body of research across multiple fields (psychology, medicine, and management science) indicates that individuals are
-
-2 It is important to note that AI systems differ from decision aids of the past in the degree to which these systems can incorporate diverse, unstructured data sets, and the degree to which they can adapt over time based on those data sets (i.e., machine learning). AI systems are increasingly able to simulate human judgment–and auditors are expected to incorporate the evidence produced into their decisions. Thus, prior research examining auditors' use of decision aids (e.g., checklists to promote adherence to accounting standards or firm policies) on fraud risk assessments or internal controls testing tasks does not offer clear implications for auditor's use of AI (e.g., Kachelmeier and Messier [1990], Messier [1995], Glover, Prawitt, and Spilker [1997], Anderson, Moreno, and Mueller [2003], Asare and Wright [2004]).
-susceptible to "algorithm aversion"–a tendency to rely more heavily on information produced by a human source than information produced by a computer source (e.g., Promberger and Baron [2006], Önkal et al. [2009],
-Eastwood, Snook, and Luther [2012], Dietvorst, Simmons, and Massey
-[2015], Yeomans et al. [2019]). For example, Önkal et al. [2009] show that, when forecasting stock prices, individuals are more likely to discount computer-generated input than human input, although the information from the two sources is otherwise identical. Similarly, when predicting student performance, individuals prefer to rely on their own predictions (or predictions from another person) rather than predictions produced by an algorithm, even after receiving feedback that demonstrates the algorithm's predictions are consistently more accurate than their own (Dietvorst, Simmons, and Massey [2015]).
-
-Recent research also documents algorithm aversion effects in highly subjective settings (Castelo, Bos and Lehmann [2019], Yeomans et al.
-
-[2019]). For example, Yeomans et al. [2019] show that although an algorithmic joke recommendation system outperforms human recommenders, individuals are reluctant to rely on advice from the system when making recommendations to others and when receiving recommendations for themselves. Importantly, Castelo, Bos, and Lehmann [2019] posit that algorithm aversion effects occur in subjective task settings because individuals believe algorithms lack the necessary abilities (e.g., human intuition)
-to perform subjective tasks effectively. Although existing research has yet to fully explain why individuals are susceptible to algorithm aversion, the Castelo, Bos and Lehmann [2019] findings suggest that algorithm aversion effects might arise from beliefs that algorithmic information sources are inherently less capable than human sources. Informed by the algorithm aversion literature, we expect auditors will more heavily discount audit evidence produced by AI systems than evidence produced by human specialists. Moreover, consistent with Castelo, Bos, and Lehmann [2019],
-we theorize that this discounting effect is due, in part, to auditors' beliefs that AI systems lack the necessary capability (i.e., knowledge and expertise) to evaluate complex estimates. These capability concerns might lead to the additional concern that management will be unwilling to adjust their estimates based on the contradictory evidence provided by an AI system.
-
-Consequently, auditors might be more hesitant to propose and negotiate adjustments related to management's complex estimates.
-
-Individuals tend to place less weight on information sources that are perceived to be less credible (e.g., lower expertise; Birnbaum [1976],
-Birnbaum, Wong, and Wong [1976], Birnbaum and Mellers [1983], Hirst
-[1994], Griffith [2018]).3 Furthermore, the Birnbaum and Stegner [1979]
-scale-adjustment model posits that, much like a traditional balance scale,
-
-3 Source credibility theory identifies objectivity and expertise as key factors that increase the perceived credibility of a source (Hovland, Janis, and Kelley [1966], O'Reilly and Roberts
-[1976], Birnbaum and Stegner [1979], Pornpitakpan [2004]). Audit research documents that
-discounting one source's information causes a proportional *increase* in the weight placed on *competing* information. For example, Birnbaum and Stegner [1979] ask individuals to determine the value of a used car based on estimates provided by two sources, each of whom had previously examined the car. Results indicate that a lower level of expertise (i.e., a novice mechanic vs. an expert mechanic) causes individuals to more heavily discount the estimated value from that source and more heavily weight the estimated value provided by the second source. Applying the Birnbaum and Stegner [1979] scale-adjustment model, and theory on algorithm aversion, to the context of auditing complex estimates implies auditors will discount firm-provided contradictory evidence more heavily (and thus more heavily weight management-provided evidence) when that evidence comes from an AI system instead of a human specialist. Thus, the adoption of AI systems could have an unfavorable effect on auditor judgments. For example, auditors' consideration of the available evidence (from both management and firm sources) determines their beliefs about whether and to what extent management's estimates should be adjusted. Placing more weight on management-provided evidence and less weight on firm-provided evidence results in auditors being more accepting of management's preferred estimates, leading to smaller proposed audit adjustments. Formally, we predict the following:
-H1: Auditors will propose smaller adjustments to management's estimates when evidence contradicting management's preferences is received from a firm AI system instead of a human specialist.
-
-2.3 objectivity and the amplification of algorithm aversion Complex accounting estimates are inherently subjective because they are forward-looking, and managers can incorporate a variety of inputs and assumptions that are difficult to verify (Bratten et al. [2013]). However, the nature of estimation inputs can vary, with some inputs appearing more objective than others (Kadous, Koonce, and Towry [2005], FASB [2010], Griffin [2014], PCAOB [2017b]). For example, inputs based on external data sources appear more objective than inputs based on management's projections and assumptions. Research suggests that accounting professionals have a strong preference for well-defined, more objective evidence/tasks over subjective and ambiguous evidence/tasks (Bamber, Snowball, and Tubbs [1989], Zimbelman and Waller [1999], Kadous, Koonce, and Towry
-
-auditors consider expertise and competence to be key source credibility factors when deciding whether to rely on others' work (e.g., Bamber [1983], Griffith [2018]). Building on this, our study examines whether auditors weight their own firm's independent evidence differently depending on whether the evidence source is a firm-employed human specialist or a firmdeveloped AI system. Given that these sources are equivalently independent from the client, we expect that differences in auditors' weighting of evidence from human specialists versus AI systems will more strongly reflect concerns around expertise, relative to concerns around objectivity.
-[2005], Joe, Vandervelde, and Wu [2017]). Furthermore, audit standards identify a higher degree of subjectivity in inputs to management's estimates as an indicator of potential bias (PCAOB [2017b]). Consistent with this regulatory caution, research finds that auditors are less likely to adjust management estimates that are more precise and objective in nature (Nelson, Elliott, and Tarpley [2002], Nelson, Smith, and Palmrose [2005], Griffin
-[2014]). Relatedly, Kadous, Koonce, and Towry [2005] find that quantification positively influences the persuasiveness of accounting managers' proposals through greater perceived competence of the preparer, but that the influence of quantification on persuasiveness only occurs when proposals are based on objective (rather than subjective) inputs. Overall, these findings suggest auditors prefer objective information and will be more likely to agree with management's estimates when those estimates are based on inputs that are more objective in nature.
-
-Importantly, Kadous, Koonce, and Towry [2005] also demonstrate that objectivity can interact with other credibility factors (i.e., perceived competence). Relatedly, the Birnbaum and Stegner [1979] scale-adjustment model demonstrates that, when there are two competing information sources, the expertise of one source and the perceived objectivity of the competing information source interactively affect judgments. Our first hypothesis follows the findings of Birnbaum and Stegner [1979] that a decrease in one source's expertise (i.e., expert vs. novice mechanic) can cause a trade-off between the two information sources. However, their results also indicate that the trade-off created by a decrease in the first source's expertise is *even greater* when the second source appears more objective. For example, a car buyer will discount a novice mechanic's car value estimate even more heavily (relative to an expert mechanic) when the competing second source is believed to be more objective (e.g., blue book value vs.
-
-friend of the seller).
-
-Given that algorithm aversion is likely due, in part, to concerns about capability or expertise (e.g., Castelo, Bos, and Lehmann [2019]), the findings of Birnbaum and Stegner [1979] suggest that algorithm aversion effects will be amplified (i.e., even greater) when there is a competing source that appears relatively more objective. Thus, although H1 suggests that receiving contradictory evidence from an AI system (instead of a human specialist)
-will cause auditors to propose smaller adjustments, theory further suggests this effect will be *stronger* when management uses inputs that are relatively more objective (vs. subjective) in nature, causing proposed adjustments to be even smaller.4 This interaction prediction is formalized as follows:
-H2: Receiving contradictory evidence from an AI system instead of a human specialist will reduce proposed adjustments to a greater extent when management's estimates are based on inputs that are relatively more objective than subjective.
-
-4 Figure 1 depicts the interactive effect suggested by H1 and H2.
--e 
-
-
-
-
-![./output_combined_images/image_1.png](./output_combined_images/image_1.png)
-
-Fig 1.—Illustration of predictions. H1 predicts that auditors will propose smaller adjustments to management's estimates when evidence contradicting management's preferences is provided by an AI system compared to a human specialist
-(i.e., algorithm aversion). H2 further proposes that the effect predicted in H1 will be stronger when management uses inputs that are relatively more objective (vs. subjective) in nature, causing auditors to propose smaller proposed adjustments. Although not formally predicted, regardless of firm source, we expect when management develops their estimate based on objective inputs, this will increase the perceived objectivity of management's estimate, causing auditors to propose smaller adjustments. In conjunction, H1 and H2 suggest an ordinal interaction will occur.
-
-|                                                                                                                     | TABLE                                                 | 1   |
-|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|-----|
-|                                                                                                                     | Demographic Profile of Participants                   |     |
-| Mean public accounting experience (in years)                                                                        | 4.02                                                  |     |
-| Percentage of participants who have experience with banking clients                                                 | 30%                                                   |     |
-|                                                                                                                     | Average percentage of time working on banking clients | 44% |
-| Percent of participants' time working on public clients                                                             | 50%                                                   |     |
-| Likelihood of providing input for proposed audit adjustments                                                        | 5.10                                                  |     |
-| (1 = "Not at All Likely" and 7 = "Highly Likely") Percentage of participants who have experience using an AI system | 4%                                                    |     |
-
-## 3. Methods 3.1 Participants
-
-One hundred and seventy audit seniors from two Big 4 firms participated in this study. Table 1 presents participants' demographic data. Participants have an average of 4.02 years of public accounting experience (SD = 1.19),
-with a range of 1–10 years.5 Importantly, 96% of participants report three years or more of public accounting experience.6 Additionally, 30%
-of participants in our sample report experience working on audits of banking clients, indicating that a fair portion of our sample has relevant industry-specific experience. Participants report spending approximately 50% of their time working on public clients and are relatively likely to provide input into decisions regarding proposed audit adjustments in a typical year (mean of 5.10 on a scale from 1 = "Not at All Likely" and 7
-= "Highly Likely"). Overall, these participants have experience consistent with auditors who are typically involved with auditing complex estimates
-(e.g., Griffith, Hammersley, and Kadous [2015], Griffith et al. [2015]).
-
-Very few participants (4%) report experience working with AI systems on an audit engagement, consistent with our understanding that audit firms have not yet fully implemented these systems.
-
-## 3.2 Experimental Audit Case
-
-Prior to conducting our study, we gathered extensive information to fully understand audit firms' plans and intentions around the use of AI.
-
-Specifically, we consulted with senior audit partners at different international accounting firms, including a partner that specializes in auditing banks. Each of these partners indicated that their respective firm has a particularly strong interest in developing AI to replicate the judgments that auditors and specialists' make on financial services engagements. Notably, we consulted with the National Innovation Leader of a Big 4 audit firm.
-
-This Innovation Leader described their firm's development of a system that can be used to produce loan grades for portfolios of commercial real estate loans. Additionally, after designing our experiment, senior partners at multiple Big 4 firms reviewed and validated our experimental context and instrument.
-
-In our experiment, participants assume the role of an in-charge auditor on the financial statement audit of Heartland National Bank. Participants first receive background information about their hypothetical audit firm (Clark & Miller, LLP) and Heartland's allowance for loan losses ("ALL"). Participants then receive information about the methodology that Clark & Miller uses to evaluate clients' ALL calculations. In all conditions, Clark
-& Miller's methodology involves developing independent loan grades.
-
-5 We obtained institutional review approval for this study. We received 199 complete responses from experienced audit senior associates. We also received three additional responses from individuals who indicated they had less than one year of public accounting experience, which we omit from the study because these individuals do not possess the requisite experience for the experimental task. We also exclude 29 responses from participants who provided incorrect answers to the manipulation check questions. See subsection 4.4 for additional discussion regarding these manipulation check failures. 6 Reported inferences about hypotheses are unchanged if data from participants with less than three years of experience are excluded.
-We manipulate the source of these independent loan grades as either the firm's in-house human valuation specialist or the firm's AI system (i.e., the Source manipulation described later in subsection 3.3).
-
-Following this, participants receive information about the current audit of Heartland's ALL. Differences between Heartland's loan grades and Clark & Miller's independent loan grades indicate a potential audit difference that would reduce earnings by $28 million. For simplicity, we do not provide participants with the ALL balance. Instead, in all conditions, the experimental materials state that the potential audit difference is greater than the materiality threshold, indicating this issue warrants significant attention. Case details indicate that these differences relate to disagreements about estimated collateral values, which are a key parameter in the ALL calculation. Due to rapidly increasing real estate prices, evidence from both management and the audit firm indicates that many of the appraisals used to determine collateral values are "stale" (i.e., outdated) as of the balance sheet date—and therefore need to be adjusted upward. We manipulate the nature of the inputs that Heartland's management uses for these adjustments as relatively more objective or relatively more subjective (i.e., the Nature of Inputs manipulation described later in subsection 3.3) to roll forward collateral value estimates. However, in all conditions, Heartland adjusts these collateral values more aggressively than Clark & Miller, resulting in higher estimated collateral values.
-
-Participants then view side-by-side reports from Clark & Miller and Heartland summarizing the respective methodologies that each uses to rollforward collateral values from the appraisal date to the balance sheet date.
-
-Ultimately, Heartland's methodology results in significantly higher collateral values than Clark & Miller's methodology. In all conditions, management engages in a benchmarking exercise to evaluate how their collateral value updates compare to national price changes. Although details seeded throughout the case indicate that there are three highly reputable price indices that can be used, in all conditions, management takes the same aggressive approach in its benchmarking and relies only on the two most favorable price indices. In contrast, Clark & Miller's specialist report primarily focuses on the two most conservative price indices. Therefore, although Heartland's management asserts that their estimated collateral value increases are reasonable based on their analysis, there are subtle indications that management could have conducted this benchmarking exercise in an optimistically biased manner, and relatedly could have estimated collateral values in a biased manner (i.e., resulting in a lower ALL balance and higher earnings).
-
-Following these reports, participants view a comprehensive summary of the issue. The last part of this summary informs participants that Heartland management is confident in its methodology and prefers not to make an (income-decreasing) adjustment to the ALL. Immediately following this summary, participants recommend a proposed adjustment.7 Proposed adjustments serves as our dependent measure because this judgment reflects the auditor's consideration and relative weighting of the available evidence (from both management and firm sources). Finally, participants complete a postexperiment questionnaire.
-
-## 3.3 Independent Variables
-
-We use a 2 × 2 between-subjects experimental design, manipulating the source of an audit firm's evidence around a complex estimate (i.e., "*Source*")
-and the nature of the inputs used by management to generate the estimate
-(i.e., "*Nature of Inputs"*). We manipulate *Source* at two levels: human specialist and AI system. In the human specialist condition, the audit firm employs an internal group of human specialists who develop independent loan grades for individual loans. In the AI system condition, we inform participants that Clark & Miller utilizes a proprietary AI system called the "Amadeus System" that develops these grades. The description of the firm's loan grade calculations and the resulting valuation reports (i.e., audit evidence) from these two sources are identical in both conditions. For example, in both *Source* conditions the firm specialist (i.e., the human specialist or the AI system)
-considers the specific property-type and location when relying on detailed market data (i.e., price indices). Additionally, the firm specialist uses other market indicators (e.g., vacancy rates, rent levels, new construction, and comparable sales) to further adjust collateral values.
-
-Importantly, while AI systems can use different information and methodologies than human specialists, we made the conscious decision to hold the experimental language around this methodology constant across conditions in order to maintain experimental control. Specifically, we designed identical wording to describe the method of updating collateral values in both *Source* conditions, such that the language could be interpreted differently when attributed to a human specialist versus an AI system. Our design choices were informed and validated through the consultations with senior audit partners, as described in subsection 3.2. As a result, our experiment achieves experimental realism while maintaining internal validity
-(Swieringa and Weick [1982], Peecher and Solomon [2001]).
-
-When describing the sources of firm evidence, we include statements in both treatments to equalize the acceptability of the two sources and legitimize the AI system in the same way that audit firms legitimize human specialists in practice (see the appendix). For example, we inform participants in both *Source* conditions that the audit firm considers the loan grades developed by the respective source to be an approved source of audit evidence. This information helps familiarize participants with the respective
-
-7 Senior leaders at a participating firm indicated that experienced senior associates are qualified to recommend proposed adjustments and that partners would likely consider these recommendations in their own decisions. For brevity, we hereafter refer to this measure as "proposed adjustments."
-source and ensures that observed effects are due to the human/nonhuman nature of the information source rather than reluctance to deviate from more traditional firm methodologies.
-
-Next, we manipulate the *Nature of Inputs* (used by management) at two levels: objective inputs and subjective inputs (e.g., Kadous, Koonce, and Towry [2005]).8 In the objective inputs condition, Heartland's management relies on detailed, verifiable market data (i.e., real estate price indices) to roll forward collateral value estimates. In the subjective inputs condition, management relies on the judgment of its loan officers and credit analysts to update collateral values using a variety of methods. For example, these loan officers and credit analysts can update the most recent appraised value based on their own research (e.g., comparable sales, local market trends, discussions with real estate brokers).
-
-It is important to note that while subjective inputs can provide management with more degrees of freedom to introduce bias than objective inputs (e.g., Choudhary [2011], Ramanna and Watts [2012], Bratten et al.
-
-[2013]), management can effectively bias its collateral value estimates in both *Nature of Inputs* conditions. Specifically, in the objective inputs condition, adding, replacing, or removing a single price index can materially alter the ALL calculation at the portfolio level. In the subjective inputs condition, systematically biased judgments at the individual loan level could accumulate to a material misstatement of the ALL.9
-
-## 4. Results 4.1 Manipulation Checks
-
-We evaluate our *Source* manipulation by asking participants whether the audit team received input from the firm's internal valuation group or the Amadeus system. Only 11 participants incorrectly identified the *Source* of the audit firm's evidence. With regard to our *Nature of Inputs* manipulation, we varied whether management relies on the systematic application of detailed market data (i.e., objective inputs) or on the judgment and expertise of loan officers and/or credit analysts (i.e., subjective inputs). Accordingly, we asked participants to identify management's methodology and 18 additional participants were unable to do so correctly. As these 29 participants did not properly attend to our manipulations, we eliminate their responses from our analyses, resulting in a final sample of 170 participants.10
-
-8 The *Nature of Inputs* manipulation relates only to inputs used by Heartland management.
-
-The audit firm (Clark & Miller) uses the same inputs in all conditions. 9 Research consistently finds that management uses the unverifiable discretion afforded to them in the accounting standards to estimate fair values in a way that opportunistically inflates earnings and stock prices (e.g., Benston [2006], Hilton and O'Brien [2009], Dechow, Myers, and Shakespeare [2010], Choudhary [2011], Ramanna and Watts [2012], Bratten et al.
-
-[2013], Li and Sloan [2017]). 10 We eliminate these responses because we view these multiple-choice questions as straightforward measures of participants' attentiveness to the experimental materials (both
-To further examine the effectiveness of our *Nature of Inputs* manipulation, we ask participants, "to what extent do you believe management's process for estimating updated collateral values was objective versus subjective?"
-(reverse-coded to 1 = "Very Subjective" and 7 = "Very Objective"). Participants in the objective inputs condition reported that management's estimation process was more objective (i.e., less subjective), on average, than participants in the subjective inputs condition (3.89 vs. 3.02, respectively; p < 0.01, one-tailed, untabulated), further indicating that *Nature of Inputs* is successfully manipulated in our final sample.11 We also ask participants whether their audit firm views the respective Source as a "credible source of audit evidence" (1 = "Strongly Disagree" and 7 = "Strongly Agree"). Participants in the human specialist and AI system conditions report similarly high levels of agreement with that statement
-(5.92 vs. 5.61, respectively; p > 0.10, two-tailed, untabulated). Further, mean responses in both conditions are significantly higher than the scale midpoint (p < 0.01, two-tailed, untabulated). Thus, participants in both *Source* conditions were similarly assured that their respective source was deemed reliable and approved by the firm.
-
-## 4.2 Tests Of Hypotheses
-
-We test our hypotheses using a 2 × 2 analysis of variance (ANOVA) model with auditors' proposed adjustments ("*Proposed*") as the dependent variable and *Source* and *Nature of Inputs* as independent variables. Table 2, panel A, presents descriptive statistics for *Proposed*, Table 2, panel B, reports ANOVA
-results, and Figure 2 provides a graphical illustration of these results.12 H1 predicts that auditors will propose smaller adjustments to management's estimates when their own firm's contradictory evidence comes from an AI system versus a human specialist. Furthermore, H2 predicts that this effect will be larger when management uses inputs that are relatively more objective (vs. subjective) to develop their estimates. Consistent with H1, we find a significant main effect of Source on *Proposed* (F1,166 = 11.29, p < 0.01, one-tailed), indicating that proposed adjustments are, on average, higher in the human specialist condition than in the AI system condition. As indicated in Table 2, panel A, the mean for *Proposed* is only $16.12 million in the AI system condition versus a mean of $21.02 million in the human
-
-manipulations are highly salient and appear in multiple places throughout the instrument).
-
-We discuss the implications of these manipulation check failures in subsection 4.4. 11 For directional predictions, we report p-values that are one-tailed equivalents in the text. 12 We perform the Levene [1960] test for equality of variances and the results are not significant (F1,166 = 1.93; p = 0.13, two-tailed), indicating that the assumption of homogeneity of variances has not been violated in our data. However, consistent with the nature of proposed audit adjustment decisions, the Shapiro–Wilk test indicates that our *Proposed* variable is not normally distributed (W = 0.94, p < 0.01, two-tailed; untabulated). We conduct a nonparametric bootstrapping procedure using the Process macro (model 1, untabulated) to examine whether our results are robust to the potential implications of this nonnormality, and our inferences are unchanged.
-
-| Proposed Audit Adjustments                                                                           |                |        |       |       |
-|------------------------------------------------------------------------------------------------------|----------------|--------|-------|-------|
-| Panel A: Descriptive statistics: mean (standard error) [n] cell Human Specialist AI System           | Overall        |        |       |       |
-| Subjective inputs                                                                                    | 22.13          | 19.94  | 21.06 |       |
-| (1.52)                                                                                               | (1.55)         | (1.02) |       |       |
-| [47]                                                                                                 | [45]           | [92]   |       |       |
-| A                                                                                                    | C              |        |       |       |
-| Objective inputs                                                                                     | 19.81          | 11.20  | 15.95 |       |
-| (1.58)                                                                                               | (1.76)         | (1.35) |       |       |
-| [43]                                                                                                 | [35]           | [78]   |       |       |
-| B                                                                                                    | D              |        |       |       |
-| Overall                                                                                              | 21.02          | 16.12  | 18.72 |       |
-| (1.07)                                                                                               | (1.29)         | (0.85) |       |       |
-| [90]                                                                                                 | [80]           | [170]  |       |       |
-| Panel B: Conventional ANOVA Source of Variance                                                       | Sum of Squares | df     | F     | pa    |
-| Source                                                                                               | 1,223.91       | 1      | 11.29 | <0.01 |
-| Nature of Inputs                                                                                     | 1,283.77       | 1      | 11.84 | <0.01 |
-| Source × Nature of Inputs                                                                            | 433.25         | 1      | 4.00  | 0.05  |
-| Error                                                                                                | 17,997.05      | 166    |       |       |
-| Panel C: Simple effects of source                                                                    | df             | t      | pb    |       |
-| Across subjective inputs: Cell A > Cell C                                                            | 1, 166         | 1.01   | 0.16  |       |
-| Across objective inputs: Cell B > Cell D                                                             | 1, 166         | 3.63   | <0.01 |       |
-| The dependent variable ("Proposed") is the amount of participants' proposed audit adjustments to the |                |        |       |       |
-
-Across subjective inputs: Cell A > Cell C 1, 166 1.01 0.16 Across objective inputs: Cell B > Cell D 1, 166 3.63 <0.01 The dependent variable ("*Proposed*") is the amount of participants' proposed audit adjustments to the ALL on a scale from $0 million (no adjustment) to $28 million (full adjustment of the difference between the firm's estimate and the client's estimate). We manipulate, between participants, the source of the audit firm's evidence ("*Source*") at two levels (Human Specialist vs. AI System). We also manipulate, between participants, the nature of inputs that management uses to develop their estimate ("*Nature of Inputs*") at two levels (subjective inputs vs. objective inputs). aAs ANOVA F-tests are nondirectional, we report two-tailed p-values in panel B. Consistent with our directional predictions, we report one-tailed equivalent p-values in the text. We derive these one-tailed equivalent p-values from the ANOVA contrast t-statistics, which are equivalent to the square roots of the respective F-statistics (see, e.g., Kachelmeier and Williamson [2010]; Piercey [2011]; Saiewitz and Kida [2018]). bThe p-values in panel C are one-tailed, consistent with our directional predictions.
-
-specialist condition, yielding a $4.90 million difference across conditions.13 Thus, we find that, on average, proposed adjustments are 23% lower in the AI system condition versus the human specialist condition and 14% lower than the overall sample mean of $18.72 million.
-
-Consistent with H2, we find a significant interaction between *Source* and Nature of Inputs (F1,166 = 4.00, p = 0.02, one-tailed). To further evaluate this interaction, we also examine the simple effects of *Source*. As reported in
-
-13 Relative to the potential audit difference of $28 million, the mean proposed adjustment in the AI system condition ($16.12 million) is about 58% of the maximum potential adjustment amount. In contrast, the mean proposed adjustment in the human specialist condition
-($21.02 million) is about 75% of the maximum potential adjustment.
+服務科學的是一個「行」的科學,強調「做中學」。服務是要能「透過自己的做到,成為 別人的需要」。透過實踐力行來學習服務科學的兩大核心觀念:服務系統觀與價值共創論,是 進入服務科學領域的墊腳石。大山背博物館構想的提出與跨領域團隊的協同合作,在台灣服 務科學學會的支持下,於 2014 年中租用了廢校多年的豐鄉國小所修建的大山背客家生態人文 會館,作為大山背博物館的籌備基地,並由清大服科所研究生莊凱詠先生創辦的「大山北月」
+(http://www.bighillnorthmoon.tw/cafe/)經營管理,期許成為新竹台三大道的策展人,連結在地 價值與擴展社會資源網絡,推動服務與社會創新。 大山背博物館的天地人生的四大主題 大山背博物館服務系統以公益平台為載具,承
 
 ![./output_combined_images/image_2.png](./output_combined_images/image_2.png)
 
-Fig 2.—Observed effects of source and nature of inputs on proposed audit adjustments. See notes to Table 2 for descriptions of dependent variable and independent factors.
-Table 2, panel C, the simple effect of *Source* is significant in the objective inputs condition (t166 = 3.63, p < 0.01, one-tailed). Although the simple effect of *Source* in the subjective inputs condition is not statistically significant (t166 = 1.01, p = 0.16, one-tailed), the overall mean pattern depicted in Figure 2 is visually consistent with our expectations (see Figure 1). As noted earlier, the mean proposed adjustment is $4.90 million lower in the AI system condition than in the human specialist condition. However, this mean difference increases to $8.61 million when management's inputs are more objective ($19.81 million vs. $11.20 million) and decreases to $2.19 million difference when management's inputs are more subjective ($22.13 million vs. $19.94 million), consistent with the predicted interaction effect. Notably, the mean proposed adjustment in the AI system/objective inputs condition ($11.20 million) is 43% lower than the mean in human specialist/objective inputs condition ($19.81 million) and 40% lower than the overall sample mean ($18.72 million). Given that participants were instructed that the $28 million audit difference was material, these differences are quite significant and suggest that algorithm aversion can have a meaningful influence on amounts reported within the financial statements. Collectively, our results provide support for H1 and H2.14
+載農業永續、低碳交通、文化觀光、社會創新
 
-14 We gather data on participants' public accounting experience and position, as well as their specific experience with public clients, banking clients, artificial intelligence, and proposed adjustment decisions. We run several models to examine whether any of our experience
+![./output_combined_images/image_1.png](./output_combined_images/image_1.png) 等天地人生的服務創新。
 
-## 4.3 Moderated Mediation Analyses
+## 【學習目標】
 
-In developing our hypotheses, we draw on theory that suggests algorithm aversion might be partially attributable to concerns about the capabilities (e.g., expertise) of AI systems (Birnbaum and Stegner [1979], Castelo, Bos, and Lehmann [2019]). This is particularly plausible in the audit setting because source expertise/competence is a key consideration for auditors when evaluating audit evidence (Bamber [1983], Hirst [1994], Griffith
-[2018]). Furthermore, in the audit setting, auditors must use the available audit evidence to "justify proposed adjustments and persuade management that the current estimate is unreasonable" (Griffith [2018, p. 178]). Thus, expertise concerns about the firm's source of contradictory evidence could lead auditors to worry that they might have difficulty convincing management to adjust their estimate based on the contradictory evidence. In this section, we provide additional analyses to demonstrate that these mechanisms drive the effects we observe in our tests of H1 and H2. Accordingly, we examine whether the effect of Source on *Proposed* operates sequentially through participants' concerns about the firm specialist's expertise (i.e.,
-Source Expertise Concern) and their perceptions of the likelihood that management can be convinced to book an adjustment based on the specialist's evidence (i.e., *Convincing to Management*).15 Additionally, because our theory predicts the effect of algorithm aversion will be amplified (stronger)
-when management uses inputs that are relatively more objective (vs. sub-
+1. 了解服務科學之跨領域學科內容與關聯。 2. 了解服務科學的學習歷程。 3. 了解服務科學領域所處的典範移轉的階段。 4. 了解服務科學國內外學術與產業社群的發展階段。 5. 了解服務科學所植基的服務人文與哲學。
 
-measures influence the effects we observe and find that this is not the case. First, we run a series of six 2 × 2 analysis of covariance (ANCOVA) models that control for each of these demographic measures. The main effects and interactions in all models (untabulated) have the same significance levels as the main effects and interaction in our main analysis. We then adapt the 2 × 2 ANOVA model from our main analyses (i.e., with proposed adjustments as the dependent variable) and run six new models, each with a three-way interaction between our two manipulated variables and one of the respective demographic measures (where demographic measures are mean-centered continuous variables). In all of these models, the three-way interaction is insignificant (all two-tailed p-values are greater than 0.35). Furthermore, the main effects of our two manipulated variables, as well as the predicted two-way interaction between these variables, remain significant at the same levels as in our main analysis. Collectively, these sensitivity tests indicate that none of our experience measures influence the effects we observe. In addition, we run a series of models on the full sample (n = 199) to test whether there are systematic demographic differences across conditions, despite our use of random assignment. We find no significant main effects or interactions in any of these models, indicating that none of our demographic measures differ systematically across conditions (all p-values >
-0.19, two-tailed). 15 Both process measures (i.e., *Source Expertise Concern* and *Convincing to Management*) are collected as part of the post experiment questionnaire. To capture participants' perceptions of Source Expertise Concern, we asked participants to rate the extent to which they were concerned about the firm specialist's expertise (1 = "Not at All Concerned" and 7 = "Very Concerned").
+1. Understand the constituent subjects of service science and their interconnections. 2. Understand the learning paths of service science. 3. Get updated of the stages of paradigm shifting of service science. 4. Get updated of the progressive development of the communities of academics and practice.
 
-To measure *Convincing to Management*, we asked participants to assess the likelihood that management could be convinced to adjust an estimate based on evidence provided by the firm specialist (1 = "Highly Unlikely" and 7 = "Highly Likely"). One participant did not respond to the *Convincing to Management* measure, and thus, reported mediation analyses include 169 observations.
-190 b. p. commerford, s. a. dennis, j. r. joe, and j. w. ulla
+5. Understand the embedded humanity and philosophy of service science.
 
-| TABLE                                                                                        | 3       |        |      |
-|----------------------------------------------------------------------------------------------|---------|--------|------|
-| Descriptive Statistics for Mediator Variables                                                |         |        |      |
-| Panel A: Source Expertise Concern: mean (standard error) [n] cell Human Specialist AI System | Overall |        |      |
-| Subjective inputs                                                                            | 2.89    | 4.16   | 3.51 |
-| (0.20)                                                                                       | (0.21)  | (0.15) |      |
-| [47]                                                                                         | [45]    | [92]   |      |
-| A                                                                                            | C       |        |      |
-| Objective inputs                                                                             | 2.90    | 4.63   | 3.69 |
-| (0.21)                                                                                       | (0.24)  | (0.19) |      |
-| [42]                                                                                         | [35]    | [77]   |      |
-| B                                                                                            | D       |        |      |
-| Overall                                                                                      | 2.90    | 4.36   | 3.59 |
-| (0.15)                                                                                       | (0.16)  | (0.12) |      |
-| [89]                                                                                         | [80]    | [169]  |      |
-| Panel B: Convincing to Management: mean (standard error) [n] cell Human Specialist AI System | Overall |        |      |
-| Subjective inputs                                                                            | 3.96    | 3.38   | 3.67 |
-| (0.22)                                                                                       | (0.23)  | (0.15) |      |
-| [47]                                                                                         | [45]    | [92]   |      |
-| A                                                                                            | C       |        |      |
-| Objective inputs                                                                             | 3.38    | 2.66   | 3.05 |
-| (0.23)                                                                                       | (0.26)  | (0.19) |      |
-| [42]                                                                                         | [35]    | [77]   |      |
-| B                                                                                            | D       |        |      |
-| Overall                                                                                      | 3.69    | 3.06   | 3.39 |
-| (0.16)                                                                                       | (0.17)  | (0.12) |      |
-| [89]                                                                                         | [80]    | [169]  |      |
+## 2.1 導論
 
-jective), we also examine whether and how this sequential indirect effect on auditors' proposed adjustments differs depending on the nature of management's inputs (i.e., moderated mediation). We present descriptive statistics for *Source Expertise Concern* and *Convincing to Management* in Table 3, panels A and B, respectively.
+普遍認知跨領域學科內容的服務科學,在面對全球化的經濟與科技化的產業與社會環 境,有其發展的時代性。本章介紹在國內外服務科學領域發展的進程上,學科內容的範疇以 及培養服務科學與創新人才的學習歷程。同時,根據孔恩博士(Kuhn, 1996)所著的《科學 革命的結構》一書提供的典範轉移架構,分析服務科學的典範移轉,以及服務科學的學術與 實務社群發展的現況,邀請有志於服務科學領域的研究、教育、實務人才的參與。回應服務 科學發展的終極目標為增進社會幸福與永續發展,本章以人文與哲學闡述服務科學發展的基 礎:服務人文。
 
-Following the procedures described by Hayes [2018], we conduct a moderated mediation analysis using the SPSS PROCESS macro (Model 89) with participants' evaluations of *Source Expertise Concern* and *Convincing to Management* as serial mediators. Figure 3 presents our results and describes our process measures in more detail. Results indicate that in the objective inputs condition, the effect of Source on *Proposed* operates indirectly through Source Expertise Concern and *Convincing to Management* (90% confidence interval of −1.48 to −0.11, indicating a one-tailed p-value less than 0.05),
-though this sequential indirect effect is not significant in the subjective
--e 
+## 2.2 跨領域的學科內容
 
+「服務科學」名詞首先出現在 2004 年 5 月 IBM 舉辦的「隨需企業架構」(The Architecture of On Demand Business)會議上,是一種多學科方法(Multidisciplinary) 的觀點, 全名為服務科學、管理與工程(Service Science, Management and Engineering, SSME)。IBM 將 之定義為:應用科學、管理和工程方面的學科(如:電腦科學、作業研究、工業工程、企業 策略、管理科學、社學及認知科學等)來解決服務問題與創造新的知識。也就是希望讓學術 與業界緊密合作,應用跨學科(Transdisciplinary)的方法來解決服務經濟上的複雜問題。期 望它是一門獨立的學科,目的是為了補充(complement),而非取代其他對服務領域上有貢獻 的學科。隨後加入了設計(design),稱為 SSMED,一般以「服務科學」來統稱這個新興的 學術領域。
 
+國立清華大學於 2008 年成立服務科學研究所碩士班,是台灣第一個專精於服務科學領域 的教學與研究單位。服務是共創價值的過程與結果,除了要有功能性及產業的深入知識與技 能外,還需要溝通、協調、合作、情緒管理、衝突管理、自主學習等能力。在現今社會逐漸 重視培養學生這些軟實力,以作為培養硬功夫(功能性知識與技術)的基礎。清大服科所強 調以服務人文的基礎來支持服務科學跨領域的學習,以服務管理、服務工程、服務設計為三 大主軸。圖 2-1 描繪出清大服科所服務科學的學習範疇。
 
+台灣的服務科學的發展,到了 2011 年有了一個新的里程碑:成立了「台灣服務科學學 會」。學會於 2011 年邀請管理、工程、設計、經濟等領域的學者們,共同參與規劃服務科學 碩士班的課程模組。並獲得溫世仁文教基金會的贊助,推廣服務科學課程教學與個案撰寫, 透過台灣服務科學社群的學術同好與產業上的服務科學先行者的合作,將台灣服務科學發展 連接國際,扎根台灣。以下小節針對服務科學學會所規劃的課程模組,逐項說明。
 
-![./output_combined_images/image_3.png](./output_combined_images/image_3.png)
+![./output_combined_images/image_3.png](./output_combined_images/image_3.png) 
+圖 2-1:服務科學研究領域,以服務人文為基底,結合了管理、資訊、設計三個主要領域的理 論與實務(林福仁,2008)
 
-Fig 3.—Moderated mediation analysis. The diagram represents a moderated sequential mediation model (Hayes [2018]). We use a Model 89 with two mediators. Specifically, the effect of Source on *Proposed* is expected to operate sequentially through concerns about the expertise of firm specialist (i.e., *Source Expertise Concern*) and the perceived likelihood that management could be convinced to adjust their estimate (i.e., *Convincing to Management*). Consistent with H2, *Nature of Inputs* is depicted as having a moderating effect on the indirect effect on *Source* to *Proposed* through *Source Expertise Concern* and *Convincing to Management*. All continuous variables are mean-centered to facilitate interpretation of the coefficients. aWe use confidence intervals from bootstrapped sampling distributions (based on 10,000 bootstrap samples) to test the significance of indirect effects (Hayes [2018]). Reflecting our directional predictions, we use 90% confidence intervals (i.e., bounded at 0.05 and 0.95) to test whether one-tailed p-values are less than 0.05 and 80% confidence intervals (i.e., bounded at 0.10 and 0.90) to test whether one-tailed p-values are less than 0.10. * denotes statistical significance equivalent to p < 0.10, one-tailed. ** denotes statistical significance equivalent to p < 0.05, one-tailed.
-inputs condition (90% confidence interval of −0.67 to 0.24). Consistent with H2, which predicts that the effect of Source on *Proposed* (and thus the associated indirect effects) is moderated by *Nature of Inputs*, we find that the index of moderated mediation is marginally significant (i.e., 80% confidence interval of −1.11 to −0.03, indicating p < 0.10, one-tailed). Collectively, the individual links in this model indicate that receiving contradictory evidence from an AI system instead of a human specialist results in greater expertise concerns, which leads to lower perceived likelihoods that management can be convinced to adjust their estimate. However, these concerns lead to smaller proposed audit adjustments only when management utilizes objective inputs to develop their estimates. Overall, the pattern of these conditional indirect effects is consistent with our theory that algorithm aversion effects are stronger when management uses objective (vs. subjective) inputs.16
+## 專欄「實務櫥窗」 服務科學課程架構
 
-## 4.4 Manipulation Check Failures
+「台灣服務科學學會」規劃的服務科學碩士班課程模組架構,是以「服務科學導論」引 領學生進入服務科學跨學科研究領域。此課程定義服務科學的主題:服務系統觀、價值共創 論。這門課程除了有管理,工程和設計的元素之外,也強調起源於東方和西方社會的服務人 文與哲學。本課程可以引導學生透過孔恩的《科學革命的結構》一書去思考服務科學的典範 移轉。教師可以透過團隊計畫指導學生,在跨學科上對知識的體現和實踐,學生從當下的社 會環境中從事田野調查與定義服務系統,以實踐的態度和方法創新服務。
 
-In our main analyses, we exclude responses from 29 participants who failed the manipulation checks. We exclude these observations because our manipulations are overt and repeated in multiple places throughout the experimental materials, and we view the manipulation check questions as straightforward tests of whether participants attended to the study.17 We perform additional analyses to validate this rationale and provide further insight regarding these manipulation check failures. As discussed below, we find troubling and paradoxical patterns in these 29 responses that suggest a critical lack of attention to the experimental materials.
+以服務個案作為統整課程,讓學生從不同的學科,如管理、工程、設計及社會科學,運 用所學知識與能力分析與討論有關服務科學的真實案例。服務科學的三大核心知識:服務管 理、服務工程與服務設計在於社會情境中被探討;同時,學生需要具備描述服務所在的社會 情境的基本知識與能力。因此,課程模組中建議了服務的法律和法規、資訊與服務經濟為兩 門了解服務情境必要的課程。在服務科學三大核心知識模組:服務管理、服務工程和服務設 計,每一個知識模組規劃了三門課程,作為核心選修,培養學生在相對應的領域中具備基本 理論、技能與態度。
 
-We first examine the internal consistency of participants' answers to two separate sets of related questions in our postexperimental questionnaire
-(all results untabulated). We ask participants to rate the degree of professional judgment exhibited by management (*Judgment*; 1 = "None at All" and 7 = "A Great Deal") and the perceived bias within management's estimate (*Bias*; 1 = "Not at All Biased" and 7 = "Very Biased). If participants attended to the experimental materials, then we should observe negative correlations between participants' *Subjectivity/Objectivity* ratings (as described in subsection 4.1, 1 = "Very Subjective" and 7 = "Very Objective") and both their *Judgment* and *Bias* ratings. As expected, these correlations are negative and significant in our main sample of 170. However, both correlations are *insignificant* among the 29 participants who failed a manipulation check. Moreover, the correlation between *Subjective/Objective* and *Bias* is inexplicably directionally positive in these 29 responses. We also ask participants to rate their levels of concern about the specialist's expertise (1
-= "Not at All Concerned" and 7 = "Very Concerned") and the likelihood that management would find the firm's evidence convincing (1 = "Highly Unlikely" and 7 = "Highly Likely"). Although we find a negative and significant correlation between these measures in our main sample, this correlation is (paradoxically) directionally positive, though insignificant, among the 29 participants who failed a manipulation check. Collectively, we interpret these results as evidence that these 29 participants were not attentive
+![./output_combined_images/image_4.png](./output_combined_images/image_4.png)
 
-16 Although our moderated mediation analyses provide additional support for our theorybased expectations, we acknowledge that inferences from these analyses rely on process variables that are measured obtrusively and after participants respond to the main dependent variable. Capturing process measures in this manner creates greater potential for carryover effects and reverse causality threats, which limits the validity of our process inferences (Asay, Guggenmos, Kadous, Koonce, and Libby [2021]). 17 Theory on reading comprehension, memory, and recall holds that the probability of attentive individuals failing to recall the same information encountered over successive cognitive processing cycles (as in the different sections of our instrument) decreases *exponentially* as the information is repeated (Dijk and Kintsch [1978, p. 369]). Moreover, including observations from inattentive participants tends to obscure results (Maniaci and Rogge [2014]).
-to our experimental materials—and therefore should not be included in our analyses.18 We further examine whether including these 29 observations in our analyses changes our results and inferences. An ANOVA model (untabulated)
-with the full sample of 199 (i.e., including all 29 manipulation check failures) continues to yield two significant main effects (both p < 0.01, onetailed), but the interaction becomes insignificant (p = 0.18, one-tailed).
+服務科學碩士班課程模組,包括了服務科學導論的入門與服務科學個案的統整。包括了 服務情境、服務管理、服務設計和服務工程四個模組的課程。(資料來源:台灣服務科學學會)
+2.2.1 服務科學導論(Introduction to Service Science)
+服務科學導論是碩士生第一年進入服務科學領域必修的第一門課。課程的目的是為了讓 學生概括性地全面了解服務科學,檢視自己要具備服務科學專業能力還需要培養什麼樣的能 力,然後規劃符合自己需要後續參與的服務科學課程,透過對於服務科學的探索,成為一個 有思想和技能的專業人才。服務科學學習的路徑,可以分為以下幾個步驟:(1)定義服務現 象的發生,因為現象滋生科學;(2)用科學的方法分析遇到的現象;(3)利用服務建模和工程 技術來設計服務;(4)透過服務體驗了解服務提供者服務顧客的過程;(5)了解服務科學相關 議題,用於後續的研究中。透過學習活動,學生能了解服務科學的組成、探索服務科學議題、 體驗服務遞送過程、實際演練服務設計和工程方法、加強人文的服務態度和行為,以及要持 續地發現研究問題,精進問題解決能力與服務的創新力。
 
-The ANOVA interaction effect likely weakens because participants who are not attentive to the experimental materials (e.g., those that fail manipulation checks) create noise in the data and reduce statistical power (Maniaci and Rogge [2014]). Additionally, it is important to note that traditional ANOVA models test for disordinal interactions and, in doing so, will attribute most of the explained variance in any ordinal interaction to the main effects (Buckless and Ravenscroft [1990], Guggenmos, Piercey, and Agoglia [2018]), making it difficult for our ANOVA model to detect the type of ordinal interaction suggested by our hypotheses (see Figure 1).
+## 2.2.2 服務情境(Service Context)
 
-## 5. Conclusion
+「服務的法律與法規」(Law and Regulation for Service)以及「資訊與服務經濟」(Information and Service Economy)是主要的兩門課程,透過這兩門課程培養學生了解服務情境。
 
-To date, the auditing profession has invested hundreds of millions of dollars with plans for further investments to develop and implement AI systems. Leaders of multinational accounting firms and the audit profession assert that these investments will enhance audit quality (FEI [2017], EY [2018], Bloomberg Tax [2020]). One area that audit firms have targeted for technological innovation is the use of AI systems to provide "expert" evaluations and recommendations to assist auditors in the performance of complex tasks. The profession is likely keen on implementing these AI systems because human specialists are both a costly and scarce resource, and research has noted that audit teams are sometimes reluctant to use specialists because of the associated costs (Bratten et al. [2013], Griffith, Hammersley, and Kadous [2015]). Although the audit profession is optimistic that the implementation of AI will enhance audit quality, research has not examined how auditors will interact with these new AI systems or how AI might influence the way auditors evaluate evidence. Prior research in psychology
+為了達到服務科學的研究目標之一,讓學生具備創新服務的能力,學生需要更謹慎地了 解提供服務的法律環境。我們採用服務網絡的觀點,也就是強調在服務系統裡不同的利害關 係人所扮演的角色來組織「服務的法律與法規」這門課程的內容架構。利害關係人包含服務 供應商、顧客、服務接收者等,他們對於各自的利益可能有不同的考量。特別是,在技術驅 動創新的時代,有許多新的發明和創新,所以智慧財產權、個人隱私、反壟斷、服務國際化,
 
-18 The number of participants failing a manipulation check in the *AI System/Objective Inputs* condition (12) is larger than in the other conditions (between 3 and 9). We therefore collect additional data to examine whether this condition (i.e., Cell D) stands out in terms of time taken, difficulty, or understandability. Nineteen additional auditors read the same case materials we used in the main experiment but did so via Qualtrics, which allows us to measure time taken to process the case materials. Additionally, participants assess case understandability and case difficulty instead of dependent variable questions and post-experiment questions used in the main experiment. Although the small sample size precludes meaningful statistical tests, descriptive results reveal that participants in Cell D spend essentially the same amount of time as those in the other conditions and that the case is similarly understandable and similarly difficult in all conditions (data untabulated).
-and management science, however, documents that individuals are susceptible to algorithm aversion—the tendency to discount computer-generated advice more severely than human advice. Thus, if algorithm aversion occurs in auditing, there could be significant consequences for the performance of audits, and particularly for the high-risk audit areas that require specialist expertise. Motivated by these concerns, this study examines how algorithm aversion manifests in the context of auditing complex estimates.
 
-Consistent with theory, we find that algorithm aversion influences the way auditors weigh contradictory evidence from their firm's specialists.
 
-Specifically, our findings suggest that auditors discount their own firm's contradictory evidence more heavily when it comes from an AI system rather than a human specialist. We further find that this effect is amplified when management's competing evidence appears more objective (i.e.,
-relies on inputs that are more objective vs. subjective). This finding is consistent with the Birnbaum and Stegner [1979] scale-adjustment model and suggests that algorithm aversion has a greater influence on auditors' judgments when management's evidence appears more credible.
+以及消費者保護問題是相當受到重視的議題。因此,透過這門課程,學生能夠了解基本的法 律術語和概念、知道如何評估在服務創新時法律相關的問題、並能以法律推理去做結論,以 及比較運用各種法律理論去解釋現實世界的情況,因此,知道從什麼出發點去權衡和分析風 險,而更加熟悉服務相關的法律制度。
 
-Our study makes several important contributions to research and practice. First, our findings have implications for research related to auditing complex estimates. PCAOB inspection findings indicate that auditors frequently fail to consider contradictory evidence identified by valuation specialists (PCAOB [2017a]). Furthermore, qualitative evidence suggests that jurisdictional motivations can lead auditors to discount (or even alter)
-contradictory evidence provided by specialists if that evidence does not conform to their own perspective, which threatens audit and financial reporting quality (Barr-Pulliam et al. [2020], Griffith [2020]). We provide evidence that the adoption of these AI systems can lead to further discounting of firm-provided contradictory evidence, particularly when management develops their estimates using inputs that appear relatively more objective in nature. It is important to note that managers have significant discretion over their estimation methods and inputs, as well as other attributes of evidence (e.g., quantification of evidence; Joe, Vandervelde, and Wu [2017]). Therefore, our findings also raise the troubling possibility that algorithm aversion among auditors can increase the likelihood of auditors accepting their client's potentially biased estimates. Thus, we highlight a possible unintended consequence of employing cognitive technologies in the audit setting.
+「資訊與服務經濟」課程創造了機會給學生進行資訊和服務的主題辯論與思考,以及提 供學生一些刺激和想法去面對全球經濟議題與挑戰。因此,本課程致力於以目前正在發生的 世界經濟作為分析的開始,如:市場的全球化、不斷演化的資訊領域、技術和通訊領域,以 及經濟學和國際關係的整合。因此,我們以這門課程作為了解資訊和服務經濟的基礎,結合 資訊、服務科學、經濟和組織知識,去了解服務與資訊為基礎的經濟。學生們將分析目前所 面臨的營利和不以營利為目的的組織,如:包裹式定價(bundle pricing)、產品差異化和多樣 性、網絡外部性,和權限管理等策略性問題。通過學習活動,學生能了解經濟變遷與典範, 以及從利基的觀點去看科技與制度的共同演化(co-evolution),尤其是從服務價值網絡,而不 是公司的觀點去探討。最後,學生能了解如何在服務經濟崛起中,從原本的產品增加價值到 創造更多創新的服務。關於服務經濟的內容於第三章「服務創新與服務經濟」會有詳細的說 明。
 
-Our study also contributes to emerging research in psychology and management science around algorithm aversion. Prior studies documenting algorithm aversion effects do so primarily in more objective, less complex, and low-stakes task settings. We document that algorithm aversion manifests in the behavior of experienced professionals with strong incentives to rely on the related computer-generated evidence. Emerging research shows that AI models can outperform human-based models in forecasting, lending, financial reporting, and auditing settings (e.g., Ding et al. [2020],
-Liu [2021], Chen et al. [2021], Christ et al. [2021]). Our findings add a cautionary note that the benefits of AI models will only be realized if professionals are willing to rely on the advice that comes from these models.
+## 2.2.3 服務管理課程模組(Service Management Area)
 
-Additionally, unlike other algorithm aversion studies, we examine this phenomenon in a setting where individuals must weigh competing evidence from multiple sources. Our findings demonstrate that in such settings, algorithm aversion effects are amplified when the competing information sources appear more credible. Furthermore, although prior research presents evidence of algorithm aversion, this literature provides little explanation for why and how this phenomenon affects judgments. Our study provides evidence that algorithm aversion partly operates through source credibility concerns.
+服務管理課程模組的領域知識主要來自管理學門,推薦了組織行為與領導、服務行銷、
+服務創新三門核心課程以培養學生的服務管理知識和技能。此模組三門課程的共同目標為(1)
+培養學生了解在服務系統中人際之間的關係,以及組織的動態發展,並發展自己在服務管理 的領導力;(2)具備在服務行銷和利害關係人連結的知識和技能;(3)設計和管理服務創新活 動,以創造新的服務。
 
-Our study is subject to some limitations that provide several interesting opportunities for future research. First, to achieve experimental control, the human specialist and the AI system in our study use the same information and provide participants with identical audit evidence (i.e., the information content is held constant in all conditions). Although this design choice is aligned with firms' current focus on developing "narrow" AI systems to replicate human judgments, our findings may not generalize to more ambitious AI systems that firms might use in the future. For instance, firms might begin to employ systems that incorporate a greater degree of autonomy and adaptability, though they might be hesitant to do so without more authoritative guidance from standard setters and regulators
-(Christ et al. [2021]). Nevertheless, future research could examine how auditor reliance is affected by various system characteristics and capabilities. As these systems become more capable, auditors might become more willing to rely on them. For example, making individuals explicitly aware that an algorithm performs better than a human can increase reliance on algorithms (Castelo, Bos, and Lehmann [2019]). However, despite the algorithm's superior performance, findings suggest this awareness does not create a significant preference for algorithms over humans. Thus, even as these systems advance, some degree of algorithm aversion might persist if system performance is not vastly superior to its human counterparts or if the system capabilities are not well-understood by the auditors using these systems.
+組織行為與領導(Organizational Behavior and Leadership)是人類在組織環境下的行為研 究。這包括微觀層面(人際關係和小團體)和宏觀層面(組織間)的互動。探討組織行為的 理論與實務,透過案例分析,了解理論和實證研究結果的應用。本課程也會發展一些重要的 議題讓學生學習,如管理者如何管理人員和組織之間的關鍵問題。課程以個人在組織內的主 題作為開始,包括個人的態度,動機和個性。然後再以組織作為一個整體,發展更廣泛的重 點,包含權力和政治性的考量、群組和組織領導、組織文化等議題。透過課程的學習活動, 學生能了解一個人的人格特質、價值觀和人際互動能力為工作生活帶來的影響,也能實際執 行促進組織公民、協作和團隊精神的行為。因此能夠理解和解決人際關係和團隊合作之間的 問題,並分析組織的人力資源架構及其與組織策略的關係。最後,希望能培養學生在群體和 組織的領導力,以提升組織的創新和創造力。本書第十章「服務與部落領導力」,探討服務創 新者的特質、部落領導力、創新與創業家精神、團隊變革與管理等人力資源與組織管理等議 題。
 
-Second, this study measures auditors' reactions to a novel source of audit evidence. It is possible that this novelty will decrease after repeated exposure to these AI systems, and as a result the effects we observe might subside over time. Specifically, auditors might become more willing to rely on AI systems as they gain experience and familiarity with them. Previous research, however, finds that individuals are more willing to rely on algorithms when they have no experience using the algorithm because they have not seen the algorithm err (Dietvorst, Simmons, and Massey [2015]). With repeated exposure and usage, auditors are likely to encounter both positive and negative experiences (e.g., errors) as they use AI systems. Future research could examine how the valence of these experiences shapes the way auditors rely on their firm's AI systems. Our study takes the important first step of identifying when and how receiving audit evidence from an AI
-system alters auditor decisions around complex accounting estimates. Future research could explore theory-grounded interventions that mitigate the effects of algorithm aversion and, ultimately, help the auditing profession to realize the full benefits of its investments in cognitive technologies.
+有別於商品的行銷,服務行銷(Service Marketing)特別對管理者提出了挑戰,包括顧客 滿意度衡量和管理、行銷的協調、設計過程與服務傳遞的執行、人力發展和員工傳遞服務的 技能、以及新興技術的應用。這門課程讓學生有機會修改在行銷上一些基本觀念,以因應從 實體貨品的經濟轉移到服務經濟的改變。這門課程還會區別出企業以產品或服務為主的功 能、組織和結構,定義在服務環境下發展行銷規劃與策略的困難之處,透過個案研討或與企 業的建教合作來呈現這些概念。這門課程將會讓學生熟悉服務行銷這個概念。因此,通過學 習活動,學生能了解目前服務行銷概念、理論和應用方面的知識,且能夠分析服務行銷的問 題,發展市場行銷的解決方案,以及廣泛應用服務行銷的原則到不同的情況。這門課程也會 培養學生具有定義服務決策問題、確定方案、定義關鍵議題、分析和規劃並落實解決方案的 能力。此外,學生也會了解關於關係行銷和服務失敗以及補救的相關議題。本書第九章「服 務管理」,針對服務行銷有專節的探討。
 
-| Human Specialist Condition                                                                              | AI System Condition                                                                                                                                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Source of audit                                                                                         | Your firm's department of                                                                                                                                                                                                                                                                                                                                                                 | Your firm's proprietary AI system                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| evidence:                                                                                               | specialized professionals                                                                                                                                                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Qualifications:                                                                                         | "These internal valuation specialists have advanced degrees and professional certifications. They also have significant experience with audits of commercial loans (on large numbers of clients), and they continue to receive extensive and rigorous training in their areas of expertise." "The firm has invested significant resources developing and supporting the valuation group." | "To develop the Amadeus system, your firm partnered with a large international technology company with leading experts in artificial intelligence. Additionally, the firm gathered input from valuation specialists with expertise in commercial loan grading (e.g., advanced degrees, professional certifications, significant experience, and extensive and rigorous training)." "The firm has invested significant resources developing and supporting the Amadeus system." |
-| Method:                                                                                                 | "applies firm-approved methodologies to evaluate information from a variety of sources…uses information from clients as well as external information to develop independent loan grades."                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| Firm endorsement:                                                                                       | "Your firm has indicated that the [Amadeus system's/internal valuation group's] overall predictions are reasonably accurate and are considered an approved source of audit evidence."                                                                                                                                                                                                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| The purpose of this appendix is to illustrate how the language in the experimental instrument equalizes |                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+服務創新(Service Innovation)探討服務的價值如何被創造出來。尤其在科技化與全球化 的趨勢下,服務業的快速成長以及跨業中之間的合作創新,服務創新的理論、方法、工具、 案例等內容,是本課程豐富的來源。這門課程強調服務是多樣性的,並明確區分傳統和高價 值的服務。學生將能夠評估其組織的服務組合,評估機會和新興服務的發展趨勢,且學習分 析方法與建模技術,這些是實現新服務所不可或缺的技能。課程透過真實案例的探討,具體 了解服務分析、規範和實施的內容。透過這門課程的學習活動,學生能了解創意、設計思維 和創新的基本原則,如何應用在設計新產品、服務和商業模式。了解開發和調整服務創新模 式與流程的實務方法,以及如何兼顧企業策略和客戶價值主張以實現具有競爭優勢的新服 務。此外,學生也應該了解企業如何透過產品和服務創新進行策略更新。所以,需要獲取相 關應用情境的背景知識,與評估服務創新理念,模式和方法的適用性。本書第四章「新服務 的創新與發展」有更詳細的介紹。
 
-appendix Comparison of Source Treatments
+## 2.2.4 服務設計課程模組(Service Design Area)
 
-## References
+服務設計課程模組的主要方法論來自於設計學科,強調透過動手學習的活動,才能內化 知識和技能。服務設計引導顧客參與設計的過程,以探討顧客經驗、界面和服務流程的改變。 此外,因為加入技術創新的價值,服務設計需要考慮人、技術和組織的價值的整合,這些內 容的學習包含在這個課程模組的學習活動中。這個課程模組包括三門課程:服務設計、服務 體驗設計和服務互動設計,以培養學生具備創造新服務的設計能力。服務設計為入門的課程, 讓學生了解基本概念、技術和設計新服務的技能。服務體驗設計課程則強調為顧客塑造新體 驗的價值。透過顧客感受到的新服務體驗,提出新的價值主張以豐富服務的流程。服務互動 設計課程著重於設計服務接收者和服務提供者之間的互動,促使價值主張精確地定義與傳遞。
 
-Anderson, J. C.; K. K. Moreno; and J. M. Mueller. "The Effect of Client vs. Decision Aid as a Source of Explanations Upon Auditors' Sufficiency Judgments: A Research Note." *Behavioral* Research in Accounting 15 (2003): 1–11.
+服務設計(Service Design)課程的主要對象,是還沒有正式受過設計科學訓練的學習者, 以培養其具備進行服務設計能力。因此,這門課程包括服務設計的基本知識、工具和設計流 程,透過老師講課,以及學生親自動手做的方式進行。學生面向真實世界的問題,發展服務 設計態度和能力。這門課程是學生進一步學習其他服務設計相關課程的基礎,如服務體驗設 計,互動設計等。透過服務設計課程的學習活動,學生能夠了解服務的特點和服務體驗,以 評估服務系統和體驗的價值與品質,並定義出服務設計的機會,與設計出服務體驗的元素, 最後,再以視覺化呈現出服務體驗。
 
-Asare, S. K., and A. M. Wright. "The Effectiveness of Alternative Risk Assessment and Program Planning Tools in a Fraud Setting." *Contemporary Accounting Research* 21 (2004): 325–52.
+體驗設計不是由單一設計學科驅動,而是需要透過跨領域的觀點,從多個方面去考量, 如品牌、商業環境,以及產品,包裝和零售環境的經驗與員工的態度和行為。體驗設計尋求 發展透過產品,服務或事件交換價值的情境。服務體驗設計(Service Experience Design)涵 蓋服務體驗情境的不同接觸點。這些接觸點主要是從不同的感知來源與認知的判斷所定義形 成。這門課程可以透過講課與實作,讓學生有能力處理在服務體驗設計所面臨現實世界中的 問題,並藉此過程內化知識和技能。透過學習活動,學生能了解使用者的體驗,比如他們如 何生活,他們需要什麼或想要什麼。並透過腦力激盪去想像新的機會,以及著手雛型創作, 呈現出體驗品質的模型。本課程提供學生了解設計的解決方案,例如產品或服務在人們生活 中所扮演的角色、使用者的心智模型、如何看待互動之間的感覺、什麼是待解決的技術問題。 學生可以學習紀錄與創造互動體驗,如使用者看到什麼,聽到和感覺到什麼,然後,學生要 能呈現和測試體驗設計的結果。
 
-Asay, H. S., R. Guggenmos, K. Kadous, L. Koonce, and R. Libby "Theory Testing and Process Evidence in Accounting Experiments." Working paper, Cornell University, Emory University, University of Iowa, and University of Texas at Austin, 2021. Available at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3485844 Austin, A. A.; T. Carpenter; M. H. Christ; and C. Nielson. "The Data Analytics Journey: Interactions Among Auditors, Managers, Regulation, and Technology." Working paper, University of Richmond and University of Georgia, 2020. Available at https://papers.ssrn.com/
-sol3/papers.cfm?abstract_id=3214140.
+互動設計定義產品行為,在不同的情境下,調節人與人、人與產品、人與環境,人與服 務之間的關係。互動模型的設計涉及跨領域的團隊去規劃、構思、設計、實施,以及支援符 合人類需求和渴望的產品、服務和系統。這種以人為本的模型,考慮心理、社會、文化因素; 另一方面,也考量技術、經濟和環境因素。服務互動設計(Service Interaction Design)主要 目標在設計服務接口(service interface),以促進服務提供者和接收者之間的互動。這門課程 可以透過老師講課與動手實作的方式,讓學生具備可以處理真實世界問題的能力。課程著重 在互動、界面設計、完成技術與技能上的練習、提供概念性的計畫、建立計畫的雛型、以呈 現服務互動設計能力。此外,學生也能為組織建立動態策略,以及透過口語/視覺呈現概念性 的計畫提案去呈現數位資訊,完成技術與技能上的練習,以提供原創的計畫工作。本書第三 篇「服務設計」,對於服務設計的問題定義、解決方案探索、雛型與測試,透過不同的服務設 計案例說明與討論。
 
-Bamber, E. M. "Expert Judgment in the Audit Team: A Source Reliability Approach." *Journal* of Accounting Research 21 (1983): 396–412.
+## 2.2.5 服務工程課程模組(Service Engineering Area)
 
-Bamber, E. M.; D. Snowball; and R. M. Tubbs. "Audit Structure and Its Relation to Role Conflict and Role Ambiguity: An Empirical Investigation." *The Accounting Review* 64 (1989):
-285–99.
+服務工程領域的課程扮演的角色為,透過設計科學(Design Science)方法來實現服務的 提供,並基於目標顧客的需求、現有的理論和技術,考量產品的創造與評價。在實施服務, 特別是以技術為基礎的服務,服務流程與資訊技術的整合對於服務創新和管理非常重要。因 此,服務工程課程模組的學習目標主要為轉換服務雛型從概念到企業流程模型,然後設計服 務資訊系統,接著評估,並根據服務導向的技術系統化地去執行。本課程模組包括三門課程: 服務流程塑模與分析、服務系統工程和服務導向科技。
 
-Barr-Pulliam, D.; J. R. Joe; S. Mason; and K. A. Sanderson. "The Auditor-Valuation Specialist Coopetitive Alliance in the Fair Value Audit of Complex Financial Instruments." Working paper, University of Louisville, University of Delaware, DePaul University, and Bentley University, 2020. Available at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3620440 Benston, G. J. "Fair-Value Accounting: A Cautionary Tale from Enron." *Journal of Accounting* and Public Policy 25 (2006): 465–84.
+企業流程塑模用以呈現企業流程與活動,有助於企業流程的分析與改善。這門課程不僅 著重於塑模,也強調企業流程變革管理,以持續取得競爭的優勢。學生修習服務流程塑模與 分析(Service Process Modeling and Analysis)課程,能精確描述、分析且改善企業流程。利 用企業流程塑模語言進行企業流程塑模以利後續執行企業流程改善。在現行的流程設計裡找 出缺點,提出改進的建議,進而利用改進的模式與外部的最佳實例重新設計流程。最後,可 以發展流程實施與整合的策略,充分利用企業的組織和技術能力。
 
-Birnbaum, M. H. "Intuitive Numerical Prediction." *The American Journal of Psychology* 89 (1976):
-417–29.
+服務系統工程(Service System Engineering)課程目標是讓學生具備設計和執行服務資訊 系統的能力,以實現資訊流在企業流程中服務價值的交換和創造。這門課程著重於讓學生接 觸不同的工程方法與真實世界中的計畫,以內化知識和技能去執行服務系統。通過課程的學 習活動,學生能培養完善的技術基礎,同時,學習如何在跨學科的團隊裡工作,將解決問題 的技巧應用於以人為本的不確定性的系統問題,再藉由應用系統的觀點設計系統流程與執行 軟體開發。
 
-Birnbaum, M. H., and B. A. Mellers. "Bayseian Inference: Combining Base Rates with Opinions of Sources Who Vary in Credibility." *Journal Personality and Social Psychology* 45 (1983):
-792–804.
+服務導向科技(Service Oriented Technology)課程旨在透過服務導向的方法連結企業流 程和資訊科技。這門課程涵蓋服務導向架構(Service Oriented Architecture)的系統設計以及 相關的網路服務(Web service)的實際操作的練習。透過課程的學習活動,學生能了解服務 導向架構與網路服務技術,並透過專案,開發網路服務以解決服務遞送相關的問題。本書第 四篇「服務工程」,針對服務流程之塑模與分析,以及服務導向架構與技術於第七、八章進行
 
-Birnbaum, M. H., and S. E. Stegner. "Source Credibility in Social Judgment: Bias, Expertise, and the Judge's Point of View." *Journal of Personality and Social Psychology* 37 (1979): 48–74.
+## 2.2.6 服務科學個案(Service Science Case Study)
 
-Birnbaum, M. H.; R. Wong; and L. K. Wong. "Combining Information from Sources That Vary in Credibility." *Memory & Cognition* 4 (1976): 330–36.
+服務科學個案為服務科學碩士班的統整課程,預期學生應用跨領域的學科能力,從個案 分析與討論中提出解決真實世界中服務相關問題的方案。在個案的議題選擇上,強調可以讓 學生從不同的觀點來看服務現象,然後運用從不同的學科知識與能力,如管理,技術,設計 等,應用概念、方法和工具去分析個案所呈現的問題,進而整合不同學科的知識與方法提出 解決方案。
 
-Bloomberg Tax. "Big Four Invest Billions in Tech, Reshaping Their Identities." 2020.
+## 2.3 服務科學的學習歷程
 
-Available at https://news.bloombergtax.com/financial-accounting/big-four-investbillions-in-tech-reshaping-their-identities.
+服務科學是一個跨領域的學科。因此,植基於原有領域的學術基礎,服務科學的學習者, 進入服務科學領域,期待是一個敞開心胸,迎接整合不同領域知識與技能的學習歷程。
 
-Bratten, B.; L. M. Gaynor; L. McDaniel; N. R. Montague; and G. E. Sierra. "The Audit of Fair Values and Other Estimates: The Effects of Underlying Environmental, Task, and Auditor-Specific Factors." *Auditing: A Journal of Practice & Theory* 32 (2013): 7–44.
+Choudaha 在其博士論文透過線上德菲法(Delphi)獲得當時 SSME 教學與研究的學者的統合 意見,提出以能力為本位的 SSME 碩士課程範疇,包括知識、技能及態度三個面向(Choudaha, 2008)。 雖然以 SSME 為名,已經涵蓋服務設計,與台灣服務科學碩士班課程模組,並不完 全相同,但有相似的涵蓋面。其中所涵蓋的十種技能與態度,是學習服務科學知識的基礎, 也是持續必要精進的態度與能力。Choudaha 將這十種技能與態度分為三種類型:服務心態 (service mindset)、整合能力(integrative competence)及核心能耐應用力(meta-competence)。
 
-Buckless, F. A., and S. P. Ravenscroft. "Contrast coding: A Refinement of ANOVA in Behavioral Analysis." *The Accounting Review* (1990): 933–45.
+在價值共創的服務心態上,透過下列四種能力的培養:(一)服務系統的概念化、設計與實作 能力;(二)運用工具與方法擷取與評估客戶需求的能力;(三)定義與排序問題的優先與解 決問題的能力;(四)了解服務經濟與服務科學相關的理論、文獻與哲學。在整合能力上,包 括以下三種能力的培養:(一)整合資訊科技於企業的能力;(二)跨領域合作的能力;(三) 與異質性的國內外夥伴溝通合作的能力。在核心能耐應用力方面,包括三項能力的培養:(一) 面對不熟悉,不確定以及複雜情境的適應力;(二)批判性思考:應用歸納與演繹方法,從不 同的觀點和規準分析評估服務系統的組成;(三)人際溝通能力:有效地透過不同方式,跨越 不同領域背景,區域、科技與文化障礙,達成共創價值的目標。
 
-Canadian Public Accountability Board (CPAB). *CPAB Report on 2014 All Firm Inspections* of the Quality of Audits Across Canada's Big Four Accounting Firms: Highlights, 2015a. Available at http://www.cpab-ccrc.ca/Documents/Topics/Public%20Reports/CPAB_2014_PR_
-Highlights_EN_FNL.pdf Canadian Public Accountability Board (CPAB). CPAB Report on 2015 Inspections of Canada's Big Four Accounting Firms, 2015b. Available at http://www.cpab-ccrc.ca/ Documents/Annual%20Reports/CPAB_2015_Big_Four_Report_Highlights_EN_Final.pdf.
+培養上述的技能與態度,用傳統的課堂講課與討論的授課方式,是無法達成核心能力培 養的目標。服務科學的學習重視面向實務的專案式團隊學習活動。面對實務問題,學習者可 以觀察與體驗服務系統的結構與利害關係人在服務網絡的複雜度。同時實務問題提供了豐富 的情境,學習者以不同的學術背景與專業經驗,可以培養與不同領域的個人與組織的溝通與 合作的能力。解決實務問題過程中,個人的批判思考、人際溝通能力、團隊的跨領域合作能 力,得以練習與精進。對於服務系統的概念化、設計與實作能力以及運用工具與方法擷取與 評估客戶需求的能力,以及整合資訊科技於服務系統的創新等能力的培養,可以從操作中習 得與熟練。
 
-Cannon, N. H., and J. C. Bedard. "Auditing Challenging Fair Value measurements: Evidence from the Field." *The Accounting Review* 92 (2017): 81–114.
+以清大服務科學研究所的碩士班課程為例,說明面向實務的專案式團隊學習活動的規劃 與執行做為參考。碩士班研究生入學的迎新儀式,是以溯溪活動,研二學長與研一新生一起 經歷溯溪而上的不同挑戰。過程中,新舊學生漸漸熟悉彼此,除了達到跨屆間人際關係的連 結外,同時也一起體驗「上善若水」的服務哲學。在溯溪的最後挑戰,從高達七公尺的溪岸 岩台上跳下溪水中,是突破心理恐懼的挑戰,也是進入服務科學領域跨越領域界線的初體驗。
 
-Castelo, N.; M. W. Bos; and D. R. Lehmann. "Task-Dependent Algorithm Aversion." *Journal* of Marketing Research 56 (2019): 809–25.
 
-Chen, X.; Y. H. Cho; Y. Dou; and B. Lev. "Fundamental Analysis of Detailed Financial Data: A Machine Learning Approach." Working paper, New York University, 2021.
 
-Available at https://research.chicagobooth.edu/arc/journal-of-accounting-research/jarannual-conference/papers Choudhary, P. "Evidence on Differences Between Recognition and Disclosure: A Comparison of Inputs to Estimate Fair Values of Employee Stock Options." Journal of Accounting and Economics 51 (2011): 77–94.
+服務科學導論是學習服務科學的入門課,期望建立服務系統觀與價值共創論的基礎,以 及培養服務科學的核心能力。課程伴隨著課堂授課與討論,進行面向實務的專案式團隊學習 活動。為讓學生可以就近深入服務系統場域,突破管理學院傳統僅以產業為範圍的學習內容, 以新竹縣市的城鄉生活場域作為實務問題的來源。如此,學生可以深入場域,經歷服務系統 的概念化,設計與實作的練習,專案的服務雛型,也可以獲得測試與推動的可能。例如,以 新竹縣台三線的鄉鎮為場域,幅員涵蓋關西、橫山、竹東、北埔、峨嵋等鄉鎮。而在地的議 題包括了農業的永續、教育的競爭力、交通與旅遊、養老與社區健康與醫療、多元人才的發 展等,涉及了現有不同服務系統本身或是系統間的改善與創新。這些議題大都存在於台灣, 甚至全世界,具有其普遍性。學生的學習收穫,可以應用於產業與社會的問題解決上。結合 台灣服務科學學會的區域聯盟網絡,這樣的學習活動與在地的中華大學、交通大學、明新科 大的服科學會社群夥伴一起推動在地實踐的專案計畫。
 
-Christ, M. H.; S. A. Emett; S. L. Summers; and D. A. Wood. "Prepare for Takeoff: Improving Asset Measurement and Audit Quality with Drone-Enabled Inventory Audit Procedures."
-Review of Accounting Studies, forthcoming (2021): 1–21.
+在研一寒假,服科所研一同學可以參加由台灣服務科學學會主辦,溫世仁文教基金會贊 助的「服務人文體驗營」。服務人文體驗營創辦於 2009 年初,招收來自國內各大學四年級以 上的學生,每梯次約 80 人。課程的設計與執行,旨在透過體驗式的學習活動,體驗自己在團 隊中的思與行,透過自我改變的歷程,體會服務的人文精神:透過自己的做到,成為別人的 需要。在活動過程中,學員經歷了整備好自己、營造築夢的部落到團隊創造巔峰經驗的自我 改變過程。同時,各組的學員於營隊結束的三個月期間,需要共同完成一件有益於社會的專 案,並於三個月後的充電會分享成果。三個月的團隊專案,期待團隊能發揮服務人文精神, 做到改變自我、服務利他。這樣的服務人文體驗,啟發了服務人生觀,讓服務科學的知識與 技能的精進有了最崇高的善行:改變自我、服務利他。
 
-198 b. p. commerford, s. a. dennis, j. r. joe, and j. w. ulla Cooper, L. A.; D. K. Holderness, JR.; T. L. Sorensen; and D. A. Wood. "Robotic Process Automation in Public Accounting." *Accounting Horizons* 33 (2019): 15–35.
+研一下的服務創新課程,授課老師邀請了具有服務創新與設計的業師共同開課,每學期 與一個不同的企業合作,由企業提供實際企業的服務情境,作為師生探討與進行服務創新專 案的對象。除了授課外,強調面向實務的專案式團隊學習活動。由於企業的深度參與學生專 案活動以及業師在服務設計活動的指導,增進學生在問題探索的深度以及服務創新構想被採 納實現的機會,提供了學生的學習成就感。
 
-Dechow, P. M.; L. A. Myers; and C. Shakespeare. "Fair Value Accounting and Gains from Asset Securitizations: A Convenient Earnings Management Tool with Compensation SideBenefits." *Journal of Accounting and Economics* 49 (2010): 2–25.
+研一暑假為期兩個月的產業實習是驗證一年所學與探索未來職業的機會。提供暑期實習 的企業組織指派主管擔任業師來指導實習生,實習期間,學生需要繳交期中自評,以督促學 生能把握學習機會,自主學習;實習結束後,邀請業師參與實習成果發表會,透過成果分享, 達到跨業間的交流與學習。對於甫進入服科所的新生而言,參與學長的分享,自期未來能在 一年的學習後如學長們一樣可以發揮所學,透過自己的做到,成為別人的需要。
 
-Deloitte, L. L. C. "Demystifying Artificial Intelligence." 2014. Available at https:
-//www2.deloitte.com/us/en/insights/focus/cognitive-technologies/what-is-cognitivetechnology.html Deloitte, L. L. C. "Minds and Machines: The Art of Forecasting in the Age of Artificial Intelligence." 2016. Available at https://www2.deloitte.com/us/en/insights/deloittereview/issue-19/art-of-forecasting-human-in-the-loop-machine-learning.html Deloitte, L. L. C. "Artificial Intelligence." 2018a. Available at https://www2.deloitte.
+服務科學的課程選修範疇,在清大的服科所,從 2014 年開始,分為服務管理與行銷、服 務創新與設計、服務資訊系統以及企業資料分析等四個主題。每一個主題下,學生至少修過 三門課,即可獲得該主題的修課證書,以協助學生在服務科學領域的專長更容易被企業所指 認。除了培養為企業所用的跨領域人才,服務科學強調服務創新與創業。因此,對於學生解 決問題的能力,與人合作的團隊領導力,以及做中學的主動學習能力的培養,與課程專業知 識的獲得,同樣受到重視。經由服務科學的學習歷程,培養具有服務人文素養,服務科學與 創新的專業知識與能力,成為服務利他的行者。
 
-com/content/dam/Deloitte/nl/Documents/deloitte-analytics/deloitte-nl-data-analyticsartificial-intelligence-whitepaper-eng.pdf Deloitte, L. L. C. "Solve for Now. Build for Next. The Deloitte Audit." 2018b. Available at https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Audit/gxaudit-solve-for-now-build-for-next.pdf.
+## 2.4 服務科學的典範轉移 2.4.1 孔恩的科學革命論
 
-Dennis, S. A.; J. B. Griffin; and K. M. Zehms. "The Value Relevance of Managers' and Auditors' Disclosures About Material Measurement Uncertainty." *The Accounting Review* 94
-(2019): 215–43.
+孔恩(1962)認為科學發展歷程可簡略分為四個時期:前科學常態科學科學危機 科學革命新常態科學新科學危機(參見圖 2-2 循環模式)。由於科學發展的早期,是謂前 科學期。這種百家爭鳴的現象,最後由某一學派勝出,而趨於一統,即進入常態科學時期。 此時科學社群共享一套典範,以它了解學科的基礎、指導實驗,並從事「解謎(puzzles-solving)」 活動。典範的作用及在於確認:什麼研究主題是有意義的,什麼能成為研究主題。科學家即 在典範的指導下從事精煉典範的細部工作,使典範更具精度與廣度。但有些問題仍是科學家 們所難以解決,稱作異常現象(anomaly)。通常偵測到異常現象時,科學家可能會修正原先 的典範做擴大解釋,或者做出重大的科學發現,但也可能視若無睹。如果常態科學下的典範, 不能解釋的異常現象越來越多,使科學家們對此一典範的信心開始動搖,則常態科學即進入 危機與異常科學階段。科學家試圖對異常現象提出不同的解釋,但未必被科學社群所採納。 由常態科學轉入非常態科學的徵兆包括:典範的不同詮釋大量出現、科學家們願意嘗試任何 新的作法、科學家明白表示對本行現況的不滿、訴諸於哲學辯論,以及對研究的先驗假說有 所爭議等種種現象。最後,當典範逐漸形成並取代了原有典範,即為科學革命。科學革命之 後的新典範在邏輯、觀察尺度上與原典範截然不同,這種性質稱為「不可共量性
+(incommensurability)」。新典範對於科學問題的解答一開始並未臻完善,經過相信新典範的 科學社群的共同發展,而愈趨於有效。此即進入此學門的另一個科學發展階段。
 
-Dietvorst, B. J., and S. Bharti. "People Reject Algorithms in Uncertain Decision Domains Because They Have Diminishing Sensitivity to Forecasting Error." *Psychological Science* 31 (2020): 1302–14.
+![./output_combined_images/image_5.png](./output_combined_images/image_5.png) 
 
-Dietvorst, B. J.; J. P. Simmons; and C. Massey. "Algorithm Aversion: People Erroneously Avoid Algorithms After Seeing Them Err." *Journal of Experimental Psychology: General* 144 (2015): 114–26.
+圖 2-2:孔恩的科學革命循環模式,從異常現象暴露了常態科學的科學危機,而科學革命帶動 了典範的轉移。(資料來源:Chen et al., 1998)
 
-Ding, K.; B. Lev; X. Peng; T. Sun; and M. A. Varsarhelyi. "Machine Learning Improves Accounting Estimates: Evidence from Insurance Payments." *Review of Accounting Studies* 25 (2020): 1098–134.
+## 2.4.2 典範與典範轉移
 
-Dijk, T. A. V., and W. Kintsch. "Cognitive Psychology and Discourse: Recalling and Summarizing Stories." *Current Trends in Text Linguistics* (1978): 61–80.
+孔恩於 1962 年在其著作《科學革命的結構》一書中提出了典範的概念,典範主導科學家 選擇問題、設計研究流程及詮釋研究結果,同時也指引學術社群鑑別研究工作的良窳。「典範」 是一套不管是科技、社會活動的運作模式、理論或世界觀,他受到廣泛的認同而塑造出在人 類中共同的典範概念。孔恩藉由說明科學發展過程中不斷透過發明或發現所引起的科學革 命,來解釋原本存在的典範不斷地被推翻改變的狀態。當新的典範被認同,獲得了普遍的認 同後,原先的典範就被轉移了,新的典範吸引舊的典範的支持者投效,造成典範的轉移。所 以典範轉移(paradigm shift)的發生必須建立在三個要件:原來已存在的典範、以革命的方 式發生變化、以及舊典範被新典範取代。
 
-Eastwood, J.; B. Snook; and K. Luther. "What People Want from Their Professionals: Attitudes Toward Decision-making Strategies." *Journal of Behavioral Decision Making* 25 (2012):
-458–68.
+典範的轉移並不單單存在於自然科學中,許多其他存在的事物或現象都是可能發生典範 轉移的現象。雖然孔恩對於典範轉移的概念原先以自然科學作為解釋對象,但是典範轉移普 遍具有哲學的理念。因此典範轉移可以從科學的領域跨越到社會科學的領域。典範轉移是一 種長期形成的思維變遷,paradigm shift 一詞的譯法很多,有譯為「典範轉移」、「境相轉移」、 「思想範疇轉變」;也有「概念轉移」、「範例轉換」、「範式轉換」、「思維變遷」、「思維轉換」 等。然而典範的轉移不一定會完全終結之前的典範,當典範的轉移應用在社會科學,典範可 能產生新的社會潮流成為當代典範的主流。
 
-Emett, S. A.; S. E. Kaplan; E. Mauldin; and J. S. Pickerd. "Auditing with Data and Analytics: External Reviewers' Judgments of Audit Quality and Effort." Working paper, Arizona State University, University of Mississippi, and University of Missouri, 2021. Available at https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3544973 Ernst & Young (EY). "How Artificial Intelligence Will Transform the Audit."
-2018. Available at https://www.ey.com/en_us/assurance/how-artificial-intelligencewill-transform-the-audit.
+## 專欄「新知平台」 常態科學與典範轉移
 
-Financial Accounting Standards Board (FASB). *Fair Value Measurements*. Statement of Accounting Standards Codification (ASC) Section 820. Norwalk, CT: FASB, 2010.
+孔恩在《科學革命的結構》一書中提出,所謂常態科學指的是「以過去的科學成就為基 礎所從事的研究,這些科學成就是某一科學社群的成員在某一時期內所公認的研究成果」。 至於典範,孔恩認為具有以下兩個特徵的科學成就稱之:(一)作者的成就實屬空前,因此 能從此種科學活動中的敵對學派中吸引一群忠誠的歸附者;(二)著作中仍留有許多問題能 讓這一群研究者來解決。常態科學家並不想發明新理論,也不容忍別人的新理論。常態科學 的研究目的就是闡明典範提供的現象和理論。常態科學的主要科學活動有幾個焦點:(一) 就是哪些已由典範指出來的,最能增進我們瞭解事物本質的那些事實;(二)設法增進觀察 這些事實的精確度;(三)精鍊典範理論,也就是解決理論中仍不清楚的地方。
 
-Financial Executive International (FEI). "What Impact Will AI Have on the Audit?" 2017.
+常態科學是「解謎活動」(puzzle-solving)。常態科學的問題,通常都是由典範所指出(或 由理論導出),故它們的結果其實都可預期。一般而言,解答常態科學問題,就是用某一新 方法來達到預期的目標,其間必須超越觀念上的、儀器上的、數學上各種複雜的障礙。解答 常態科學問題的活動類似拼圖謎(jigsaw puzzle)及 解字謎(crosswordpuzzle)的活動,很 有挑戰性,科學家解謎成功,會很有成就感,這成為驅使他前進的動力。進一步,典範保證 了常態科學的謎題,必然有答案。只是獲得答案的過程充滿未知因素。當常態科學的解謎活 動不能持續進行且遭遇重大挫折時,即科學家發現不能順利完成解謎活動時,往往會感到強 烈的挫折或失落,當然有部分原因是出自實驗往往不能一次就成功。科學家在常態科學時期 甚少從事理論發明的工作,除非是在科學發展的前典範階段。科學危機的出現,也就是改變 工具的時機到來,建構新理論的機會來了。
 
-Available at https://daily.financialexecutives.org/impact-will-ai-audit/.
+## 2.4.3 服務科學漸成為新典範
 
-Glover, S. M.; D. F. Prawitt; and B. C. Spilker. "The Influence of Decision Aids on User Behavior: Implications for Knowledge Acquisition and Inappropriate Reliance." *Organizational* Behavior and Human Decision Processes 72 (1997): 232–55.
+在 2011 年 4 月 10 日,國立清華大學舉辦東亞研究型大學校長會議(Association of East Asian Research Universities, AEARU),日本京都大學校長松本纮博士(Dr. Hiroshi Matsumoto)
+在其演講上,提到了兩個矛盾的現實(paradox):經濟成長邁向絕種(growth toward extinction) 和知識碎片化導致盲目(knowledge toward blindness)。一味地追求經濟成長的後果,是竭盡 所能地耗損有限的地球資源,加上經濟活動的誘因所帶動的都市化(urbanization),造成了交 通、水源、治安、汙染、社會結構等環境與社會永續發展的問題。對於人類社會長期追求的 願景:美好生活品質(Good Quality of Life)形成了期望與作為的矛盾現實。知識的分化與領 域內容的複雜,漸漸地形成了跨領域間的鴻溝。一個領域的學者離開了自己的領域,好像是 瞎子般,看不見也不知道別的領域發展彼此可以成為所用。往往一個領域的作為,成為另一 領域的問題。例如,一個新物質的發現到實務應用,可能造成環境的負擔。但在發現、實務 應用、環境永續上等議題,未能在問題發生前得到準確的預防與妥善的處理。因此,在學術 領域的分工合作上,他提出「務本之學」。在大學的教育內容上,低年級的學習內容以專業知 識與技能為主,到了高年級,要朝向知識整合與人生哲學的探討,以能通達學習的目的與知 識的終極效用。松本校長提出這兩個矛盾現實,正值同年 3 月 21 日,日本福島核電廠由於地 震海嘯造成核輻射外洩的嚴重災害,顯示出他在社會永續與學術發展的深度反省。
 
-Griffin, J. B. "The Effects of Uncertainty and Disclosure on Auditors' Fair Value Materiality Decisions." *Journal of Accounting Research* 52 (2014): 1165–93.
+服務科學的領域發展,如同其定義:「服務科學是一個以系統觀和價值共創論為基礎, 探究服務系統的跨領域學術領域;服務系統是一個由人,科技,內部和外部組織所組成的價 值共創的體系,彼此透過價值論述的連結來提升生活品質。」是以增進人類福祉與社會永續 發展為目標。松本校長的提醒,可以作為 21 世紀才開始發展的服務科學一個很好的視野與方 向:從永續發展出發,以人類福祉為依歸。從系統觀和價值共創論為基礎所觀察的社會現象, 以及從人類永續發展和福祉為依歸的服務科學,在更多的學術、產業社群的認同與參與研究 與發展,漸漸地成為新典範。
 
-Griffith, E. E. "When Do Auditors Use Specialists' Work to Improve Problem Representations of and Judgments About Complex Estimates?" *The Accounting Review* 93 (2018): 177–
-202.
+從產業社群的發展方向出發,全球化與科技化的趨勢下,全球的產業價值鏈產生了很大 的改變。以下以分享經濟(shared economy)、六級產業、社會企業(social enterprise)為例說 明服務經濟的典範轉移現象。
 
-Griffith, E. E. "Auditors, Specialists, and Professional Jurisdiction in Audits of Fair Values."
-Contemporary Accounting Research 37 (2020): 245–76 Griffith, E. E.; J. S. Hammersley; and K. Kadous. "Audits of Complex Estimates as Verification of Management Numbers: How Institutional Pressures Shape Practice." Contemporary Accounting Research 32 (2015): 833–63.
+(一)分享經濟的服務創新漸成為新的商業模式。例如,透過 Uber (https://www.uber.com)
+的移動通訊服務,有車的人可以成為司機,讓想搭車的乘客彼此透過智慧型手機上的 App 叫車。透過信用卡付費以及行車路徑的追蹤等機制,增加交易的信賴度。Airbnb (http://www.airbnb.com)提供有空房間的人成為民宿的主人,透過線上訂房的服務, 讓全世界的人可以成為房客。Autolib (http://www.autolib.fr/)首先出現在巴黎街上的 電動汽車自動出租服務,透過遍布在市區捷運站口以及重要路口的停車格作為充電站 來提供便利的租用服務。分享經濟的企業模式在各種產業或跨產業的案例逐漸增加, 同時,透過科技,從一地啟用,快速地複製到不同的地區,改變了許多既有的商業模 式。這些新商業模式所發展出來的分享經濟,從服務科學的價值共創與服務系統的觀 點來看,說明了服務提供者與接受者在其所處的社會環境與經濟組織所發展出的生態 系統,所產生的價值符合彼此的價值論述而能營運下去。
 
-Griffith, E. E.; J. S. Hammersley; D. Young; and K. Kadous. "Auditor Mindsets and Audits of Complex Estimates." *Journal of Accounting Research* 53 (2015): 49–77.
+(二) 六級產業的跨業價值共創成為新的產業主流。我們慣稱農業、工業、服務業分別為第 一、二、三級產業。過去,產業的發展總是切割的方式分別規劃各自的發展藍圖,產 業間的競爭所造成的社會成本往往超過社會的永續發展效益。例如,一個工業區的開 發,使用大量的農業土地,水資源,以及勞工。結果,其所排放的廢水和廢氣,所造 成的土地與空氣的汙染,對居民的健康與生態環境的不良影響,所需要的疾病治療與 生態復原的成本,甚至大於所得到的經濟利益。從農村往都市集中的人口,瓦解了農 村的社會與家庭結構,衝擊了都市的公共服務與經濟活動,結果是農村土地廢耕或轉 為工業生產用地,都市則承受人口壓力與財務槓桿下房地產價格飆漲,實際可用的收 入不增反減的窘境。服務業的交易在都市化的區域因人與人之間的依賴性增加而增 加,卻大都透過商業性的交易,以滿足生活與工作種種需求。於是,都市化越高的地 方,服務業越蓬勃發展。往往人們忙碌於賺更多的錢來滿足享用別人所提供的服務。 例如,忙於工作,沒有辦法回家煮飯或與家人共進晚餐;然後,增加的收入用於外食 的費用。於是,都市裡,餐廳林立,滿足外食人口的需要。忙於工作,沒有能及時接
 
-Guggenmos, R. D.; M. D. Piercey; and C. P. Agoglia. "Custom Contrast Testing: Current Trends and a New Approach." *The Accounting Review* 93 (2018): 223–44.
 
-Hanson, J. D. "Auditing the Future." 2012. Speech delivered at PCAOB/Fair Value Measurements and Reporting Conference, National Harbor, MD. Available at https://pcaobus.org/
-News/Speech/Pages/06072012_HansonAICPA.aspx.
 
-Harris, S. B. "Technology and the Audit of Today and Tomorrow." 2017. Speech delivered at PCAOB/AAA Annual Meeting, Washington, DC. Available at https://pcaobus.org/News/ Speech/Pages/Harris-statement-PCAOB-AAA-4-20-17.aspx.
+小孩回家;於是,課後安親班或才藝班林立,以代替無法親自陪伴孩子的忙碌父母來 陪伴與教導小孩。人們對過度工業化與都市化的反思,嘗試開始連結第一、二、三級 產業的價值,成為「六級產業」。這是一個跨業價值創新的機會。例如,台灣的品牌: 微熱山丘(http://www.sunnyhills.com.tw/)就是一個典型的六級產業的案例。從南投契 作的土鳳梨農業(一級)出發,結合農產品加工製作(二級)的加值,再透過行銷與 品牌價值(三級),創造原來各級產業所無法單獨創造的價值。
 
-Hayes, A. F. *Introduction to Mediation, Moderation, and Conditional Process Analysis: A Regressionbased Approach*. New York: Guilford Publications, 2018.
+(三)社會企業(social enterprise)的價值論述吸引年輕人,漸漸成為新世代的生涯選項。當 2008 年全世界受到時為美國第四大投資銀行--雷曼兄弟因次級房貸導致破產的影響, 許多國家與投資人受到牽連。經過這個事件,世人深刻反省資本社會的企業營運投資 收益最大化的道德風險以及與社會最大利益的衝突。以滿足社會需求與解決社會問題 為目的的社會企業模式因應而興起。維基百科定義社會企業:「社會企業從事的是公益 性事業,它通過市場機制來調動社會力量,將商業策略最大程度運用於改善人類和環 境生存條件,而非為外在的利益相關者謀取最大利益。其投資主要用於企業本身或者 社會。與一般其他私有企業不同的是,它不只是為了股東或者企業的擁有者謀取最大 的利潤而運作。」因此,社會企業的營運所需考量的因素以及參與的利害關係者比一 般的私有企業來的複雜。要能夠獲得整體社會利益,社會企業的生態系統中的利害關 係者如何運營價值共創的企業模式,是目前方興未艾的研究課題。社會企業是一個典 範轉移的服務系統現象。
 
-Hilton, A. S., and P. C. O'Brien. "Inco Ltd.: Market Value, Fair Value, and Management Discretion." *Journal of Accounting Research* 47 (2009): 179–211.
+從學術社群的發展趨勢,跨領域的合作創新是面向問題解決的研究領域的常態。以下以 學術領域邊界模糊化、服務導向邏輯、設計思維為例說明學術研究的典範轉移。 (一) 學術領域的邊界模糊化。學術領域分界是人為的。一方面透過理論的邏輯關係所形成 的體系,作為解釋現象的依據;另一方面,自成體系的理論架構作為培養後起學者的 學習路徑。而成為常態科學的領域,學術社群的成員具有共同的理論架構與共同經驗 的範例。然而,隨著科學的演進以及現象的持續發現以及新的問題的產生,每一個既 有領域延伸其觀察現象的解釋以及問題解決的方法論,學術領域的邊界開始產生重 疊,也為跨域的對話建立了相通的語言。隨著科技化與全球化腳步,數位化資訊的獲 得速度與來源的多元性,專業網絡的建立與運作的便利性,讓跨領域的對話與合作, 漸漸成為新現象解釋與問題解決的常態。學術領域邊界模糊化造成了新領域被定義以 及研究社群的形成。例如,網際網路經濟(Internet economy)探討因 Internet 的技術成 熟與普及後,所帶來的價值交換的形式與結構的新現象。所謂的免費經濟(Free Economy)以及分享經濟(Shared Economy)及落在網際網路經濟的領域範疇。而既 有的經濟學、社會學、管理學、資訊科學等相關領域的研究主題產生了重疊,也模糊 化了彼此的邊界。
 
-Hirst, D. E. "Auditors' Sensitivity to Source Reliability." *Journal of Accounting Research* 32
-(1994): 113–26.
+(二) 從商品導向邏輯(Goods-Dominant Logic)轉向服務導向邏輯(Service-Dominant Logic)
+的價值論述與創造(Lusch et al., 2008)。具體而言,即是:重視動態資源而非靜態資源; 強調資源的調度能力而非資源的取得能力;致力於服務化與經驗化而非產出商品與服 務;價值提案與定位的重要性高於價格;對話與互動的重要性高於促銷與推廣;價值 創造網絡的重要性高於供應鏈;重視透過價值交換的學習而非利潤最大化的定價行 為;顧客是價值共創的夥伴而非僅是市場行銷的目標對象。因此,服務科學認為服務 的提供,必須將目前商業發展的趨勢與消費者的需求加以結合、創造與設計,必須要 將嚴謹的科學方法導入服務業的營運中,發展出適合顧客的服務類型,開發出新的服 務或創造出滿足顧客的需求,令顧客感動或難忘的服務體驗,提高顧客滿意與顧客價 值。
 
-Hovland, C. I., I. L. Janis, and H. H. Kelley. "A Summary of Experimental Studies of Opinion Change," in Marie Jahoda & Neil Waren (eds.), *Attitudes*. Baltimore, Maryland: Penguin Books, (1966): 139–51.
+(三) 設計思考(Design Thinking)所帶動的創新文化。IDEO 設計公司總裁提姆布朗(Tim Brown)曾在《哈佛商業評論》定義「設計思考是以人為本的設計精神與方法,考慮 人的需求、行為,也考量科技或商業的可行性。」設計思考問題解決的步驟從透過同 理心洞察需求,定義問題,創意構想,製作雛型與測試,到實際的產品或服務的商品 化。強調以人為本,從人的需求出發,以多小誤、早成功(failure often, success sooner) 的態度來面對創新過程的失敗,注重跨領域團隊的組成與合作,透過作中學的歷程, 打造雛型系統。這樣的設計思考,對於以往的深思熟慮,未有完整想法之前,不輕易 出招的問題解決方法是一個反叛。在美國矽谷的創新創業環境中,設計思考成為創新 社群成員合作創新的共同語言與規範,亦即設計思考成為新的典範。在英國設計協會
+(Design Council)所提出的設計雙鑽石模型(Double Diamond Model)包括發現 (discover)、定義(define)、發展(develop)和遞送(deliver)四個步驟,形成分散 (divergent)、聚合(convergent)、分散(divergent)、聚合(convergent)四個方向的 創新活動歷程。許多的服務設計策略和方法大多具備這樣的歷程與步驟。例如, Stickdorn(2011) 認 為 服 務 設 計 思 考 包 括 五 個 主 要 原 則 : (1) 使用者為中心 (user-centered),(2) 共同創造的(co-creative),(3)循序性(sequencing),(4)有憑有 據的(evidencing),(5)全面考量的(holistic)。設計思考社群帶動了創新文化的典範轉 移。
 
-International Forum of Independent Audit Regulators (IFIAR). *Report on 2014 Survey* of Inspection Findings, 2015. Available at http://www.h3c.org/textes/Etude_IFIAR_2014-EN. pdf.
+## 2.5 服務科學社群的發展
 
-Joe, J. R.; S. D. Vandervelde; and Y. J. Wu. "Use of High Quantification Evidence in Fair Value Audits: Do Auditors Stay in Their Comfort Zone?" *The Accounting Review* 92 (2017): 89–116.
+如孔恩在其著作《科學革命的結構》一書中所描述的科學典範的轉移現象,既有的常態 科學對於某一些現象發生的原因無法解釋,或者發生的問題無法利用慣用的方法來解決時, 即產上了相關常態科學的危機,因此有了動能進行科學的革命。當現象可以被新的理論所解 釋,或者問題可以被新的科技所解決時,這些理論與科技的提出者,漸漸取代了既有的常態 科學的擁護者,成為新的典範的學術社群。以前不存在或者被當作無足輕重的問題,隨著新 的典範的出現,可能成為導致重大科學成就的基本問題。科學革命之後的新的常態科學於先 前的傳統不但在邏輯上互不相容。實際上前後兩者經常不能以某一客觀尺度來衡量
+(incommensurable)。在新典範的早期階段就支持它的人,通常不是基於新典範解決問題的實 績,而是當時只知道有一些存在的問題既有的典範無法解釋或解決,基於對新典範的信心, 相信新典範將會解決面對的問題。孔恩認為不同理論的支持者,好像使用不同母語的人。科 學革命可以視為把科學家用以觀察世界的觀念網絡予以更新,這個觀念網絡就是科學社群的 語言。一個科學社群是由一群共享共同典範的人所組成。這些人使用共同的符號通式 (symbolic generalization)來描述大家所認知的世界;他們有共同信守的信念(belief)與共 享的價值;在學習過程中,透過範例(exemplar)的分享,獲得社群成員的共同經驗。
 
-Kachelmeier, S. J., and W. F. Messier, JR. "An Investigation of the Influence of a Nonstatistical Decision Aid on Auditor Sample Size Decisions." *The Accounting Review* 65 (1990):
-209–26.
+從孔恩的典範轉移的理論,科學社群決定了新典範的成長與演進。因此,在服務科學新 典範的發展上,服務科學社群的形成與演進決定了服務科學的典範轉移。台灣服務科學社群 的濫觴始於 2008 年國立清華大學服務科學研究所的設立,成長於 2011 年成立的台灣服務科 學學會(http://www.s3tw.org)。服務科學學會的願景為「透過發展台灣服務科學社群,匯聚產 官學研的能量,推動「服務科學與服務創新」紮根與推廣工作,提升台灣服務經濟的競爭力, 增進社會幸福與永續發展。」肩負兩大使命: 「一、匯聚服務科學社群的熱情與活力,從學 術、教育、產業、公共政策出發,推動跨領域的學術研究、人才培育、產業創新與政策優化, 灌注台灣發展新動力;二、培養服務導向的社會價值,從知到行,成就優質生活與環境。」 學會成立以來,獲得國內學者與產業人士的響應與支持,並獲得溫世仁文教基金會的大力贊 助,從研究、教學、產學與國際合作等面向推動服務科學。例如,邀集國內跨領域的學者, 參考國外的服務科學架構,制定「服務科學碩士班課程架構」;舉辦「服務人文體驗營」,透 過體驗式學習歷程,培養服務人文素養,期能深耕台灣服務人文沃土,厚植服務人文成為服 務人才的底蘊;舉辦「服務科學與創新國際研討會」(International Conference on Service Science and Innovation, ICSSI)拓展台灣服務科學的國際社群;與溫世仁文教基金會合辦「溫世仁服 務科學論文獎」、「服務科學新苗獎」、「服務科學國際合作獎」獎勵國內服務科學的研究成果; 成立服務科學區域聯盟,推動台灣各地服務科學的教學與在地實踐,結合服務科學的教學研 究,探索在地永續發展的議題。
 
-Kachelmeier, S. J., and M. G. Williamson. "Attracting Creativity: The Initial and Aggregate Effects of Contract Selection on Creativity-Weighted Productivity." *The Accounting Review* 85 (2010): 1669–91.
+目前在歐洲、美洲和亞洲已有許多國家的學術機構和企業投入服務科學領域,積極從事 相關研究。IBM 公司總裁 Sam Palmisano 觀察到整個經濟模式逐漸轉型, 2004 年 12 月在 美國競爭力委員會,首度提出符合服務經濟時代所需的新興學科,稱為「服務科學、管理學 與工程學(Services Science, Management, and Engineering; SSME)」,以美國加州的 Almaden 研究中心作為全球推動的總部,持續在世界各國的主要大學推動服務科學課程與研究。從2016 年以來,各國有名的大學,例如麻省理工學院(MIT)、劍橋大學(Cambridge University)、 北卡州立大學(North Carolina State University)、亞利桑那州立大學(Arizona State University)、 柏克萊大學(Berkley University),瑞士日內瓦大學(University of Geneva)、瑞典卡爾斯登 (Carlstad University)、芬蘭阿托大學(Aalto University)、國立新加坡大學(National Singapore University)等,均投入服務科學領域的課程與研究。
 
-Kadous, K. L.; L. Koonce; and K. L. Towry. "Quantification and Persuasion in Managerial Judgment." *Contemporary Accounting Research* 22 (2005): 643–86.
+國際的學術社群也利用了既有的學術平台如國際期刊、學術研討會分享研究成果與連結 研究機構與學者。例如INFORMS Service Science、Journal of Service Research、Journal of Service Management 等期刊是聚焦於服務科學相關研究的國際期刊,其他既有領域的期刊,如 MIS Quarterly、Information System Research、Journal of Marketing 等國際期刊則收錄了服務科學跨 領域的論文,顯見服務科學在相關領域被重視的程度。研討會的主題上,夏威夷國際系統科 學研討會(Hawaii International Conference on System Sciences)、AIS SIG Services 的研討會、 Frontiers in Service Conference 等為服務科學學者主要參與的學術研討會。在實務社群上, ISSIP (International Society of Service Innovation Professionals)為國際服務科學與創新的專業 社群;sdn(Service Design Network)為服務設計的國際專業社群。藉由參與這些國際服務科 學社群,可以擴展台灣的服務科學的觸角到國際,促進知識交流與合作創新。
 
-KPMG, L. L. P. "Harnessing the Power of Cognitive Technology to Transform the Audit."
-2016. Available at https://assets.kpmg/content/dam/kpmg/us/pdf/2016/11/us-auditCognitiveFactSheet.pdf.
+## 2.6 服務人文與哲學
 
-Levene, H. "Robust Tests for Equality of Variances." *Contributions to Probability and Statistics:*
-Stanford Studies in Mathematics and Statistics (1960): 47, 278–92.
+2.6.1 服務人文 服務是價值的交換與共創的過程與結果。服務的主體與客體都是人,所以從人出發,回 到人。例如,教育是一個服務。所謂教學相長,老師與學生同為主體與客體。老師看見學生 學習的需要,課程的設計、學習的指導,在校園裡或透過網路等可能的接觸點,以創造機會 讓學生有所改變,成為更好的自己,達到服務傳遞的最高價值:轉型(transformation)。當學 生改變的同時,身為老師的服務提供者,也從學生的改變中有所收穫,甚至學生的知識與行 為的改變過程中,也給老師上了一課。例如,在微電影「希望樹」的真實故事中,一位義務 支援教學老師劉寅,在雲南麗江偏遠山區大拉埧,教育當地的小朋友。同時為改善當地孩子 的受教環境,透過販賣自己彈唱灌錄的 CD 以籌措資金來改善大拉埧的教育環境。他的付出, 讓教育資源缺乏的大拉埧孩子,獲得外界的贊助。電影中,當劉寅乘著鐵牛貨車正要離開村 子的當下,受到他很大的影響的李江華同學,跑步趕上,遞上當地俗稱的希望果,大聲地說 出;「老師,把希望帶上」。這一幕,映射了劉寅老師所帶給孩子們的希望,回向到老師。孩 子們要老師帶著希望去服務其他偏鄉的孩子們。
 
-Li, K. K., and R. G. Sloan. "Has Goodwill Accounting Gone Bad?" *Review of Accounting Studies* 22 (2017): 964–1003.
+服務人文,簡單的說就是「從別人的需要,看到自己的責任。」是一種對人與事的同理 心與洞察能力,能夠去感受與體會別人的需要。而回應別人的需要的能力,就是責任。亦即 「透過自己的做到,成為別人的需要。」強調的是自己的言行一致,從本身的德行、專業、 能力成為自己的價值論述,讓別人知道「我是誰」、「我可以為別人做到些什麼」和「我願意 成為價值共創者」,然後願意共同成就彼此的價值。植基於服務人文的服務科學,是一個「行」 的科學。我們修習服務科學,期望自己成為「行者」。因此,服務科學的學習,強調做中學, 知識、技能的習得與情意、態度的轉化並重,從知道到做到,要成為具備服務人文素養,能 跨領域的服務科學與創新人才。
 
-Liu, M. "Assessing Human Information Processing in Lending Decisions: A Machine Learning Approach." Working paper, Boston College, 2021. Available at https://research.
+## 2.6.2 服務哲學
 
-chicagobooth.edu/arc/journal-of-accounting-research/jar-annual-conference/papers Maniaci, M. R., and R. D. Rogge. "Caring About Carelessness: Participant Inattention and Its Effects on Research." *Journal of Research in Personality* 48 (2014): 61–83.
+從清代段玉裁《說文解字注》對「服」和「務」的註解,解析了服務的字義。「服,用 也;服,事也;凡事皆當如人之操舟也。」「務,趣也,趣者、疾走也;務者、言其促疾於事 也。」舟行水上,水是變動的。而凡事皆要能像在水上駕舟一般的敬謹與專注,才能在變動 如水的情境下,快快地完成。所謂「水能載舟,亦能覆舟」。如果把水當作是被服務的顧客, 船當作是服務提供者。因為有顧客的需要,才有服務提供者的價值,才能支撐服務提供者的 企業,如同水能載舟。相反的,如果一個服務提供者無法接住顧客的需要,顧客將另尋其他 替代途徑,這個企業也就無法成為這些顧客的需要而退出市場,如同水能覆舟。漢字「服務」 二字的組成,已經解釋了服務的本質。
 
-Martin, R. D.; J. S. Rich; and T. J. Wilks. "Auditing Fair Value Measurements: A Synthesis of Relevant Research." *Accounting Horizons* 20 (2006): 287–303.
+《老子》第八章:「上善若水,水善利萬物而不爭,處眾人之所惡,故幾于道。」闡述 了水的高貴就在它能承擔卑下(王邦雄,2011)。我們常說力爭上流,成為人上人。然而,老 子則以水來比喻最好的人格要像水一般,生動靈活不死板,善利萬物,但又能不爭。道家以 水的性格來隱喻生命的智慧:面對變動的世界,人事的變遷,生命的成長,在一切主客體變 動中,要有一個生動靈活的心去引導帶動思想與行為。水的高貴就在它能往下流動以支持萬 物,潤澤大地。更重要的是,它的不爭。往往我們以利萬物來與萬物爭,我們在利萬物裡證 明自己的優越;在利他的行為上,卻是出自於自己的優越感,結果還是傷害了對方。
 
-Messier, W. F. "Research in and Development of Audit Decision Aids." Judgment and Decision Making Research in Accounting and Auditing, edited by R. Ashton and A. Ashton. (207–28). Cambridge: Cambridge University Press, 1995.
+《老子》最後一章:「天之道,利而不害;聖人之道,為而不爭。」我們的作為,如果 是爭的方式,我們所認為利他的行為,對他人反倒是傷害。這樣的認知,可以從《老子》: 「天下萬物生於有,有生於無」和「有之以為利,無之以為用」來佐證。王邦雄教授以父母 與子女的關係以及老師與學生的對待來說明。父母以其壯年歲月,養育子女,孩子長大了, 父母的青春也老去。在孩子成長最需要照顧與陪伴,父母的有,提供了孩子成長的支持;而
 
-Murphy, H. "Auditing to be Less of a Burden as Accountants Embrace AI." *Financial Times*,
-2017. Available at https://www.ft.com/content/0898ce46-8d6a-11e7-a352-e46f43c5825d.
 
-## 200 B. P. Commerford, S. A. Dennis, J. R. Joe, And J. W. Ulla
 
-Nelson, M. W.; J. A. Elliott; and R. L. Tarpley. "Evidence from Auditors about Managers' and Auditors' Earnings Management Decisions." *The Accounting Review* 77 (2002):
-175–202.
+當孩子漸漸獨立時,父母的包容與放手,子女有了獨立發展的有。所以子女的有來自父母的 無。在疼愛子女的初衷下,父母不與孩子爭,不與子女計較誰比較對,而只是與子女同在, 陪伴他們的成長。老師與學生的對待之道,亦同。學生剛進入一個新的學習環境與課程內容, 老師的有,帶領學生進入學習的歷程;隨著學習歷程開展,學生漸漸具備基礎能力,有了創 新的能力,老師的無,給了學生創新的空間,讓學生有了展現自己能力的舞台。因為老師與 學生站在一起,可以「和其光,同其塵」,老師不計較,所謂的「挫其銳」,沒有了自己也就 不會跟學生爭,才能「解其紛」,如同水利萬物而不爭,故接近了道:師道。
 
-Nelson, M. W.; S. D. Smith; A. Z. V. Palmrose. "The Effect of Quantitative Materiality Approach on Auditors' Adjustment Decisions." *The Accounting Review* 80 (2005): 897–920.
+《老子》的「天下萬物生於有,有生於無」和「有之以為利,無之以為用」,也呼應了 服務設計與創新的策略。在發展新服務的流程上,首先去發掘使用者的需求。在需求擷取的 活動中,服務設計者在使用者的場域去同理與洞察其需求,以「和其光,同其塵」的態度, 與使用者站在一起,才能感受與理解其需要。所謂的「常無以觀其妙」,這個「觀」,是以「致 虛極及,守靜篤」的虛靜之心,就像一面鏡子,可以映射現象,直接看到,感覺到,並體悟 到事物發生的原因。因為服務設計者的虛靜之心,代表無自己,才可以感應到使用者的有需 求。接下來,服務設計者所產生的新服務的點子與雛型,讓使用者的需求能夠被滿足,亦即 從無到有。當使用者的有,滿足了,服務設計者回到無,就是超越自我,承擔更大的責任。
 
-Önkal, D.; P. Goodwin; M. Thomson; S. Gönül; and A. Pollock. "The Relative Influence of Advice from Human Experts and Statistical Methods on Forecast Adjustments." Journal of Behavioral Decision Making 22 (2009): 390–409.
+有無相生的「雙向圓成」的迴向(王邦雄,2011),體現了眾多服務設計方法的基本邏輯,成 為服務設計的心法。
 
-O'Reilly, C. A., and K. H. Roberts. "Relationships Among Components of Credibility and Communication Behaviors in Work Units." *Journal of Applied Psychology* 61 (1976): 99–102.
+上善若水的哲思,也呈現在台灣服務科學學會的會徽(圖 2-3)。台灣服務科學學會
+(Service Science Society of Taiwan)的英文簡稱 s3tw。在會徽的上半部形狀有如台灣,其中 的藍綠柔軟線條,代表水的生動靈活。藍綠線條以空白相間,代表服務提供者與接受者,有 無相生,互為利用。而曲線相距,有如探戈,彼此接應,共創價值。會徽的上半部形狀有如 向上的湧泉,代表服務的價值源源不斷湧現。會徽的下半部形狀似太極,所謂的太極生兩儀, 兩儀生四象,四象生八卦,服務是從永續發展出發,以人類福祉為依歸,然而服務系統的構 成與服務價值的產生,如同八卦的爻的多重組合而有不同的模式,服務的設計與創新,在回 歸生命的本質歸宿,其可創造與延伸的服務型態,多元與豐富。顯示了服務如水,上善若水, 止於至善。
 
-Peecher, M. E., and I. Solomon. "Theory and Experimentation in Studies of Audit Judgments and Decisions: Avoiding Common Research Traps." *International Journal of Auditing* 5 (2001): 193–203.
+![./output_combined_images/image_6.png](./output_combined_images/image_6.png)
 
-Piercey, M. D. "Documentation Requirements and Quantified Versus Qualitative Audit Risk Assessments." *Auditing: A Journal of Practice & Theory* 30 (2011): 223–48.
+圖 2-3 台灣服務科學學會會徽,展現了服務如水,上善若水,至於至善的人文與科學(設 計者:林磐聳)
 
-Pornpitakpan, C. "The Persuasiveness of Source Credibility: A Critical Review of Five Decades' Evidence." *Journal of Applied Social Psychology* 34 (2004): 243–81.
+## 2.7 結論
 
-PricewaterhouseCoopers (PwC). "Confidence in the Future. Human and Machine Collaboration in the Audit." 2017. Available at https://www.pwc.co.uk/services/auditassurance/statutory-audit/insights/confidence-in-the-future-audit-innovation/humanand-machine-collaboration-in-the-audit.html.
+本章揭開服務科學跨領域課程的面紗,看見服務科學學習歷程中,從服務科學導論入門,以 實務問題導向的專案式團隊學習活動,體驗做中學的跨領域團隊領導與合作,發現服務系統 以及共創價值的服務科學。以服務人文為基底的服務科學,旨在培養服務科學的行者,要能 透過自己的做到,成為別人需要。服務科學學會舉辦的「服務人文體驗營」,藉由團體的學習, 讓彼此看見改變的可能,也能透過自我的改變,創造群體的成功經驗。帶著改變自我,服務 利他的人文素養,讓服務科學的學習以及實踐,體現老子哲學所期許的境界:上善若水。在 學術與實務社群的行動軌跡上,體現孔恩博士所描述的典範轉移的方向與速度。而新的典範 的建立與演進,需要源源不斷的探索者與行動者的投入。服務科學在服務管理、服務設計、 服務工程三大模組課程的學習,能連接來自不同的領域的有志之士,透過跨領域的合作創新, 成就服務科學與創新的新典範。服務科學的概念由 IBM 在 2004 年開始在全世界各地點燃新 典範的火炬,經由國內的學者與實務專業人士的跨領域合作所形成台灣服務科學學會社群, 建立了服務科學課程架構,推動了服務科學研究、教學以及產學合作,自 2008 年清大服務科 學研究所創立碩士班以來,服務科學的人才已經漸漸地在企業與社會發揮跨領域的創新能 力。尤其,服務科學在台灣,以中華文化為基礎,如老子道德經總結:「天之道,利而不害; 聖人之道,為而不爭」,定義服務如水,水善利萬物而不爭。植基於中華文化的服務人文所發 展的服務科學,不是西方移植過來;而是從我們的土地、人民與科技發育而成的。讓我們一 起來耕耘服務人文沃土,培育服務科學幼苗。
 
-Promberger, M., and J. Baron. "Do Patients Trust Computers?" Journal of Behavioral Decision Making 19 (2006): 455–68.
+## 問題與討論 【基礎題】
 
-Public Company Accounting Oversight Board (PCAOB). The Auditor's Responses to the Risks of Material Misstatement*. Auditing Standard 2301*. Washington, DC: PCAOB, 2010.
+1. 請描述服務科學跨領域的課程內容與您自己的學術基礎的關聯。 2. 根據您自己的學術基礎,說明可能的學習路徑來培養自己成為具備服務人文素養的服務科 學的專業人才。
 
-Public Company Accounting Oversight Board (PCAOB). *PCAOB Release No. 104–*
-2014.166. KPMG LLP's Quality Control Remediation Submissions. Washington, DC: PCAOB, 2014a.
+3. 根據孔恩博士的理論,請提出身為典範轉移過程中服務科學社群的一員,可以做些什麼努 力,實現服務科學的價值。
 
-Public Company Accounting Oversight Board (PCAOB). *Staff Consultant Paper: Auditing* Accounting Estimates and Fair Value Measurements. Washington, DC: PCAOB, 2014b.
+4. 請闡述老子的哲學思想與服務哲學的關聯。 5. 請說明服務哲學如何成為實現服務科學的價值指引與規範。
 
-Public Company Accounting Oversight Board (PCAOB). *Staff Consultation Paper No. 2015-*
-01, the Auditors' Use of the Work of Specialists. Washington, DC: PCAOB, 2015.
+1. Please identify the correlation between the courses in service science curriculum and your academic backgrounds. 
 
-Public Company Accounting Oversight Board (PCAOB). *Proposed Amendments to Auditing* Standards for Auditor's Use of the Work of Specialists. PCAOB Release No. 2017-003. Washington, DC: PCAOB, 2017a.
+2. Based on your academic background, please specify the possible learning paths to lead you to become a service science professional embedded with service humanity.
 
-Public Company Accounting Oversight Board (PCAOB). *Proposed Auditing Standard—*
-Auditing Accounting Estimates, Including Fair Value Measurements and Proposed Amendments to PCAOB Auditing Standards. PCAOB Release No. 2017-002. Washington, DC: PCAOB, 2017b.
+3. Based on Dr. Kuhn's paradigm shifting process, please recommend the tentative actions which the members of service science can take to realize the value of service science during the transition of shifting to the new paradigm.
 
-Public Company Accounting Oversight Board (PCAOB). "Changes in Use of Data and Technology in the Conduct of Audits." PCAOB Research and Standard Setting Projects. Washington, DC: PCAOB, 2020. Available at https://pcaobus.org/oversight/standards/
-research-standard-setting-projects/changes-use-data-technology-conduct-audits Ramanna, K., and R. L. Watts. "Evidence on the Use of Unverifiable Estimates in Required Goodwill Impairment." *Review of Accounting Studies* 17 (2012): 749–80.
+4. Please elaborate the relations between Taoism and philosophies of service. 5. Please specify the potential engagement for the philosophies of service science to guide and 
 
-Raphael, J. "Rethinking the Audit." *Journal of Accountancy* 223 (2017): 29–32. Available at https://www.journalofaccountancy.com/issues/2017/apr/rethinking-the-audit.html.
+## 【實作題】
 
-Saiewitz, A., and T. Kida. "The Effects of an Auditor's Communication Mode and Professional Tone on Client Responses to Audit Inquiries." *Accounting, Organizations and Society* 65
-(2018): 33–43.
+1. 請從實際情境中,指出具有典範轉移的服務創新個案,並分析其價值論述與企業模式。 2. 請從設計思考的創新歷程,比較您自己目前解決問題的方法與設計思考的方法的異同,並 請指出讓自己具有設計思考的認知與能力,您將會如何做到?
 
-Swieringa, R. J., and K. E. Weick. "An Assessment of Laboratory Experiments in Accounting."
-Journal of Accounting Research 20 (1982):56–101.
+1. Please identify a service innovation case which demonstrates the effects of paradigm shifting. 
 
-Tysiac, K. "How to Enable Audit Innovation." Journal of Accountancy 233 (2017): 33–35.
+Please analyze its value proposition and business model.
 
-Available at https://www.journalofaccountancy.com/issues/2017/apr/audit?innovation.
+2. Based on the process of design thinking for innovation, please compare the process you are used to solving problems with that of design thinking, and then specify the tentative approaches you would take to enact the abilities of design thinking.
 
-html
--e 
+## 延伸閱讀
 
+1. 深入了解科學典範轉移的歷程與科學案例,請參閱孔恩博士原著:The Structure of Scientific Revolutions;王道還等譯,《科學革命的結構》,(遠流出版事業股份有限公司)。
 
+2. 深入了解老子哲學裡有關上善若水以及萬物生於有,有生於無等哲學理論,請參閱王邦雄 著,《老子十二講》(遠流出版事業股份有限公司)。
 
-## Auditor Reliance On Artificial Intelligence 201
+3. 對於服務設計的基本概念了解,請參閱 Stickdorn 所著 This Is Service Design Thinking。中 譯本:《這就是服務設計》,池熙璿譯,中國生產力中心出版。
 
-West, D. M., and J. R. Allen. *How Artificial Intelligence is Transforming the World*. Washington, DC: Brookings Institution Press, 2018. Available at https://www.brookings.edu/research/
-how-artificial-intelligence-is-transforming-the-world/.
+4. 對於運用設計思考的方法進行創新活動,請觀賞 IDEO 接受美國 ABC News 採訪所展現設計 一個購物車的流程(https://www.youtube.com/watch?v=z720hSIJN7o)。
 
-Yeomans, M.; A. K. Shah; S. Mullainathan; and J. Kleinberg. "Making Sense of Recommendations." *Journal of Behavioral Decision Making* 32 (2019): 403–14.
+## 參考文獻
 
-Zimbelman, M. F., and W. S. Waller. "An Experimental Investigation of Auditor-Auditee Interaction Under Ambiguity." *Journal of Accounting Research* 37 (1999): 135–55.
+1. 王邦雄(2011),老子十二講,遠流出版事業股份有限公司。
 
- 1475679x, 2022, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/1475-679X.12407 by National Tsinghua University, Wiley Online Library on [01/08/2024]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
--e 
+2. Choudaha, R. (2008). Competency-based curriculum for a master's program in Service Science, Management and Engineering (SSME): An online Delphi study (Doctoral dissertation, UNIVERSITY OF DENVER).
+
+3. Chen, X., Andersen, H., & Barker, P. (1998). Kuhn's theory of scientific revolutions and cognitive psychology. Philosophical psychology, 11(1), 5-28.
+
+4. Kuhn, T. S. (1996) *The Structure of Scientific Revolutions*. 3rd ed. Chicago, IL: University of Chicago Press.
+
+5. Lusch, Robert F., Stephen L. Vargo, and Gunter Wessels (2008). Toward a conceptual foundation for service science: contributions from Service-Dominant Logic, IBM Systems Journal 47(January–March), 5–14.
+
+6. Service Science Society of Taiwan (2012). A Reference Guide for Service Science Curriculum Development. 
+
+7. Stickdorn, M. et al. (2011). This Is Service Design Thinking, BIS Publishers, The Netherlands. 側欄: 1. 德菲法: The Delphi is a widely used and accepted method for achieving convergence of opinion concerning real-world knowledge solicited from experts within certain topic areas.
+
+2. 不可共量性: Theories are incommensurable if they are embedded in starkly contrasting conceptual frameworks whose languages lack sufficiently overlapping meanings to permit scientists to directly compare the theories or to cite empirical evidence favoring one theory over the other.
+
+3. 分享經濟:The Sharing Economy is a socio-economic ecosystem built around the sharing of human and physical resources. It includes the shared creation, production, distribution, trade and consumption of goods and services by different people and organizations. 
+
+4. 社會企業:Social enterprise is an organization that applies commercial strategies to maximize improvements in human and environmental well-being, rather than maximising profits for external shareholders.It can be structured as a for-profit or non-profit, and may take the form of a co-operative, mutual organization, a social business, or a charity organization.
+
 
 

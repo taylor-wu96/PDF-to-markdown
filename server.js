@@ -77,9 +77,11 @@ const fs = require('fs');
 
 const app = express();
 const upload = multer({ dest: 'uploads/' });
+const archiver = require('archiver');
 
 app.use(express.static('public'));
 app.use(express.json());
+
 
 let taskProgress = {}; // Store progress by task ID
 
@@ -160,6 +162,72 @@ app.get('/download/:filename', (req, res) => {
   } else {
     res.status(404).send('File not found');
   }
+});
+
+app.get('/zip/:customizationId', (req, res) => {
+  const customizationId = req.params.customizationId;
+  const outputFile = path.join(__dirname, `${customizationId}_archive.zip`);
+  const outputMarkdownFile = path.join(__dirname, `${customizationId}_final_output.md`);
+  const picturesDir = path.join(__dirname, customizationId+'_combined_images');
+
+  // Ensure the output file is writable
+  const output = fs.createWriteStream(outputFile);
+  const archive = archiver('zip', {
+      zlib: { level: 9 } // Set the compression level
+  });
+
+  output.on('close', () => {
+      console.log(`${archive.pointer()} total bytes`);
+      console.log('ZIP file created successfully');
+
+      // Send the ZIP file to the client
+      res.download(outputFile, err => {
+          if (err) {
+              console.error('Error sending ZIP file:', err);
+              res.status(500).send('Error sending ZIP file');
+          }
+
+          // Optionally delete the ZIP file after sending it
+          fs.unlink(outputFile, (err) => {
+              if (err) {
+                  console.error(`Failed to delete ZIP file ${outputFile}:`, err);
+              } else {
+                  console.log(`ZIP file ${outputFile} deleted.`);
+              }
+          });
+      });
+  });
+
+  archive.on('error', (err) => {
+      console.error('Error creating ZIP archive:', err);
+      res.status(500).send('Error creating ZIP archive');
+  });
+
+  // Pipe archive data to the file
+  archive.pipe(output);
+
+  // Add the Markdown file to the archive
+  if (fs.existsSync(outputMarkdownFile)) {
+      archive.file(outputMarkdownFile, { name: `${customizationId}_final_output.md` });
+  } else {
+      console.error(`Markdown file ${outputMarkdownFile} not found`);
+  }
+
+  // Add all PNG files from the pictures directory to the archive
+  if (fs.existsSync(picturesDir)) {
+      const files = fs.readdirSync(picturesDir);
+      files.forEach(file => {
+          const filePath = path.join(picturesDir, file);
+          if (path.extname(file).toLowerCase() === '.png') {
+              archive.file(filePath, { name: path.join(customizationId+'_combined_images', file) });
+          }
+      });
+  } else {
+      console.error(`Pictures directory ${picturesDir} not found`);
+  }
+
+  // Finalize the archive (this is required)
+  archive.finalize();
 });
 
 app.get('/picture', (req, res) => {

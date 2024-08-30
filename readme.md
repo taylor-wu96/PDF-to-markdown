@@ -1,27 +1,41 @@
-Here is a possible README.md file for the provided code:
 
 **Title:** PDF Chunking and Language Processing Script
-**Version:** 1.0
 
 **Overview:**
 This script takes a PDF file as input, processes it into chunks based on the number of pages per chunk and maximum pages specified, and generates markdown files and PNG images for each chunk. The script also handles language processing using `marker_single` tool.
 
 
+**Installation**
 
-**Usage:**
+###### ps: the code in now capability with unix based operating system
+1. Clone the repository to your local machine by running the following command in the terminal:
+```bash
+git clone https://github.com/jingyuan-liu/PDF-Chunker.git
+```
+2. Navigate to the cloned directory:
+```bash
+cd PDF-Chunker
+```
+3. Make the script executable by running the following command:
+```bash
+chmod +x complete_pdf_to_marked_down.sh
+```
 
-* Save this script to a file (e.g., `process_pdf.sh`)
-* Make the script executable by running `chmod +x process_pdf.sh`
+**Manual Usage:**
+
+* Save this script to a file (e.g., `complete_pdf_to_marked_down.sh`)
+* Make the script executable by running `chmod +x complete_pdf_to_marked_down.sh`
 * Run the script with the following arguments:
 	+ `<input_pdf>`: The input PDF file
 	+ `<output_prefix>`: The prefix for output markdown files and PNG images
 	+ `<pages_per_chunk>`: The number of pages per chunk
-	+ `<max_pages>`: The maximum number of pages to process (optional)
-	+ `[lang1]`, `[lang2]`, ...: One or more languages to process using `marker_single` tool
+	+ `<max_pages>`: The maximum number of pages to process, or input 0 to process the entire document
+	+ `[lang1]`, `[lang2]`, ...: One or more languages to process using `marker_single` tool, the default language is English (en)
+
 
 Example:
 ```bash
-./process_pdf.sh input.pdf output prefix 10 100 english chinese
+./complete_pdf_to_marked_down.sh input.pdf output prefix 10 100 english chinese
 ```
 **Requirements:**
 
