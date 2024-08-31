@@ -66,11 +66,6 @@ This script takes a PDF file as input, processes it into chunks based on the num
 	./complete_pdf_to_marked_down.sh input.pdf output prefix 10 100 english chinese
 	```
 
-**Requirements:**
-
-* `pdftk` tool installed and available in the system's PATH
-* `marker_single` tool installed and available in the system's PATH (optional)
-
 **Output:**
 The script generates two types of files:
 1. Markdown files (`*.md`) containing processed text for each chunk.
