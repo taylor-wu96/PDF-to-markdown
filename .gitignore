@@ -1,3 +1,8 @@
-./node_modules
-./dist
-./uploads
+# Node.js modules
+node_modules/
+
+# Build output
+dist/
+
+# Uploads
+uploads/
