@@ -1,8 +1,20 @@
 {
+  "name": "marker-frontend",
+  "version": "0.0.1",
+  "main": "main.js",
   "description": "",
   "dependencies": {
     "archiver": "^7.0.1",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "electron": "^32.0.1",
+    "electron-packager": "^17.1.2"
+  },
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh"
   }
 }

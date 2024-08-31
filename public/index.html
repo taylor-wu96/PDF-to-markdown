@@ -163,6 +163,13 @@
 
   
     <script>
+      async function getServerUrl() {
+        if (!server_url) {
+          server_url = await window.electronAPI.getServerAddress();
+        }
+        return server_url;
+      }
+
       document
         .getElementById("uploadForm")
         .addEventListener("submit", async (e) => {
@@ -193,7 +200,8 @@
 
           try {
             // Start processing and get taskId
-            const response = await axios.post("/process-pdf", formData, {
+            const url = await getServerUrl();
+            const response = await axios.post(url+"/process-pdf", formData, {
               headers: { "Content-Type": "multipart/form-data" },
             });
 
@@ -202,7 +210,7 @@
 
             async function pollProgress(taskId) {
               const intervalId = setInterval(async () => {
-                const response = await axios.get(`/progress/${taskId}`);
+                const response = await axios.get(`${server_url}/progress/${taskId}`);
                 const progress = response.data.progress;
                 if (progress !== previous_progress) {
                   await fetchResult(taskId);
@@ -232,14 +240,15 @@
             resultDiv.innerText =
               "Error: " +
               JSON.stringify(error.response?.data || error.message, null, 2);
-            progressBar.value = 0;
+              progressBarFill.style.width = "0%";
           }
         });
       async function fetchResult(taskId) {
         try {
+          const url = await getServerUrl();
           const prefix_output = document.getElementById("outputPrefix").value;
           const response = await axios.get(
-            `/download/${prefix_output}_final_output.md`
+            `${url}/download/${prefix_output}_final_output.md`
           );
           let markdownContent = response.data;
           let prefix_value = document.getElementById("outputPrefix").value;
@@ -247,17 +256,15 @@
             `!\\[.*?\\]\\(\\.\\/${prefix_value}_combined_images\\/(.*?)\\)`,
             "g"
           );
-
           // Adjust the image paths to use the correct prefix and format the API query parameters
           markdownContent = markdownContent.replace(
             regexPattern,
             (match, p1) => {
-              return `![${p1}](picture?filename=${p1}&relativePath=${prefix_value}_combined_images)`;
+              return `![${p1}](${url}/picture?filename=${p1}&relativePath=${prefix_value}_combined_images)`;
             }
           );
 
-          console.log("markdownContent:", markdownContent);
-
+          // console.log("markdownContent:", markdownContent);
           const htmlContent = marked.parse(markdownContent);
           document.getElementById("download").innerHTML = htmlContent;
         } catch (error) {
@@ -267,8 +274,9 @@
       }
       document.getElementById("downloadZip").addEventListener("click", async () => {
         try {
+          const url = await getServerUrl();
           const outputPrefix = document.getElementById("outputPrefix").value;
-          const response = await axios.get(`/zip/${outputPrefix}`, {
+          const response = await axios.get(`${url}/zip/${outputPrefix}`, {
             responseType: "blob",
           });
 
