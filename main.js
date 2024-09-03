@@ -57,10 +57,41 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const { app: server, PORT } = require('./server');
 const http = require('http');
+const fs = require('fs');
+const log = require('electron-log');
+const logDir = '/Users/wufengjin/Downloads/logs/';
+// Configure log level and file path
 
 let mainWindow;
 let serverInstance;
 let serverAddress = `http://localhost:${PORT}`;
+
+
+// Ensure log directory exists
+if (!fs.existsSync(logDir)) {
+  print('logDir not exist:', logDir);
+  fs.mkdirSync(logDir, { recursive: true });
+}
+
+log.transports.file.file = path.join(logDir, 'main0.log');
+log.transports.file.sync = true;
+log.transports.file.level = 'silly';
+log.transports.console.level = 'silly';
+console.log('Log file path:', log.transports.file.file);
+log.info('Log initialized.');
+
+// Example uncaught exception logging
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  log.error('Uncaught Exception:', err);
+});
+
+// Example unhandled rejection logging
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  log.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -72,6 +103,7 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
     },
   });
+  mainWindow.webContents.openDevTools();
 
   mainWindow.loadFile(path.join(__dirname, 'public', 'index.html'));
 
@@ -82,8 +114,13 @@ function createWindow() {
 
 app.on('ready', () => {
   serverInstance = http.createServer(server);
+  serverInstance.on('error', (err) => {
+    console.error('Server error:', err);
+    log.error('Server error:', err);
+  });
   serverInstance.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
+    log.info(`Server running on port ${PORT}`);
     createWindow();
   });
 });
@@ -98,7 +135,13 @@ app.on('activate', function () {
 
 app.on('will-quit', () => {
   if (serverInstance) {
-    serverInstance.close();
+    serverInstance.close((err) => {
+      if (err) {
+        console.error('Error shutting down the server:', err);
+      } else {
+        console.log('Server shut down gracefully.');
+      }
+    });
   }
 });
 

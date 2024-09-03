@@ -163,6 +163,7 @@
 
   
     <script>
+      let server_url;
       async function getServerUrl() {
         if (!server_url) {
           server_url = await window.electronAPI.getServerAddress();
@@ -204,37 +205,83 @@
             const response = await axios.post(url+"/process-pdf", formData, {
               headers: { "Content-Type": "multipart/form-data" },
             });
-
+            console.log('Response Data',response.data)
             const taskId = response.data.taskId;
             resultDiv.innerText = `Processing started. Task ID: ${taskId}`;
 
+            // async function pollProgress(taskId) {
+            //   const intervalId = setInterval(async () => {
+            //     const response = await axios.get(`${server_url}/progress/${taskId}`);
+            //     const progress = response.data.progress;
+            //     if (progress !== previous_progress) {
+            //       await fetchResult(taskId);
+            //       previous_progress = progress;
+            //     }
+
+            //     const progressPercentage = document.getElementById(
+            //       "progressPercentage"
+            //     );
+            //     progressPercentage.textContent = `${progress}%`;
+            //     // Update the progress bar fill
+            //     const progressBarFill = document.getElementById("progressBarFill");
+            //     progressBarFill.style.width = `${progress}%`;
+
+            //     // When progress reaches 100%, stop polling and display a success message
+            //     if (progress >= 100) {
+            //       clearInterval(intervalId);
+            //       document.getElementById("result").innerHTML =
+            //         "<p>Processing complete!</p>";
+
+            //       // Optionally, you could display download links here
+            //     }
+            //   }, 1000); // Poll every 1 second
+            // }
             async function pollProgress(taskId) {
+              const url = await getServerUrl();
               const intervalId = setInterval(async () => {
-                const response = await axios.get(`${server_url}/progress/${taskId}`);
-                const progress = response.data.progress;
-                if (progress !== previous_progress) {
-                  await fetchResult(taskId);
-                  previous_progress = progress;
-                }
+                try {
+                  const response = await axios.get(`${url}/progress/${taskId}`);
+                  console.log('Poll response',response)
+                  const progress = response.data.progress;
+                  if (progress !== previous_progress) {
+                    await fetchResult(taskId);
+                    previous_progress = progress;
+                  }
 
-                const progressPercentage = document.getElementById(
-                  "progressPercentage"
-                );
-                progressPercentage.textContent = `${progress}%`;
-                // Update the progress bar fill
-                const progressBarFill = document.getElementById("progressBarFill");
-                progressBarFill.style.width = `${progress}%`;
+                  const progressPercentage = document.getElementById("progressPercentage");
+                  progressPercentage.textContent = `${progress}%`;
+                  // Update the progress bar fill
+                  const progressBarFill = document.getElementById("progressBarFill");
+                  progressBarFill.style.width = `${progress}%`;
 
-                // When progress reaches 100%, stop polling and display a success message
-                if (progress >= 100) {
+                  // When progress reaches 100%, stop polling and display a success message
+                  if (progress >= 100) {
+                    clearInterval(intervalId);
+                    document.getElementById("result").innerHTML = "<p>Processing complete!</p>";
+                  }
+                } catch (error) {
                   clearInterval(intervalId);
-                  document.getElementById("result").innerHTML =
-                    "<p>Processing complete!</p>";
-
-                  // Optionally, you could display download links here
+                  let errorMessage = "Error processing PDF";
+                  if (error.response) {
+                    // The request was made and the server responded with a status code
+                    // that falls out of the range of 2xx
+                    errorMessage += `: ${error.response.data.error || error.response.data.message || error.message}`;
+                    if (error.response.data.details) {
+                      errorMessage += ` (${error.response.data.details})`;
+                    }
+                  } else if (error.request) {
+                    // The request was made but no response was received
+                    errorMessage += ": No response received from server";
+                  } else {
+                    // Something happened in setting up the request that triggered an Error
+                    errorMessage += `: ${error.message}`;
+                  }
+                  document.getElementById("result").innerText = errorMessage;
+                  const progressBarFill = document.getElementById("progressBarFill");
+                  progressBarFill.style.width = "0%";
                 }
               }, 1000); // Poll every 1 second
-            }
+            }  
             pollProgress(taskId);
           } catch (error) {
             resultDiv.innerText =
@@ -243,6 +290,7 @@
               progressBarFill.style.width = "0%";
           }
         });
+
       async function fetchResult(taskId) {
         try {
           const url = await getServerUrl();
