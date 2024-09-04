@@ -300,6 +300,7 @@
 # Set the full path to pdftk
 PDFTK_PATH="/opt/homebrew/bin/pdftk"
 MARKER_SINGLE_PATH="/Users/wufengjin/.pyenv/shims/marker_single"
+source ~/.bash_profile 2>/dev/null || source ~/.zshrc 2>/dev/null
 # MARKER_SINGLE_PATH=$(which marker_single)
 echo "Script started with arguments: $@"
 set -x  # This will print each command before it's executed
@@ -401,7 +402,8 @@ do
     $PDFTK_PATH "$INPUT_PDF" cat $START-$END output "$CHUNK_NAME"
     
     echo "Processing chunk $i"
-    $MARKER_SINGLE_PATH "$CHUNK_NAME" "$OUTPUT_DIR/${OUTPUT_PREFIX}_${i}_output" --batch_multiplier 1 --max_pages $PAGES_PER_CHUNK --langs $LANGS
+    # $MARKER_SINGLE_PATH "$CHUNK_NAME" "$OUTPUT_DIR/${OUTPUT_PREFIX}_${i}_output" --batch_multiplier 1 --max_pages $PAGES_PER_CHUNK --langs $LANGS
+    marker_single "$CHUNK_NAME" "$OUTPUT_DIR/${OUTPUT_PREFIX}_${i}_output" --batch_multiplier 1 --max_pages $PAGES_PER_CHUNK --langs $LANGS
     
     # Update progress
     PROGRESS=$(( i * 100 / NUM_CHUNKS ))

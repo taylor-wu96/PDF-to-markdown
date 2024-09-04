@@ -69,7 +69,7 @@ let serverAddress = `http://localhost:${PORT}`;
 
 // Ensure log directory exists
 if (!fs.existsSync(logDir)) {
-  print('logDir not exist:', logDir);
+  // print('logDir not exist:', logDir);
   fs.mkdirSync(logDir, { recursive: true });
 }
 

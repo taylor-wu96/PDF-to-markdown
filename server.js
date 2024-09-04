@@ -2,6 +2,11 @@
 // server.js test
 const express = require('express');
 const multer = require('multer');
+(async () => {
+  // Dynamically import fix-path and apply it
+  const fixPath = await import('fix-path');
+  fixPath.default(); // Apply the fix
+})();
 const { execFile } = require('child_process');
 const path = require('path');
 const fs = require('fs');
