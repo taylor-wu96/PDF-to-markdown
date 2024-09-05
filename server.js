@@ -129,9 +129,10 @@ app.post('/process-pdf', upload.single('pdf'), (req, res) => {
         console.log(`${scriptPath} is now executable`);
     }
   });
- 
+  res.json({ taskId, message: "pdf start execute"});
+  //   res.json({ taskId, message: "pdf start execute",stdout, error, stderr });
   execFile('/bin/bash', [scriptPath, ...args], { env: process.env, maxBuffer: 1024 * 1024 * 10 }, (error, stdout, stderr) => {
-    res.json({ taskId, message: "pdf start execute",stdout, error, stderr });
+   
     if (error) {
       log_str+=`Error processing PDF: ${error.message}`+'\n'+`Error stack: ${error.stack}`+'\n'
       console.error(`Error processing PDF: ${error.message}`);
@@ -144,10 +145,10 @@ app.post('/process-pdf', upload.single('pdf'), (req, res) => {
         log_str+=`stderr: ${stderr}`+'\n';
         console.error(`stderr: ${stderr}`);
     }
-    // console.log('Current taskProgress:', taskProgress);
-    // console.log(`stdout: ${stdout}`);
+    console.log('Current taskProgress:', taskProgress);
+    console.log(`stdout: ${stdout}`);
 
-    // taskProgress[taskId] = 100;
+    taskProgress[taskId] = 100;
 
     const finalOutputPath = path.join(outputDir,`${outputPrefix}_final_output.md`);
     if (fs.existsSync(finalOutputPath)) {
@@ -157,13 +158,13 @@ app.post('/process-pdf', upload.single('pdf'), (req, res) => {
         taskProgress[taskId] = -1;
     }
 
-    // fs.unlink(inputPdf, (err) => {
-    //   if (err) {
-    //     console.error(`Failed to delete uploaded file ${inputPdf}:`, err);
-    //   } else {
-    //     console.log(`Uploaded file ${inputPdf} deleted.`);
-    //   }
-    // });
+    fs.unlink(inputPdf, (err) => {
+      if (err) {
+        console.error(`Failed to delete uploaded file ${inputPdf}:`, err);
+      } else {
+        console.log(`Uploaded file ${inputPdf} deleted.`);
+      }
+    });
   });
 
 
@@ -187,9 +188,9 @@ app.get('/progress/:taskId', (req, res) => {
     if (progress === undefined) {
       res.status(404).json({ error: 'Task not found' });
     } else if (progress === -1) {
-      res.status(500).json({ error: 'Task failed'+log_str });
+      res.status(500).json({ error: 'Task failed' });
     } else {
-      res.json({ progress:progress, log:log_str });
+      res.json({ progress:progress});
     }
   } catch (error) {
     console.error(`Error retrieving progress for task ${taskId}:`, error);
@@ -274,7 +275,7 @@ app.get('/picture', (req, res) => {
         return res.status(400).send('Missing filename or relativePath parameter');
     }
 
-    const filePath = path.join(outputDir,path.join(relativePath, filename));
+    const filePath = path.join(outputDir,relativePath, filename);
 
     if (fs.existsSync(filePath)) {
         res.download(filePath);

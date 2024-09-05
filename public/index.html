@@ -312,7 +312,7 @@
             }
           );
 
-          // console.log("markdownContent:", markdownContent);
+          console.log("markdownContent:", markdownContent);
           const htmlContent = marked.parse(markdownContent);
           document.getElementById("download").innerHTML = htmlContent;
         } catch (error) {

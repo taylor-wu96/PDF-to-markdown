@@ -305,22 +305,22 @@ source ~/.bash_profile 2>/dev/null || source ~/.zshrc 2>/dev/null
 echo "Script started with arguments: $@"
 set -x  # This will print each command before it's executed
 
-if [ ! -f "$PDFTK_PATH" ]; then
-    echo "pdftk is not installed or not in the specified path. Please install it or correct the path."
-    exit 1
-fi
+# if [ ! -f pdftk ]; then
+#     echo "pdftk is not installed or not in the specified path. Please install it or correct the path."
+#     exit 1
+# fi
 
-echo "Using pdftk from $PDFTK_PATH"
+# echo "Using pdftk from $PDFTK_PATH"
 
-if [ -z "$MARKER_SINGLE_PATH" ] || [ ! -f "$MARKER_SINGLE_PATH" ]; then
-    echo "marker_single is not installed or not in the PATH. Please install it or correct the path."
-    exit 1
-fi
+# if [ -z "$MARKER_SINGLE_PATH" ] || [ ! -f "$MARKER_SINGLE_PATH" ]; then
+#     echo "marker_single is not installed or not in the PATH. Please install it or correct the path."
+#     exit 1
+# fi
 
 echo "Using marker_single from $MARKER_SINGLE_PATH"
 
 # Check if the correct number of arguments is provided
-if [ "$#" -lt 4 ]; then
+if [ "$#" -lt 5 ]; then
     echo "Usage: $0 <input_pdf> <output_prefix> <pages_per_chunk> <max_pages> <task_id> <out_put_dir> <lang1> [lang2] [lang3] ..."
     exit 1
 fi
@@ -348,7 +348,9 @@ else
 fi
 
 # Get the total number of pages in the PDF
-TOTAL_PAGES=$($PDFTK_PATH "$INPUT_PDF" dump_data | grep NumberOfPages | awk '{print $2}')
+# TOTAL_PAGES=$($PDFTK_PATH "$INPUT_PDF" dump_data | grep NumberOfPages | awk '{print $2}')
+TOTAL_PAGES=$(pdftk "$INPUT_PDF" dump_data | grep NumberOfPages | awk '{print $2}')
+
 
 # If MAX_PAGES is less than 0, set it to TOTAL_PAGES
 if [ $MAX_PAGES -lt 0 ]; then
@@ -375,6 +377,7 @@ FINAL_OUTPUT="$OUTPUT_DIR/${OUTPUT_PREFIX}_final_output.md"
 
 # Create a directory to store all combined images
 COMBINED_IMAGES_DIR="$OUTPUT_DIR/${OUTPUT_PREFIX}_combined_images"
+IMAGES_LINK="${OUTPUT_PREFIX}_combined_images"
 mkdir -p "$COMBINED_IMAGES_DIR"
 
 # Initialize a counter for renaming PNG files
@@ -399,7 +402,7 @@ do
     
     CHUNK_NAME="$OUTPUT_DIR/${OUTPUT_PREFIX}_${i}.pdf"
     echo "Creating chunk $i (pages $START to $END)"
-    $PDFTK_PATH "$INPUT_PDF" cat $START-$END output "$CHUNK_NAME"
+    pdftk "$INPUT_PDF" cat $START-$END output "$CHUNK_NAME"
     
     echo "Processing chunk $i"
     # $MARKER_SINGLE_PATH "$CHUNK_NAME" "$OUTPUT_DIR/${OUTPUT_PREFIX}_${i}_output" --batch_multiplier 1 --max_pages $PAGES_PER_CHUNK --langs $LANGS
@@ -425,7 +428,8 @@ do
                 cp "$IMG" "${COMBINED_IMAGES_DIR}/${NEW_IMG_NAME}"
                 
                 # Replace the old image name with the new image name, including the relative path
-                MODIFIED_CONTENT=$(echo "$MODIFIED_CONTENT" | sed "s|$(basename "$IMG")|./${COMBINED_IMAGES_DIR}/${NEW_IMG_NAME}|g")
+                MODIFIED_CONTENT=$(echo "$MODIFIED_CONTENT" | sed "s|$(basename "$IMG")|./${IMAGES_LINK}/${NEW_IMG_NAME}|g")
+                # MODIFIED_CONTENT=$(echo "$MODIFIED_CONTENT" | sed "s|$(basename "$IMG")|./${COMBINED_IMAGES_DIR}/${NEW_IMG_NAME}|g"))
                 
                 # Increment the counter
                 COUNTER=$((COUNTER + 1))
