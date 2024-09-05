@@ -7,7 +7,7 @@ const multer = require('multer');
   const fixPath = await import('fix-path');
   fixPath.default(); // Apply the fix
 })();
-const { execFile } = require('child_process');
+const { execFile,exec } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 const archiver = require('archiver');
@@ -283,6 +283,40 @@ app.get('/picture', (req, res) => {
         res.status(404).send('File not found');
     }
 });
+
+app.get('/check-plugins', (req, res) => {
+  // Define the commands to check for each plugin
+  const commands = {
+    markerPdf: 'pip show marker-pdf',
+    ocrmypdf: 'pip show ocrmypdf',
+    torch: 'pip show torch',
+    pdftk: 'brew list pdftk-java',
+  };
+
+  const results = {};
+
+  const checkCommand = (name, command) => {
+    return new Promise((resolve) => {
+      exec(command, (error, stdout) => {
+        results[name] = !error ? 'Installed' : 'Not Installed';
+        console.log('Plugin Name:', name ,results[name]);
+        resolve();
+      });
+    });
+  };
+
+  // Run all checks in parallel
+  Promise.all(Object.entries(commands).map(([name, command]) => checkCommand(name, command)))
+    .then(() => {
+      res.json(results);
+    })
+    .catch((err) => {
+      console.log('Error checking plugins:', err);
+      res.status(500).send('Error checking plugins');
+    });
+});
+
+
 
 const PORT = process.env.PORT || 3000;
 

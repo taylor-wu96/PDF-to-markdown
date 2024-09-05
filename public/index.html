@@ -13,7 +13,8 @@
           extend: {},
         },
         plugins: [
-        tailwindcss('typography'),
+        // tailwindcss('typography'),
+        require('preline/plugin'),
         ],
       }
     </script>
@@ -28,6 +29,43 @@
     <link rel="stylesheet" href="./marked_down.css">
   </head>
   <body>
+
+    <!-- Popover -->
+    <div class="hs-tooltip [--trigger:click] inline-block">
+      <div class="hs-tooltip-toggle block text-center">
+        <button type="button" class="flex justify-center items-center size-10 text-sm font-semibold rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"></path>
+          </svg>
+        </button>
+        <div class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible hidden opacity-0 transition-opacity absolute invisible z-10 max-w-xs bg-white border border-gray-100 text-start rounded-lg shadow-md dark:bg-neutral-800 dark:border-neutral-700" role="tooltip">
+          <span class="pt-3 px-4 block text-lg font-bold text-gray-800 dark:text-white">Check the requirement</span>
+          <div class="py-3 px-4 text-sm text-gray-600 dark:text-neutral-400">
+            <div class="mt-4">
+              <h3 class="text-lg font-semibold">Plugin Status</h3>
+              <ul id="pluginStatus" class="list-disc pl-5 text-gray-800 dark:text-white">
+                <li>marker-pdf: <span id="markerPdfStatus">Unknown</span></li>
+                <li>ocrmypdf: <span id="ocrmypdfStatus">Unknown</span></li>
+                <li>torch: <span id="torchStatus">Unknown</span></li>
+                <li>pdftk: <span id="pdftkStatus">Unknown</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-6 grid">
+            <button
+              type="button"
+              id="checkPlugins"
+              class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700">
+              Check Required Plugins
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div class="mx-auto max-w-2xl">
         <div class="text-center">
@@ -163,6 +201,7 @@
 
   
     <script>
+
       let server_url;
       async function getServerUrl() {
         if (!server_url) {
@@ -170,6 +209,15 @@
         }
         return server_url;
       }
+      document.getElementById('checkPlugins').addEventListener('click', async () => {
+        const url = await getServerUrl();
+        const response = await axios.get(`${url}/check-plugins`);
+        const data = response.data;
+        document.getElementById('markerPdfStatus').textContent = data.markerPdf;
+        document.getElementById('ocrmypdfStatus').textContent = data.ocrmypdf;
+        document.getElementById('torchStatus').textContent = data.torch;
+        document.getElementById('pdftkStatus').textContent = data.pdftk;
+      });
 
       document
         .getElementById("uploadForm")
@@ -209,33 +257,6 @@
             const taskId = response.data.taskId;
             resultDiv.innerText = `Processing started. Task ID: ${taskId}`;
 
-            // async function pollProgress(taskId) {
-            //   const intervalId = setInterval(async () => {
-            //     const response = await axios.get(`${server_url}/progress/${taskId}`);
-            //     const progress = response.data.progress;
-            //     if (progress !== previous_progress) {
-            //       await fetchResult(taskId);
-            //       previous_progress = progress;
-            //     }
-
-            //     const progressPercentage = document.getElementById(
-            //       "progressPercentage"
-            //     );
-            //     progressPercentage.textContent = `${progress}%`;
-            //     // Update the progress bar fill
-            //     const progressBarFill = document.getElementById("progressBarFill");
-            //     progressBarFill.style.width = `${progress}%`;
-
-            //     // When progress reaches 100%, stop polling and display a success message
-            //     if (progress >= 100) {
-            //       clearInterval(intervalId);
-            //       document.getElementById("result").innerHTML =
-            //         "<p>Processing complete!</p>";
-
-            //       // Optionally, you could display download links here
-            //     }
-            //   }, 1000); // Poll every 1 second
-            // }
             async function pollProgress(taskId) {
               const url = await getServerUrl();
               const intervalId = setInterval(async () => {
