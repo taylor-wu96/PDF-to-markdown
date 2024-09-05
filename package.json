@@ -13,11 +13,17 @@
     "preline": "^2.4.1"
   },
   "devDependencies": {
+    "@rspack/cli": "^1.0.3",
+    "@rspack/core": "^1.0.3",
+    "@rspack/plugin-react-refresh": "^1.0.0",
     "electron": "^32.0.1",
-    "electron-packager": "^17.1.2"
+    "electron-packager": "^17.1.2",
+    "react-refresh": "^0.14.2"
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh"
+    "build": "electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh",
+    "dev": "rspack serve",
+    "prod": "rspack build"
   }
 }
