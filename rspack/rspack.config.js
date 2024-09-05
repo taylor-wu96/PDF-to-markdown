@@ -6,15 +6,20 @@ const isDev = process.env.NODE_ENV === "development";
 
 // Target browsers, see: https://github.com/browserslist/browserslist
 const targets = ["chrome >= 87", "edge >= 88", "firefox >= 78", "safari >= 14"];
-
+const __base = path.resolve(__dirname, '..');
 module.exports ={
 	context: __dirname,
 	entry: {
-		main: path.join( __dirname,"./src/index.jsx")
+		main: path.join( __base,"src/index.jsx")
 	},
 	resolve: {
 		extensions: ["...", ".ts", ".tsx", ".jsx"]
 	},
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__base, 'public'),
+    clean: true
+},
 	module: {
 		rules: [
 			{
@@ -49,7 +54,7 @@ module.exports ={
 	},
 	plugins: [
 		new rspack.HtmlRspackPlugin({
-			template: "./src/index.html"
+			template: "../src/index.html"
 		}),
 		isDev ? new RefreshPlugin() : null
 	].filter(Boolean),

@@ -23,7 +23,7 @@
   "scripts": {
     "start": "electron .",
     "build": "electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh",
-    "dev": "rspack serve",
-    "prod": "rspack build"
+    "dev": "rspack serve --config rspack/rspack.dev.js",
+    "prod": "rspack build --config rspack/rspack.prod.js"
   }
 }
