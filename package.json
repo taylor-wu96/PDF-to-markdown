@@ -4,25 +4,35 @@
   "main": "main.js",
   "description": "",
   "dependencies": {
+    "@tailwindcss/forms": "^0.5.8",
     "archiver": "^7.0.1",
+    "axios": "^1.7.7",
     "cors": "^2.8.5",
     "electron-log": "^5.1.7",
     "express": "^4.19.2",
     "fix-path": "^4.0.0",
+    "marked": "^14.1.1",
     "multer": "^1.4.5-lts.1",
-    "preline": "^2.4.1"
+    "preline": "^2.4.1",
+    "react-router-dom": "^6.26.1"
   },
   "devDependencies": {
     "@rspack/cli": "^1.0.3",
     "@rspack/core": "^1.0.3",
     "@rspack/plugin-react-refresh": "^1.0.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
     "electron": "^32.0.1",
     "electron-packager": "^17.1.2",
-    "react-refresh": "^0.14.2"
+    "postcss": "^8.4.45",
+    "postcss-loader": "^8.1.1",
+    "react-refresh": "^0.14.2",
+    "tailwindcss": "^3.4.10"
   },
   "scripts": {
-    "start": "electron .",
-    "build": "electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh",
+    "start": "concurrently \"rspack serve --config rspack/rspack.dev.js\" \"electron .\"",
+    "build": "rspack build --config rspack/rspack.prod.js && electron-packager . PDF_to_markdown --platform=darwin --arch=universal --out=dist --overwrite --extra-resource=complete_pdf_to_marked_down.sh --extra-resource=pdf_processor.sh",
     "dev": "rspack serve --config rspack/rspack.dev.js",
     "prod": "rspack build --config rspack/rspack.prod.js"
   }

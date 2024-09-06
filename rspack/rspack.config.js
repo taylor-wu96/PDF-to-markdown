@@ -49,7 +49,12 @@ module.exports ={
 						}
 					}
 				]
-			}
+			},
+			{
+        test: /\.css$/,
+        use: ["postcss-loader"],
+        type: "css",
+      },
 		]
 	},
 	plugins: [
